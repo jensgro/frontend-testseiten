@@ -1,3 +1,3 @@
-# 11ty Sandbox
+# Frontend-Testseiten
 
-Very simple project for testing purposes, especially for technical ideas and plugins. 
+
