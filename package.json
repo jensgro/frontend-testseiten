@@ -1,0 +1,15 @@
+{
+  "name": "11ty-sandbox",
+  "version": "2.1.0",
+  "main": "",
+  "license": "WTFPL",
+  "scripts": {
+    "build": "eleventy",
+    "clean": "rimraf _site",
+    "start": "eleventy --serve"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "rimraf": "^6.0.1"
+  }
+}
