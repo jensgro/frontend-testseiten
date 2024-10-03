@@ -1,0 +1,35 @@
+:root {
+    --space: 10px;
+    --body-width: 80%;
+    --box-shadow-1: 1px 1px 5px rgba(0,0,0,0.5);
+
+    --lightgrey: #efefef;
+    --myred: #a20000;
+  }
+
+
+
+  /* ======== styling basics ======= */
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    padding: calc(var(--space) * 2) 0;
+    background-color: var(--lightgrey);
+    font-size: 16px;
+  }
+
+  body {
+    width: var(--body-width);
+    padding: calc(var(--space) * 4);
+    margin: 0 auto;
+    background: #fff;
+    box-shadow: var(--box-shadow-1);
+    font-family: system-ui, sans-serif;
+    font-size: 1rem;
+  }
+
+  :where(a) {
+    color: var(--myred);
+  }

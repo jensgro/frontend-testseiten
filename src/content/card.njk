@@ -1,16 +1,18 @@
 ---
-layout: layouts/base.njk
+layout: layouts/simple.njk
 title: Card-Testseite
 permalink: /card.html
 bodyClass: page
+css:
+    - main
 ---
 
 
 {% for image in images %}
 {% if (loop.index <= 5) %}
-    <div class="card"> 
+    <div class="card">
         <header class="card__head">
-            <h3>{{image.headline}}</h3>    
+            <h3>{{image.headline}}</h3>
         </header>
         <div class="card__content">
             <img src="{{ image.filename }}" />

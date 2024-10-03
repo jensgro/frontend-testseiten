@@ -1,0 +1,123 @@
+---
+layout: layouts/base.njk
+title: CardListen-Testseite
+permalink: /webseiten-gemaelde.html
+bodyClass: page
+css:
+    - main
+    - base
+---
+
+<h1><a href="http://webkrauts.de/artikel/2006/webseiten-sind-keine-gemälde">Webseiten sind keine Gemälde</a></h1>
+
+<p>Das klassische Tabellenlayout hat ausgedient. Moderne Browser – auch der Internet Explorer – können hinreichend mit CSS umgehen, dass keine Layoutkrücken mehr benötigt werden. Es ist Zeit, sich an die Anwendung der Webstandards zu gewöhnen und moderne Webseiten zu erstellen.</p>
+
+<h2>Modernes Webdesign mit XHTML und CSS</h2>
+
+<p>HTML wurde entwickelt, um Texte zu strukturieren. Mithilfe der Tags zeichnet man Strukturelemente einer Seite aus, nicht das Layout. Tags umschließen (im Normalfall) Seitenteile und geben den Browsern so den Hinweis, um welches Strukturelement einer Seite es sich hierbei handelt. Auf diese Weise erkennen Browser (und Suchmaschinen!) Überschriften, Absätze, Listen, Bilder und Tabellen.</p>
+
+<p>Die visuelle Präsentation erledigen hingegen Stylesheets (CSS). Solche Stilvorlagen kennt man auch bei Freehand, QuarkXPress oder Word (Formatvorlagen). Diese theoretische und klare Aufteilung hapert in der Realität an den Browsern. Insbesondere in den Kindertagen des Web ging die CSS-Unterstützung in den Browsern kaum über die Einfärbung von Texten hinaus.</p>
+
+<p>Mit der Kommerzialisierung des Web wurden Wege gesucht, interessante Layouts zu erstellen und Unterhaltung statt Information zu verbreiten. Tabellen wurden zu Layoutzwecken missbraucht und Schriften wurden direkt per HTML () definiert. Man lehnte sich damit stark dem Printdesign an, was nur natürlich war, schließlich kannten die Designer nichts anderes. Mit der Veröffentlichung von XHTML im Jahr 2000 versuchte das W3C, den Focus wieder stärker auf die Trennung von inhaltlicher Struktur und Layout zu setzen.</p>
+
+<p>Aber, einmal gelernt tun sich die meisten Designer und Webentwickler heute schwer damit, sich vom Tabellenlayout zu lösen. Die eingeschränkte CSS-Unterstützung in den meisten Browsern und die teilweise grob fehlerhafte Implementierung im marktführenden Internet Explorer (Windows) führen regelmäßig zu Komplikationen. Da ist es für die meisten Webentwickler einfacher, in gewohnten Fahrwassern zu bleiben. Doch ein Umdenken in Richtung qualitativ besserer Webseiten ist notwendig, damit das Web erwachsener wird.</p>
+
+<h2>Webseiten</h2>
+
+<p>Webseiten sind Texte, keine Gemälde. Deshalb ist die Grundlage für moderne Seiten ein Umdenken im Erstellungsprozess einer Webseite. Man sollte vom Inhalt, nicht von der Optik, der Präsentation her denken. Es ist deshalb wichtig, dem Inhalt eine semantisch korrekte Struktur durch HTML (oder XHTML) zu verpassen. Tabellarische Daten gehören in eine Tabelle, Listen werden mit UL, OL oder DL ausgezeichnet usw. Mit (X)HTML wird also ausgezeichnet, was etwas ist, nicht wie es aussehen soll. Wird die Optik dank eines rückständigen Browsers nicht fehlerfrei transportiert, könnte so zumindest noch der Inhalt ankommen. <br><br>
+Zudem sollte man immer im Hinterkopf haben, dass es keine absolute Sicherheit für die Optik einer Webseite gibt. Nicht nur die unterschiedlichen CSS- und HTML-Fähigkeiten der Browser sind dafür verantwortlich. Formularelemente werden beispielsweise vom Betriebssystem zur Verfügung gestellt und kein Browser erlaubt es, diese Elemente nach Belieben umzugestalten. Auch die sichtbare Fläche einer Webseite ist in allen Browsern uneinheitlich. Zudem nutzen Browser selber Stylesheets, um die HTML-Elemente formatiert auszugeben. Diese Stylesheets unterscheiden sich teilweise stark voneinander, wie man im Vergleich einer einfachen HTML-Seite zwischen dem IE6 und Firefox 1.0.4 sieht. Zu guter Letzt kann der User durch ein User-Stylesheet, das Einstellen größerer oder kleinerer Schriften im System oder im Browser sowie durch die Verkleinerung der Browseroberfläche mittels nachinstallierter Browserleisten Einfluss nehmen.</p>
+
+<h2>Die drei Schichten-Theorie: Struktur, Design, Dynamik</h2>
+
+<p>Eine Webseite kann aus drei Schichten bestehen. Optimal ist es, wenn die unterste Schicht alle relevanten Informationen beinhaltet und ohne die beiden anderen existieren kann. Die unterste Schicht ist der Seiteninhalt, dessen Information durch HTML oder XHTML strukturiert wird. Die so strukturierte Information kann durch CSS gestaltet werden (zweite Schicht). In der dritten Schicht kann durch JavaScript Dynamik in die Webseite gebracht werden. Eine Vermischung der drei Schichten sollte tunlichst vermieden werden. Doch noch viel zu oft werden ganze Texte oder Menüs mit JavaScript on-the-fly erzeugt. Hat man JavaScript deaktiviert, wie es gerade in Firmennetzwerken passiert, ist man von Teilen der Webseite oder möglicherweise der gesamten Website ausgeschlossen. Auch das Erzeugen von Inhalten durch CSS, das theoretisch möglich ist (nur der Internet Explorer kann es mal wieder nicht) ist nur dann sinnvoll, wenn durch die Deaktivierung von Stylesheets keine relevanten Informationen fehlen. Die Vorteile dieses modernen Webdesign-Ansatzes, der Befolgung der Webstandards, sind:</p>
+
+<ol>
+<li>Der Code wird übersichtlicher. Es ist nicht mehr nötig, sich durch mehrfach verschachtelte Tabellen kämpfen.
+Suchmaschinen können sich leichter im Quellcode orientieren und demnach auch die Seite besser verschlagworten.</li>
+<li>Die Seite wird schneller geladen.</li>
+<li>Die Seite wird meist leichter, die Bandbreite und damit womöglich der eigene Geldbeutel, wird geschont. Alternative Geräte wie PDAs oder Screenreader haben weniger Probleme, den Inhalt zu erfassen.</li>
+</ol>
+
+<h2>Design fürs Internet</h2>
+
+<p>Im Gegensatz zum klassischen Printdesign leben wir mit der großen Unsicherheit, wie der Betrachter die Seite zu sehen bekommt. Wir können noch unsere eigenen Testgeräte und die des Kunden erfassen, aber wie der einzelne Surfer unsere Seite sieht, können wir nicht mit Sicherheit wissen. Wir können zwar ein paar Informationen anhand der Serverstatistiken (falls eine Seite schon existiert) gewinnen, doch viele weiterführende Informationen fehlen uns.</p>
+
+<p>Wir können bei einer schon bestehenden Seite erfahren, mit welchen Bildschirmauflösungen, Betriebssystemen und Browsern die Surfer vorbeikommen. Auch die Farbtiefe erfahren wir und von woher sie auf unsere Seite kommen. Aber wir wissen nicht, ob auf dem Computer extra große Schriften eingestellt wurden, ob im Browser vielleicht sogar größere Schriften eingestellt wurden. Wir wissen nicht, ob mit maximiertem Browser gesurft wird oder mit einem verkleinerten Fenster.</p>
+
+<p>Diese Ungewissheit sollte uns davon abhalten, Gestaltungen zu erstellen, die bei geringer Abweichung gegen unser angenommenes Ideal auseinanderfallen oder nicht mehr zugänglich sind. Auch die exzessive Benutzung von Bildern sollten wir hinterfragen, insbesondere wenn diese nur Texte darstellen. Texte sind Texte, Bilder sind Bilder. Es sollte so gut wie möglich vermieden werden, Texte als Bilder zu verwenden. Wenn überhaupt, dann nur bei Überschriften. Hier sollte dann auf die <code>ALT</code>- und <code>TITLE</code>-Attribute geachtet werden. Dadurch haben wir auch den Vorteil, dass Überschriften – wenn sie nicht als Bild, sondern als Text erstellt werden – von den Suchmaschinen erfasst werden und dadurch unsere Seite leichter gefunden werden kann. Zudem ermöglicht es den Nutzern alternativer Darstellungsmedien – Screenreader für Blinde oder PDAs für den gestressten Manager – den Inhalt einer Seite zu erfassen. Die Seite lädt schneller und es werden weniger Daten übertragen, was bei stark frequentierten Seiten eine echte Kostenersparnis bedeuten kann.</p>
+
+<p><mark>Je flexibler ein Layout angelegt ist, desto weniger Schwierigkeiten dürften in der Praxis auftauchen.</mark><br> Pixelgenaue Layouts gehen oft ins Auge. Im Gegensatz zum Print kann man die Umgebung der Seite nur schlecht kontrollieren. Popup-Fenster, die auf eine genaue Pixelgröße festgezurrt werden, lösen das Problem nicht wirklich. Auch die Darstellung in diesen Fenstern kann in den meisten Browsern beeinflusst werden. Zudem erschweren Popup-Blocker die Arbeit, und nicht jeder User mag es, wenn ihm die Kontrolle über seinen Browser genommen wird.</p>
+
+<p>Auch wenn es sich manchmal so anhört, als sei mit dem Wechsel zu tabellenlosem Design die Welt komplizierter geworden, stimmt dies so nicht. Der Verzicht auf Layouttabellen zwingt zu einer Betrachtung des Seiteninhaltes, nicht der Optik und macht so die Sicht klarer auf den eigentlichen Charakter der Seite. Zudem öffnen sich auch neue Möglichkeiten mit CSS, die man in dieser Form mit einem puren Tabellendesign nicht hat. Mittels CSS können beispielsweise Objekte gestapelt werden. So könnte man zwei Bilder sich überlappen lassen oder Text über ein Bild legen.</p>
+
+<h2>Grundlagen von CSS</h2>
+
+<p>Mit CSS geben wir der Struktur der XHTML-Seite Form und Gestaltung. Wir haben dabei vier Möglichkeiten, um die Gestaltung an das XHTML-Objekt zu bringen.</p>
+
+<ul>
+<li>Über die direkte Ansprache eines Tags.</li>
+<li>Über die Ansprache einer Klasse.</li>
+<li>Über die Ansprache einer ID.</li>
+<li>Über die Ansprache einer Pseudoklasse (bspw. a:hover)</li>
+</ul>
+
+<p>Im Zusammenhang mit CSS erlangen zwei XHTML-Tags eine besondere Bedeutung: <code>DIV</code> und <code>SPAN</code>. Diese beiden Tags sind fast eigenschaftslos, denn sie bezeichnen nicht wie z.B. <code>TABLE</code> eine Tabelle oder wie <code>P</code> einen Absatz. Beide grenzen schlicht Bereiche ein. Der Unterschied zwischen beiden liegt darin, dass DIV vor und nach sich einen Absatz erzeugt, <code>SPAN</code> hingegen nicht. Deshalb nennt man <code>DIV</code> ein Block-Element, <code>SPAN</code> ein Inline-Element.</p>
+
+<h2>Klassen und IDs</h2>
+
+<p>Da es sehr wahrscheinlich ist, dass man nicht immer alle Tags gleichbehandeln möchte, gibt es zwei Möglichkeiten, zusätzliche Unterscheidungen einzufügen: Klassen und IDs.
+Eine Klasse definiert man in XHTML, indem man dem betreffenden Tag das Attribut class mitgibt und diesem einen Namen gibt. Beispiel:</p>
+
+<pre><code>&lt;p class="eingerueckt"&gt;Hier steht Text.&lt;/p&gt;
+</code></pre>
+
+<p>Eine Klasse spricht man durch ihren Namen mit einem vorangestellten Punkt an. Sie kann mehrfach auf einer Seite vertreten sein und ist zudem nicht an einen Tag gebunden. Auf der gleichen Seite kann die Klasse eingerueckt beispielsweise auch noch einem Listenelement und dem Tag `` zugewiesen werden.
+Eine ID hingegen ist einmalig auf der Seite. Sie wird durch eine vorangestellte Raute im CSS-Code angesprochen. In XHTML gibt man dem betreffenden Tag das Attribut id mit, dem man einen Namen zuweist. Beispiel:</p>
+
+<pre><code>&lt;p id="fussnote"&gt;Hier steht mal wieder Text.&lt;/p&gt;
+</code></pre>
+
+<p>Der CSS-Code für beide Beispiele könnte so aussehen:</p>
+
+<pre><code>.eingerueckt {margin-left: 10px;}
+#fussnote {border-top: 1px solid black; font-size: 10px;}
+</code></pre>
+
+<p>Zusätzlich zur direkten Ansprache eines Objektes – sei es ein Element, eine Klasse oder eine ID – kann man auch verschachtelte Objekte ansprechen. Dafür muß man sich eine XHTML-Datei einfach anhand eines Baumdiagrammes vorstellen. Wenn man einen Mozilla oder den neuesten Firefox besitzt, kann man dies anhand des DOM-Inspektors auch tun. Eine Webseite sieht dann wie eine Baumstruktur aus.</p>
+
+<p>Das oberste Element einer Seite ist immer <code>body</code>, denn dieser Tag umschließt den im Browser sichtbaren Bereich der Seite (mit Ausnahme des Seitentitels). Darunter kommen, nach außen gleichwertig, Tags, die von keinen weiteren Tags umschlossen werden. Innerhalb dieser können sich wiederum Tags befinden. So wurde in diesem Beispiel der Tag <code>span</code> innerhalb eines Absatzes benutzt. Absätze befinden sich einmal innerhalb eines DIV-Containers und einmal auf der obersten Ebene. Dieses Schema zeigt uns deutlich, wie wir bestimmte Tags direkt ansprechen können, in diesem Fall auch ohne die Nutzung von IDs oder Klassen.
+Nehmen wir an, der Absatz auf der obersten Ebene soll einen schwarzen Hintergrund und eine weiße Schrift bekommen, der in das DIV geschachtelte Absatz hingegen einen roten Hintergrund und weiße Schrift bekommen. Wir würden folgendes notieren:</p>
+
+<pre><code>p {background-color: black; color: white;}
+div p { background-color: red; color: white;}
+</code></pre>
+
+<p>Die erste Zeile können wir als „Alle Absätze sollen einen schwarzen Hintergrund und eine weiße Schriftfarbe haben“ lesen. Die zweite Zeile lautet hingegen: „Alle Absätze innerhalb eines DIVs sollen einen roten Hintergrund und weiße Schrift haben.“ Wichtig bei der zweiten Zeile ist, dass zwischen dem DIV und dem P ein Leerzeichen ist. Stünde dort ein Komma, handelte es sich um eine Aufzählung, die man einsetzen sollte, um den CSS-Code übersichtlicher zu gestalten. Wäre keines von beiden vorhanden, wüsste der Browser nichts damit anzufangen, denn der Tag divp existiert nicht.</p>
+
+<h2>Vererbung</h2>
+
+<p>Wie beim DOM nutzen wir auch in CSS die Begriffe "Eltern-Element" und "Kind-Element". Jedes Element, das ein anderes enthält, ist diesem gegenüber das Elternelement. <code>&lt;ul&gt;</code> ist demnach für jedes Listenelement <code>&lt;li&gt;</code> innerhalb seiner Liste das Elternelement. Diesen Umstand kann man sich zu Nutze machen, indem man Eigenschaften vererbt. So kann man einer Liste über das <code>&lt;ul&gt;</code>-Element eine globale Schriftart und -größe mitgeben. Selbstverständlich kann man trotzdem einzelne Ausnahmen von dieser Regel definieren. Allerdings kann man nicht alle Eigenschaften vererben, so z.B. nicht die Eigenschaften border und background.
+Die Vererbung kann Stylesheets kompakt und lesbar machen. Nicht jeder Fall muss mehr dezidiert erwähnt werden.</p>
+
+<h2>Ein Reset am Anfang</h2>
+
+<p>Wir haben zu Beginn gesehen, dass Browser von sich aus jede ungestylte HTML-Seite interpretieren. Nur tun sie dies nicht einheitlich. So haben Überschriften unterschiedliche Schriftgrößen, Zeilenhöhen, Abstände nach unten. Um sich nicht unnötig Probleme einzuhandeln sollte man deshalb am Anfang eines jeden Stylesheets eine Art Reset vornehmen. Das ist weder ein Zauberwerk, noch bedarf es viel Code. Mit</p>
+
+<pre><code>* {
+margin: 0;
+padding: 0;
+}
+</code></pre>
+
+<p>nehmen wir allen Elementen einer Seite sowohl den Innen- (padding) als auch den Außenabstand (margin). Nachfolgend fügen wir dann im Stylesheet die jeweiligen gewünschten Abstände hinzu. Insbesondere bei Listen ist diese Kombination wichtig. Denn die einen Browser nutzen padding für den Einzug der Listenelemente von Links, die anderen nutzen margin. Mit</p>
+
+<pre><code>p, li, h1, h2, h3, h4, h5, h6 {
+font-weight: normal;
+font-size: 1em;
+}
+</code></pre>
+
+<p>geben wir allen Überschriften, Listelementen und Absätzen die gleiche Schriftgröße und beseitigen Fettformatierung bei Überschriften. Die hier vorgeschlagene Schriftgröße ist ein Beispiel.</p>
+
+<p>**Trotz aller Unzulänglichkeiten der heutigen Browser, insbesondere des Internet Explorer, ist ein modernes Design ohne Layouttabellen mit CSS keine Hexerei. Die Vorteile eines CSS-Designs überwiegen eindeutig das traditionelle Tabellenlayout. Mit einer sauber anhand von Webstandards erstellten Seite ist dann auch eine barrierefreie Umsetzung keine Hexerei mehr. Und da manche (potentielle) Kunden gesetzlich zu barrierefreien Webseiten verpflichtet sind, ist dies für jeden professionellen Webworker von Interesse.
+**</p>
