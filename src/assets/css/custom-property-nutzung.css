@@ -1,0 +1,37 @@
+/* ========= nicht so praktisch ========= */
+p {
+	font-size: var(--fs-xs);
+}
+@media (min-width: 800px) {
+	p {
+		font-size: var(--fs-sm);
+	}
+}
+
+/* ========= besser!!!! ========= */
+p {
+	font-size: var(--fz-para, var(--fs-xs));
+}
+@media (min-width: 800px) {
+	p {
+		--fz-para: var(--fs-sm);
+	}
+}
+
+/* ========= oder auch  ========= */
+:root {
+	--fs-xs: 0.85rem;
+	--fs-md: 1rem;
+	--fz-lg: 1.25rem;
+}
+
+p {
+	--_fz-para: var(--fs-xs);
+
+	font-size: var(--_fz-para);
+}
+@media (min-width: 800px) {
+	p {
+		--_fz-para: var(--fs-sm);
+	}
+}

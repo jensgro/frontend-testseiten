@@ -1,0 +1,7 @@
+:where(label:has(> input:disabled), label:has(+ input:disabled)) { cursor : not-allowed;}
+.row:has(.topic-tags-block) {}
+:where(button) { all : unset;}
+footer:has(.broadcastinfo) {}
+a:has(.lead) {}
+.teaser:has(.topline[style="display: none;"]) .hgroup a:before {}
+.media-liveblog:has(.topline) .topline:before {}
