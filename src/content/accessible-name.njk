@@ -1,0 +1,46 @@
+---
+layout: simple-1.njk
+title: "Accessible Name für Screenreader"
+permalink: accessible-name.html
+css:
+  - base
+  - normalizeme
+  - btn
+  - utilities
+---
+
+{% include "partials/testicons-svg.njk" %}
+
+<h2>Content (with visually hidden text)</h2>
+<button class="btn btn--medium" type="button">
+    <svg class="svg-icon"><use xlink:href="#cancel"></use></svg>
+    <span class="sr-only">Delete</span>
+</button>
+
+<h2><code>title</code> attribute</h2>
+<button class="btn btn--medium" title="Delete" type="button">
+    <svg class="svg-icon"><use xlink:href="#cancel"></use></svg>
+</button>
+
+<h2><code>title</code> attribute and actual text</h2>
+<button class="btn btn--medium" title="Delete" type="button">
+    <svg class="svg-icon"><use xlink:href="#cancel"></use></svg> Del
+</button>
+
+<h2><code>aria-label</code> attribute</h2>
+<button class="btn btn--medium" aria-label="Delete" type="button">
+    <svg class="svg-icon"><use xlink:href="#cancel"></use></svg>
+</button>
+
+<h2><code>aria-label</code> attribute and actual text</h2>
+<button class="btn btn--medium" aria-label="Delete" type="button">
+    <svg class="svg-icon"><use xlink:href="#cancel"></use></svg> Del
+</button>
+
+<h2><code>aria-labelledby</code> attribute</h2>
+<button class="btn btn--medium" aria-labelledby="label-for-delete-button" type="button">
+    <svg class="svg-icon"><use xlink:href="#cancel"></use></svg>
+</button>
+
+
+<div class="hint"><a href="https://patrickhlauke.github.io/aria/demos/accessible-name-calculation/" target="_blank">Quelle</a></div>

@@ -19,9 +19,9 @@
 }
 
 /* === Formulare === */
-:where(button) {
+/* :where(button) {
 	all: unset;
-}
+} */
 
 :where(input, button, textarea, select) {
 	font: inherit;
@@ -82,9 +82,9 @@
 }
 
 /* Set a size for SVG's without a width attribute */
-:where(svg):where(:not([width])) {
+/* :where(svg):where(:not([width])) {
 	inline-size: 5rem;
-}
+} */
 
 
 /* ==== Headlines ======= */

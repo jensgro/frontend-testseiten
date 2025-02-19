@@ -2,8 +2,18 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPassthroughCopy({
     'src/assets/css/': '/assets/css/',
     'src/assets/img/': '/assets/img/',
-    'src/assets/js/': '/assets/js/'
+    'src/assets/js/': '/assets/js/',
+    'src/assets/svg/': '/assets/svg/'
   });
+
+  eleventyConfig.addShortcode("svg", async function( icon, modificator = false) {
+    if(modificator) {
+      return `<svg class="svg-icon ${modificator}"><use xlink:href="#${icon}"></use></svg>`;
+    } else {
+        return `<svg class="svg-icon"><use xlink:href="#${icon}"></use></svg>`;
+    }
+  });
+
   return {
     templateFormats: [
       "md",
