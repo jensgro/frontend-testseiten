@@ -1,0 +1,31 @@
+[
+    {
+        "name": "Startseite",
+        "url": "#"
+    },
+    {
+        "name": "Politik",
+        "url": "#"
+    },
+    {
+        "name": "Bundestagswahl",
+        "url": "#"
+    },  
+    {
+        "name": "Wirtschaft",
+        "url": "#"
+    },
+    {
+        "name": "Sport",
+        "url": "#"
+    }, 
+    {
+        "name": "Wissen",
+        "url": "#"
+    }, 
+    {
+        "name": "Kultur",
+        "url": "#"
+    }
+    
+]
