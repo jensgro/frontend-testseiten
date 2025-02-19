@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Navigationstest für Screenreader",
+        "url": "navigation-1.html"
+    },
+    {
+        "name": "Accessible Name für Screenreader",
+        "url": "accessible-name.html"
+    },
+    {
+        "name": "Einfacher Zweispalter mit Container Queries",
+        "url": "einfacher-zweispalter-container-queries.html"
+    },
+    {
+        "name": "Einfacher Zweispalter",
+        "url": "einfacher-zweispalter.html"
+    },
+    {
+        "name": "CardListen-Testseite",
+        "url": "lists.html"
+    },
+    {
+        "name": "Card-Testseite",
+        "url": "card.html"
+    }       
+]
