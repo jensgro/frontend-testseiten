@@ -3,7 +3,12 @@ const configPath = "./src/_includes/";
 const {
   card,
   teaser,
-  quoteTeaser
+  quoteTeaser,
+  nav,
+  selectBundeslaender,
+  blockquote,
+  blockquoteSimple,
+  thumbnail
 } = require(configPath + 'shortcodes/index.js');
 
 module.exports = (eleventyConfig) => {
@@ -25,6 +30,11 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addShortcode("card", card);
   eleventyConfig.addShortcode("teaser", teaser);
   eleventyConfig.addShortcode("quoteTeaser", quoteTeaser);
+  eleventyConfig.addShortcode("nav", nav);
+  eleventyConfig.addShortcode("selectBundeslaender", selectBundeslaender);
+  eleventyConfig.addShortcode("blockquote", blockquote);
+  eleventyConfig.addShortcode("blockquoteSimple", blockquoteSimple);
+  eleventyConfig.addShortcode("thumbnail", thumbnail);
 
   return {
     templateFormats: [
