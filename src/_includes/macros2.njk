@@ -1,0 +1,64 @@
+{%- macro card(params) -%}
+  <div class="card">
+    <header class="card__head">
+      <h3>{{ headline }}</h3>
+    </header>
+    <div class="card__content">
+      <svg class="placeholder" xmlns="http://www.w3.org/2000/svg">
+        <rect/>
+      </svg>
+    </div>
+  </div>
+{%- endmacro -%}
+{%- macro post_thumbnail(image) -%}
+  <div class="thumbnail">
+    <img src="{{ image.filename }}" alt="{{ image.alt }}"/>
+  </div>
+{%- endmacro -%}
+{%- macro post_thumbnails(images) -%}
+  <div class="post-thumbnails">
+    {%- for image in images %}
+      {{ post_thumbnail(image) }}
+    {%- endfor %}
+  </div>
+{%- endmacro -%}
+{%- macro site_nav(links) -%}
+  <nav class="site-nav" role="navigation">
+    {%- for link in links %}
+      <a href="{{ link.url }}" title="{{ link.title }}">{{ link.text }}</a>
+    {%- endfor %}
+  </nav>
+{%- endmacro -%}
+{%- macro teaser -%}
+  <div class="teaser">
+    <svg class="placeholder" xmlns="http://www.w3.org/2000/svg">
+      <rect/>
+    </svg>
+    <h2>Lorem ipsum dolor sit dolor.</h2>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat veniam quaerat nam.</p>
+  </div>
+{%- endmacro -%}
+{%- macro quote_teaser(quote) -%}
+  <div class="quote-teaser">
+    <blockquote>
+      <p>{{ quote.text }}</p>
+      <cite>— {{ quote.author }}</cite>
+    </blockquote>
+  </div>
+{%- endmacro -%}
+{%- macro quote(quote_list) -%}
+  <div class="quote">
+    {%- for quote in quote_list %}
+      {{ quote_teaser(quote) }}
+    {%- endfor %}
+  </div>
+{%- endmacro -%}
+{%- macro recent_teaser -%}
+  <div class="teaser">
+    <svg class="placeholder" xmlns="http://www.w3.org/2000/svg">
+      <rect/>
+    </svg>
+    <h2>Lorem ipsum dolor sit dolor.</h2>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat veniam quaerat nam.</p>
+  </div>
+{%- endmacro -%}
