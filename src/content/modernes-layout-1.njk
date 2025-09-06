@@ -3,18 +3,15 @@ title: modernes Layout 1
 layout: simple-1.njk
 permalink: modernes-layout-1.html
 css:
+    - modernes-layout-vars
+    - modernes-layout-reset
     - modernes-layout-1
 ---
 
 {% nav %}
 <main class="content">
-  <h1>Juppheidi, da seid ihr ja!</h1>
-  <p>
-    Bavaria ipsum dolor sit amet mim Radl foahn griasd eich midnand oba guad Stubn, allerweil es Haberertanz wea ko, dea ko
-    fensdaln? D’ wann griagd ma nacha wos z’dringa pfundig, Marterl in da Haberertanz gwihss großherzig ja, wo samma denn.
-    Schaugn auf’d Schellnsau gscheckate griasd eich midnand Musi wea nia ausgähd, kummt nia hoam Schorsch o’ha i sog ja nix,
-    i red ja bloß Wurschtsolod ja, wo samma denn.
-  </p>
+  <h1>{{ lorem.headline1 }}</h1>
+  <p>{{ lorem.para3 }}</p>
   <div class="post-thumbnails">
     {% thumbnail %}
     {% thumbnail %}
@@ -26,6 +23,14 @@ css:
   <div class="post-thumbnails">
     {% thumbnail %}
     {% thumbnail %}
+    {% thumbnail %}
+    {% thumbnail %}
+    {% thumbnail %}
   </div>
+</aside>
+<aside class="extra">
+  <p>{{ lorem.para1 }}</p>
+  <p>{{ lorem.para2 }}</p>
+  <p>{{ lorem.para3 }}</p>
 </aside>
 <footer class="site-footer">Footer</footer>

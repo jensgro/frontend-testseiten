@@ -1,0 +1,36 @@
+/* ====================== */
+:root {
+    --yellow-1: #f1d23a;
+    --yellow-2: #b89900;
+    --yellow-3: #fbf4d6;
+    --yellow-4: #e7d586;
+    --yellow-5: #ffe566;
+
+    --green-1: darkkhaki;
+
+    --black: #101010;
+    --my-red: #a20000;
+
+    --area-bg: var(--yellow-3);
+    --area-border: var(--yellow-4);
+    --area-padding: 1rem 1.5rem;
+
+    --border-color: var(--yellow-1);
+
+    --text-color: var(--black);
+    --link-color-hover: var(--yellow-2);
+
+    --thumbnail-1: var(--yellow-5);
+    --thumbnail-2: var(--green-1, #000);
+
+    --grid: linear-gradient(transparent, #fff 70%),
+        fixed repeating-linear-gradient(#efefef,
+            #efefef 1px,
+            transparent 1px,
+            transparent 40px),
+        fixed repeating-linear-gradient(to right,
+            #efefef,
+            #efefef 1px,
+            transparent 1px,
+            transparent 40px) #fff;
+}
