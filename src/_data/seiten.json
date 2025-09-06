@@ -1,11 +1,11 @@
 [
   {
-    "name": "Navigationstest für Screenreader",
-    "url": "navigation-1.html"
+    "name": "Modernes Layout 1",
+    "url": "modernes-layout-1.html"
   },
   {
-    "name": "Accessible Name für Screenreader",
-    "url": "accessible-name.html"
+    "name": "Modernes Layout 2",
+    "url": "modernes-layout-2.html"
   },
   {
     "name": "Einfacher Zweispalter mit Container Queries",
@@ -28,7 +28,11 @@
     "url": "testlayout-3.html"
   },
   {
-    "name": "Modernes Layout 1",
-    "url": "modernes-layout-1.html"
+    "name": "Navigationstest für Screenreader",
+    "url": "navigation-1.html"
+  },
+  {
+    "name": "Accessible Name für Screenreader",
+    "url": "accessible-name.html"
   }
 ]

@@ -1,0 +1,37 @@
+---
+title: modernes Layout 2
+layout: simple-1.njk
+permalink: modernes-layout-2.html
+css:
+    - modernes-layout-vars
+    - modernes-layout-reset
+    - modernes-layout-1
+    - modernes-layout-2
+---
+
+{% nav %}
+<main class="content">
+  <h1>{{ lorem.headline1 }}</h1>
+  <p>{{ lorem.para3 }}</p>
+  <div class="post-thumbnails">
+    {% thumbnail %}
+    {% thumbnail %}
+    {% thumbnail %}
+  </div>
+</main>
+<aside class="sidebar">
+  <h2>Abseitiges</h2>
+  <div class="post-thumbnails">
+    {% thumbnail %}
+    {% thumbnail %}
+    {% thumbnail %}
+    {% thumbnail %}
+    {% thumbnail %}
+  </div>
+</aside>
+<aside class="extra">
+  <p>{{ lorem.para1 }}</p>
+  <p>{{ lorem.para2 }}</p>
+  <p>{{ lorem.para3 }}</p>
+</aside>
+<footer class="site-footer">Footer</footer>
