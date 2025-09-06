@@ -1,16 +1,9 @@
 ---
-layout: block-1.njk
-title: "My index-page"
+layout: simple-1.njk
+title: My index-page
 permalink: index-2.html
 css:
   - base
 ---
-{%- import '../_includes/macros.njk' as component -%}
-{% block content %}
 
-{{ component.h({
-  level: 2,
-  text: "What a great headline"
-}) }}
-
-{% endblock %}
+<h2>What a great headline</h2>

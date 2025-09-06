@@ -1,6 +1,6 @@
 ---
 layout: simple-1.njk
-title: "Navigationstest für Screenreader"
+title: Navigationstest für Screenreader
 permalink: navigation-1.html
 css:
   - base
@@ -9,47 +9,64 @@ css:
   - utilities
 ---
 
-<p class="hint">Ein einfaches Menü in einem <code>nav</code>-Element.</p>
+<p class="hint">Ein einfaches Menü in einem
+    <code>nav</code>-Element.</p>
 <nav>
     <ul class="navbar">
         {% for i in navigationTest %}
-            <li><a href="{{ i.url }}">{{ i.name }}</a></li>
+            <li>
+                <a href="{{ i.url }}">{{ i.name }}</a>
+            </li>
         {% endfor %}
     </ul>
 </nav>
-
-<p class="hint">Das Listenelement bekommt die Rolle <code>menuitem</code>.</p>
+<p class="hint">Das Listenelement bekommt die Rolle
+    <code>menuitem</code>.</p>
 <nav>
     <ul class="navbar">
         {% for i in navigationTest %}
-            <li role="menuitem"><a href="{{ i.url }}">{{ i.name }}</a></li>
+            <li role="menuitem">
+                <a href="{{ i.url }}">{{ i.name }}</a>
+            </li>
         {% endfor %}
     </ul>
 </nav>
-
-<p class="hint">Das Listenelement bekommt die Rolle <code>menuitem</code> und die Liste die Rolle <code>menu</code>.</p>
+<p class="hint">Das Listenelement bekommt die Rolle
+    <code>menuitem</code>
+    und die Liste die Rolle
+    <code>menu</code>.</p>
 <nav>
     <ul class="navbar" role="menu">
         {% for i in navigationTest %}
-            <li role="menuitem"><a href="{{ i.url }}">{{ i.name }}</a></li>
+            <li role="menuitem">
+                <a href="{{ i.url }}">{{ i.name }}</a>
+            </li>
         {% endfor %}
     </ul>
 </nav>
-
-<p class="hint">Der Link bekommt die Rolle <code>menuitem</code> und die Liste die Rolle <code>menu</code>. Das Listenelement wird mittels <code>role="presentation"</code> für Screenreader unsichtbar gemacht.</p>
+<p class="hint">Der Link bekommt die Rolle
+    <code>menuitem</code>
+    und die Liste die Rolle
+    <code>menu</code>. Das Listenelement wird mittels
+    <code>role="presentation"</code>
+    für Screenreader unsichtbar gemacht.</p>
 <nav>
     <ul class="navbar" role="menu">
         {% for i in navigationTest %}
-            <li role="presentation"><a href="{{ i.url }}" role="menuitem">{{ i.name }}</a></li>
+            <li role="presentation">
+                <a href="{{ i.url }}" role="menuitem">{{ i.name }}</a>
+            </li>
         {% endfor %}
     </ul>
 </nav>
-
-<p class="hint">Ein einfaches Menü in einem <code>nav</code>-Element. Hier bekommt der Link zusätzlich ein title-Attribut.</p>
+<p class="hint">Ein einfaches Menü in einem
+    <code>nav</code>-Element. Hier bekommt der Link zusätzlich ein title-Attribut.</p>
 <nav>
     <ul class="navbar">
         {% for i in navigationTest %}
-            <li><a href="{{ i.url }}" title="{{ i.name }}">{{ i.name }}</a></li>
+            <li>
+                <a href="{{ i.url }}" title="{{ i.name }}">{{ i.name }}</a>
+            </li>
         {% endfor %}
     </ul>
 </nav>

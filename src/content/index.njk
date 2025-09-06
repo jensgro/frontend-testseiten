@@ -1,18 +1,16 @@
 ---
-title: "Übersicht der Testseiten"
+title: Übersicht der Testseiten
 permalink: index.html
+layout: simple-2.njk
 css:
   - base
   - indexlist
 ---
-{%- import '../_includes/macros.njk' as component -%}
-{% extends "layouts/block-1.njk" %}
-{% block content %}
 
- <ol class="indexlist">
-    {% for i in seiten %}
-        <li><a href="{{ i.url }}">{{ i.name }}</a></li>
-    {% endfor %}
+<ol class="indexlist">
+  {% for i in seiten %}
+    <li>
+      <a href="{{ i.url }}">{{ i.name }}</a>
+    </li>
+  {% endfor %}
 </ol>
-
-{% endblock %}

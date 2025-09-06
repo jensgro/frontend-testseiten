@@ -1,22 +1,21 @@
 ---
 layout: simple-2.njk
 title: Card-Testseite
-permalink: /card.html
+permalink: card.html
 bodyClass: page
 css:
     - main
 ---
 
-
 {% for image in images %}
-{% if (loop.index <= 5) %}
-    <div class="card">
-        <header class="card__head">
-            <h3>{{image.headline}}</h3>
-        </header>
-        <div class="card__content">
-            <img src="{{ image.filename }}" />
+    {% if (loop.index <= 5) %}
+        <div class="card">
+            <header class="card__head">
+                <h3>{{ image.headline }}</h3>
+            </header>
+            <div class="card__content">
+                <img src="{{ image.filename }}"/>
+            </div>
         </div>
-    </div>
-{% endif %}
+    {% endif %}
 {% endfor %}
