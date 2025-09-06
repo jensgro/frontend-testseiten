@@ -1,4 +1,4 @@
-@layer container, grid, simpleteaser, demo;
+@layer container, grid, simpleteaser, simpleteasergrid, demo;
 
 @layer demo {
     * {
@@ -25,6 +25,12 @@
         border: 1px solid var(--area-border);
         margin-bottom: 20px;
     }
+
+    h1,
+    main {
+        max-width: 90%;
+        margin: 20px auto;
+    }
 }
 
 @layer container {
@@ -36,7 +42,7 @@
 }
 
 @layer grid {
-    .test-1 {
+    .test {
         display: grid;
         gap: var(--area-gap);
     }
@@ -47,13 +53,17 @@
         }
 
     }
+}
 
-    @media screen and (min-width: 1000px) {
-        .test-1 {
-            grid-template-columns: repeat(3, 1fr);
-        }
-
+@xlayer grid {
+    .test-1 {
+        display: grid;
+        gap: var(--area-gap);
     }
+
+
+
+
 
     .test-2 {
         display: grid;
@@ -62,7 +72,7 @@
     }
 }
 
-@layer simpleteaser {
+@xlayer simpleteaser {
     .simpleteaser {
         display: grid;
         grid-template-columns: 100px 1fr;
@@ -91,5 +101,70 @@
         .simpleteaser h2 {
             font-size: 1.25rem;
         }
+    }
+}
+
+@layer simpleteaser {
+    .simpleteaser {
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        gap: var(--area-gap);
+
+        border: 1px solid var(--border-color);
+        padding: 10px;
+        background-color: var(--thumbnail-1);
+        color: var(--text-color);
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+
+    }
+
+    .simpleteaser img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 4px;
+        object-fit: cover;
+    }
+
+    .simpleteaser:hover {
+        background-color: var(--thumbnail-2);
+        color: #fff;
+    }
+
+    .simpleteaser a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .simpleteaser a:hover {
+        text-decoration: underline;
+    }
+
+    @media screen and (min-width: 800px) {
+        .simpleteaser {
+            grid-template-columns: 1fr;
+        }
+
+        .simpleteaser img {
+            border-radius: 8px;
+            width: 200px;
+        }
+    }
+}
+
+@layer simpleteasergrid {
+
+    @media screen and (min-width: 800px) {
+        .test-1 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media screen and (min-width: 1000px) {
+        .test-1 {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
     }
 }
