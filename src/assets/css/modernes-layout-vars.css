@@ -14,6 +14,7 @@
     --area-bg: var(--yellow-3);
     --area-border: var(--yellow-4);
     --area-padding: 1rem 1.5rem;
+    --area-gap: 20px;
 
     --border-color: var(--yellow-1);
 

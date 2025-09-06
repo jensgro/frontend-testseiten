@@ -6,6 +6,8 @@ const selectBundeslaender = require('./select-bundeslaender/index.js');
 const blockquote = require('./blockquote/index.js');
 const blockquoteSimple = require('./blockquote-simple/index.js');
 const thumbnail = require('./placeholder/thumbnail.js');
+const imageSimple = require('./placeholder/imageSimple.js');
+const simpleteaser = require('./teaser/simpleteaser.js');
 
 module.exports = {
     card,
@@ -15,5 +17,7 @@ module.exports = {
     blockquoteSimple,
     nav,
     selectBundeslaender,
-    thumbnail
+    thumbnail,
+    imageSimple,
+    simpleteaser
 };

@@ -8,7 +8,9 @@ const {
   selectBundeslaender,
   blockquote,
   blockquoteSimple,
-  thumbnail
+  thumbnail,
+  imageSimple,
+  simpleteaser
 } = require(configPath + 'shortcodes/index.js');
 
 module.exports = (eleventyConfig) => {
@@ -35,6 +37,8 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addShortcode("blockquote", blockquote);
   eleventyConfig.addShortcode("blockquoteSimple", blockquoteSimple);
   eleventyConfig.addShortcode("thumbnail", thumbnail);
+  eleventyConfig.addShortcode("imageSimple", imageSimple);
+  eleventyConfig.addShortcode("simpleteaser", simpleteaser);
 
   return {
     templateFormats: [

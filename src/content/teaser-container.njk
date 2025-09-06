@@ -1,0 +1,27 @@
+---
+title: Teaser mit Container Queries
+layout: simple-2.njk
+permalink: teaser-container.html
+css:
+    - modernes-layout-vars
+    - simpleteaser
+---
+
+<main>
+  <div class="test test-1">
+    {% simpleteaser lorem.headline1, lorem.para1, "1x1-200.png", 200, 200 %}
+    {% simpleteaser lorem.headline2, lorem.para1, "1x1-200.png", 200, 200 %}
+    {% simpleteaser lorem.headline2, lorem.para1, "1x1-200.png", 200, 200 %}
+    {% simpleteaser lorem.headline3, lorem.para1, "1x1-200.png", 200, 200 %}
+    {% simpleteaser lorem.headline4, lorem.para1, "1x1-200.png", 200, 200 %}
+  </div>
+  <div class="test test-2">
+    {% simpleteaser lorem.headline5, lorem.para1, "1x1-200.png", 200, 200 %}
+    {% simpleteaser lorem.headline6, lorem.para1, "1x1-200.png", 200, 200 %}
+    {% simpleteaser lorem.headline7, lorem.para1, "1x1-200.png", 200, 200 %}
+    {% simpleteaser lorem.headline8, lorem.para1, "1x1-200.png", 200, 200 %}
+    {% simpleteaser lorem.headline9, lorem.para1, "1x1-200.png", 200, 200 %}
+    {% simpleteaser lorem.headline10, lorem.para1, "1x1-200.png", 200, 200 %}
+    {% simpleteaser lorem.headline1, lorem.para1, "1x1-200.png", 200, 200 %}
+  </div>
+</main>
