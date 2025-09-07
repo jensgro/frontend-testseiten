@@ -5,7 +5,6 @@ permalink: modernes-layout-2.html
 css:
     - modernes-layout-vars
     - modernes-layout-reset
-    - modernes-layout-1
     - modernes-layout-2
 ---
 
@@ -22,11 +21,11 @@ css:
 <aside class="sidebar">
   <h2>Abseitiges</h2>
   <div class="post-thumbnails">
-    {% thumbnail %}
-    {% thumbnail %}
-    {% thumbnail %}
-    {% thumbnail %}
-    {% thumbnail %}
+    {% blockquote lorem.zitat1.quote, lorem.zitat1.author %}
+    {% blockquote lorem.zitat2.quote, lorem.zitat2.author %}
+    {% blockquote lorem.zitat3.quote, lorem.zitat3.author %}
+    {% blockquote lorem.zitat4.quote, lorem.zitat4.author %}
+    {% blockquote lorem.zitat5.quote, lorem.zitat5.author %}
   </div>
 </aside>
 <aside class="extra">

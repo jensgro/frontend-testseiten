@@ -1,0 +1,186 @@
+@layer quote, sidebarcrowded, base, grid, areas, header, thumbnails;
+
+@layer base {
+    body {
+        font-family: system-ui, sans-serif;
+        font-size: 1rem;
+        line-height: 1.7;
+        color: var(--text-color);
+        border-top: 6px solid var(--border-color);
+        /* background: fixed var(--grid); */
+        padding: 2rem 3rem;
+        margin: 0 auto;
+        max-inline-size: 1500px;
+        min-height: 100vh;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        line-height: 1.5;
+        margin-block: 0 0.25em;
+    }
+
+    h2 {
+        font-size: 1.15rem;
+        line-height: 1.5;
+        margin-block: 0 0.5em;
+    }
+
+    p:not(:last-child) {
+        margin-block: 0 1em;
+    }
+}
+
+@layer grid {
+    body {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto 1fr auto auto;
+        grid-template-areas:
+            "header header header header"
+            "main main main sidebar"
+            "extra extra extra extra"
+            "footer footer footer footer";
+        gap: 1rem;
+    }
+
+    .site-header {
+        grid-area: header;
+    }
+
+    .content {
+        grid-area: main;
+    }
+
+    .sidebar {
+        grid-area: sidebar;
+    }
+
+    .site-footer {
+        grid-area: footer;
+    }
+
+    .extra {
+        grid-area: extra;
+    }
+}
+
+@layer areas {
+
+    .site-header,
+    .site-footer,
+    .content,
+    .sidebar,
+    .extra {
+        padding: var(--area-padding);
+        background-color: var(--area-bg);
+        border: 1px solid var(--area-border);
+    }
+}
+
+/* === Header Styles ======== */
+@layer header {
+    .site-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+
+    .site-nav-toggle {
+        font-size: 2rem;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .site-nav {
+        justify-content: flex-end;
+        gap: 1.25rem;
+        display: none;
+    }
+
+    @media (width >=780px) {
+        .site-nav-toggle {
+            display: none;
+        }
+
+        .site-nav {
+            display: flex;
+        }
+    }
+
+    .site-nav a {
+        font-weight: 500;
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .site-nav a:hover,
+    .site-nav-toggle:hover {
+        color: var(--link-color-hover);
+    }
+
+    .site-nav a:focus-visible,
+    .site-nav-toggle:focus-visible {
+        color: var(--link-color-hover);
+        outline: 2px dotted var(--link-color-hover);
+        outline-offset: 0.25em;
+    }
+}
+
+/* ========= Thumbnails ========= */
+@layer thumbnails {
+    .post-thumbnails {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .thumbnail {
+        flex: 1;
+        aspect-ratio: 1 / 0.5;
+        background-color: var(--thumbnail-1);
+    }
+}
+
+@layer quote {
+    .blockquote {
+        border-left: 4px solid #ccc;
+        padding-left: 1rem;
+        margin: 1rem 0;
+    }
+
+    .blockquote figcaption {
+        font-size: 0.875rem;
+        color: #666;
+        margin-top: 0.5rem;
+    }
+}
+
+@layer sidebarcrowded {
+
+    /*
+        Wenn in der Sidebar mindestens drei Blockzitate vorhanden sind,
+        wird das Layout entsprechend angepasst.
+        Für die Sidebar wird der Platzbedarf erhöht.
+        Die Regeln der Sidebar kommen später.
+    */
+    body:has(.sidebar .blockquote:nth-last-child(n+4)) {
+        grid-template-areas:
+            "header header header header"
+            "main main main main"
+            "sidebar sidebar sidebar sidebar"
+            "extra extra extra extra"
+            "footer footer footer footer";
+    }
+}
+
+
+@xlayer sidebarcrowded {
+    .sidebar:has(.blockquote:nth-last-child(n+3)) {}
+}

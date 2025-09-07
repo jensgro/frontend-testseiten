@@ -9,6 +9,15 @@ html {
 
 html,
 body {
-    margin: 0;
     padding: 0;
+}
+
+blockquote,
+figure {
+    margin: 0;
+}
+
+figcaption p,
+blockquote p {
+    margin: 0;
 }
