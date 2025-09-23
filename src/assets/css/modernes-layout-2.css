@@ -1,4 +1,4 @@
-@layer quote, sidebarcrowded, base, grid, areas, header, thumbnails;
+@layer quote, grid, base, areas, header, thumbnails, sidebarcrowded;
 
 @layer base {
     body {
@@ -138,20 +138,30 @@
 @layer thumbnails {
     .post-thumbnails {
         display: flex;
+        flex-wrap: wrap;
         gap: 1rem;
     }
 
     .thumbnail {
-        flex: 1;
-        aspect-ratio: 1 / 0.5;
+        flex: 1 1 auto;
+        height: 100px;
+        border-radius: 4px;
+        border: 1px solid var(--border-color);
         background-color: var(--thumbnail-1);
     }
 }
 
 @layer quote {
+    .post-blockquotes {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
     .blockquote {
-        border-left: 4px solid #ccc;
-        padding-left: 1rem;
+        flex: 1;
+        background-color: var(--thumbnail-1);
+        padding: 10px;
         margin: 1rem 0;
     }
 
@@ -170,6 +180,8 @@
         Für die Sidebar wird der Platzbedarf erhöht.
         Die Regeln der Sidebar kommen später.
     */
+    /* Die Reihenfolge der Layer am Dateibeginn ist wichtig! */
+
     body:has(.sidebar .blockquote:nth-last-child(n+4)) {
         grid-template-areas:
             "header header header header"
@@ -178,9 +190,44 @@
             "extra extra extra extra"
             "footer footer footer footer";
     }
-}
 
+    /* v1 - Flexbox */
+    /* .post-blockquotes:has(.blockquote:nth-last-child(n+4)) {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
 
-@xlayer sidebarcrowded {
-    .sidebar:has(.blockquote:nth-last-child(n+3)) {}
+        .post-blockquotes:has(.blockquote:nth-last-child(n+4)) .blockquote {
+            flex: 1 1 20%;
+            max-width: 320px;
+        } */
+
+    /* ======================== */
+    /* v2 - CSS Grid */
+    /* .post-blockquotes:has(.blockquote:nth-last-child(n+4)) {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+    }
+
+    .post-blockquotes:has(.blockquote:nth-last-child(n+4)) .blockquote {
+        max-width: none;
+    } */
+
+    /* ======================== */
+    /* v3 - CSS Grid */
+    /* .post-blockquotes:has(.blockquote:nth-last-child(n+4)) {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 320px);
+        gap: 10px;
+    } */
+
+    /* ======================== */
+    /* v4 - CSS Grid */
+    .post-blockquotes:has(.blockquote:nth-last-child(n+4)) {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 10px;
+    }
+
 }

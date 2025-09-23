@@ -1,5 +1,5 @@
-const teaser = (headline, para) => {
-    return `<div class="teaser">
+const teaser = (headline, para, className) => {
+    return `<div class="teaser ${className}">
         <div class="teaser__image">
             <svg class="placeholder" xmlns="http://www.w3.org/2000/svg">
                 <rect/>
