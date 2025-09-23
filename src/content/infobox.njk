@@ -1,0 +1,42 @@
+---
+layout: simple-2.njk
+title: Infobox und ARIA
+permalink: infobox.html
+css:
+  - base
+  - normalizeme
+---
+
+<h2>Versuch, auf Rollen zu verzichten</h2>
+<div class="panel-group info-box-collapsable-wrapper news-sources-group" id="news-sources-accordion">
+  <div class="panel info-box info-box-collapsable news-source" id="news-source-1">
+    <div class="panel-heading news-source-heading" id="news-source-heading-1">
+      <h3 class="panel-title news-source-title">
+        <button
+          class=""
+          data-toggle="collapse"
+          data-target="#news-source-collapse-1"
+          aria-expanded="true"
+          aria-controls="news-source-collapse-1">Südwestrundfunk (SWR)<svg xmlns="http://www.w3.org/2000/svg" role="presentation" aria-hidden="true" focusable="false" class="icon-info">
+            <use
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              xlink:href="/assets/images/swr/symbols.svg?dc536dadf3810aab44b67a88b1b58be8#info"></use>
+          </svg>
+        </button>
+      </h3>
+    </div>
+    <div
+      id="news-source-collapse-1"
+      class="panel-collapse news-source-collapse collapse show"
+      aria-labelledby="#news-source-heading-1">
+      <div class="panel-body info-box-content news-source-body">
+        <p class="news-source-description">Die Informationen stammen aus Recherchen des SWR: beispielsweise aus den Studios, den
+          Fachredaktionen, dem ARD-Hauptstadtstudio oder von Auslandskorrespondentinnen und -korrespondenten.
+        </p>
+        <div class="news-source-url">
+          <a href="https://www.swr.de/index.html" class="link">Zur Website</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

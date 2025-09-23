@@ -42,5 +42,9 @@
   {
     "name": "Accessible Name für Screenreader",
     "url": "accessible-name.html"
+  },
+  {
+    "name": "Infobox und ARIA",
+    "url": "infobox.html"
   }
 ]
