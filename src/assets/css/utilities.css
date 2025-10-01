@@ -5,6 +5,18 @@
     width: fit-content;
 }
 
+.max400 {
+    max-width: 400px;
+}
+
 .max600 {
     max-width: 600px;
+}
+
+.max800 {
+    max-width: 800px;
+}
+
+.max1000 {
+    max-width: 1000px;
 }
