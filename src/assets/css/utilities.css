@@ -4,3 +4,7 @@
     margin-block: 40px 20px;
     width: fit-content;
 }
+
+.max600 {
+    max-width: 600px;
+}
