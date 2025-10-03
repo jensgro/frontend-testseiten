@@ -1,4 +1,4 @@
-@layer container, grid, teasergrid, components, demo, myContainerTests;
+@layer container, grid, teasergrid, components, demo, myContainerTests, utilities;
 
 @layer demo {
     * {
@@ -176,3 +176,22 @@
 
     .test-teaser-3 {}
 } */
+
+@layer utilities {
+    [data-container] {
+        position: relative;
+    }
+
+    [data-width]::before {
+        content: attr(data-width);
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.7);
+        color: #fff;
+        font-size: 14px;
+        padding: 2px 4px;
+        border-bottom-left-radius: 4px;
+        z-index: 10;
+    }
+}
