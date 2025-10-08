@@ -1,0 +1,33 @@
+.teaser-wrapper {
+    display: grid;
+    gap: 20px;
+}
+
+.teaser-item {
+    border: 1px solid #ccc;
+    padding: 20px;
+    padding-top: 0;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.teaser-item:has(img) {
+    border-color: #007BFF;
+    background-color: #E6F0FF;
+
+    h2 {
+        color: #28A745;
+
+        margin-top: 0;
+        padding: 20px;
+        background-color: #E6FFED;
+        border-bottom: 1px solid #ccc;
+        border-radius: 8px 8px 0 0;
+        margin-inline: -20px;
+    }
+}
+
+.teaser-item:has(a):not(:has(img)) {
+    border-color: #28A745;
+    background-color: #E6FFED;
+}

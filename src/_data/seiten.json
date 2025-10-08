@@ -46,5 +46,9 @@
   {
     "name": "Infobox und ARIA",
     "url": "infobox.html"
+  },
+  {
+    "name": "has()-Selector",
+    "url": "has-selector.html"
   }
 ]
