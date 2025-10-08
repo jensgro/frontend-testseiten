@@ -1,0 +1,15 @@
+.card {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 1rem;
+    border: 3px solid;
+    margin-bottom: 20px;
+}
+
+.card>img {
+    width: 100%;
+    /* without the 0 here, it will grow if the text is long enough, but never shrink smaller */
+    height: 0px;
+    min-height: 100%;
+    object-fit: cover;
+}

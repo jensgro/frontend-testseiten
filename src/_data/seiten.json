@@ -5,6 +5,10 @@
       "url": "has-selector.html"
     },
     {
+      "name": "Ein einfacher Theme-Switcher",
+      "url": "simple-theme-switcher.html"
+    },
+    {
       "name": "Die zweite Reihe selektieren",
       "url": "select-2nd-row.html"
     },
@@ -15,10 +19,6 @@
     {
       "name": "Letzte Reihe selektieren",
       "url": "select-last-row.html"
-    },
-    {
-      "name": "Ein einfacher Theme-Switcher",
-      "url": "simple-theme-switcher.html"
     }
   ],
   "layouts": [
@@ -67,6 +67,10 @@
   {
     "name": "Komponentenansammlung",
     "url": "testlayout-3.html"
+  },
+  {
+    "name": "Anpassbare Bilderhöhe",
+    "url": "anpassbare-bilderhoehe.html"
   }],
   "accessibility": [
   {
