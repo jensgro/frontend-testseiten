@@ -50,5 +50,9 @@
   {
     "name": "has()-Selector",
     "url": "has-selector.html"
+  },
+  {
+    "name": "Die zweite Reihe selektieren",
+    "url": "select-2nd-row.html"
   }
 ]
