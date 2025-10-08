@@ -15,6 +15,10 @@
     {
       "name": "Letzte Reihe selektieren",
       "url": "select-last-row.html"
+    },
+    {
+      "name": "Ein einfacher Theme-Switcher",
+      "url": "simple-theme-switcher.html"
     }
   ],
   "layouts": [

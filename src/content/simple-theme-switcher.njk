@@ -1,0 +1,48 @@
+---
+layout: simple-2.njk
+title: Ein einfacher Theme-Switcher
+permalink: simple-theme-switcher.html
+css:
+  - base
+  - normalizeme
+  - simple-theme-switcher
+---
+
+<div class="wrapper">
+  <div class="alert">
+    <p>Your browser doesn't support CSS :has. Please view it in Safari 15.4 or the latest Chrome Canary.</p>
+  </div>
+</div>
+<div style="margin-bottom: 1.5rem;">
+  <label for="">Select theme</label>
+  <select name="" id="themeSwitcher">
+    <option value="default">Default</option>
+    <option value="blueish">blueish</option>
+  </select>
+</div>
+<header>
+  <a class="logo" href="#">Logo</a>
+  <nav>
+    <ul class="main-nav">
+      <li>
+        <a href="#">Home</a>
+      </li>
+      <li>
+        <a href="#">About</a>
+      </li>
+      <li>
+        <a href="#">Profile</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+<div class="prose">
+  <h2>This is a basic title just for the sake of testing</h2>
+  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit ducimus cu!</p>
+  <h3>Sub title in there</h3>
+  <p>CSS :has is cool, isn't it?</p>
+  <h2>Quelle</h2>
+  <p>
+    <a href="https://codepen.io/shadeed/pen/OJzoxgo" target="_blank">Codepen</a>
+    von Ahmad Shadeed.</p>
+</div>
