@@ -1,0 +1,76 @@
+.grid {
+    display: grid;
+
+    resize: horizontal;
+        overflow: hidden;
+    container-type: inline-size;
+
+    /* the gap + minimum size in the minmax() is important,
+     they can be any number, but it's used for the math below */
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+    /* for demo purposes so I didn't have to make more queries */
+    max-inline-size: 1200px;
+    margin-inline: auto;
+}
+
+.grid>* {
+    /* because minmax(200px, 1fr), once there is 400px of space,
+     plus 1rem for the gap, we'll have 2 colunms... so if it's
+     smaller than that, we know we have 1 column. */
+
+    /* 400px -> 600px wide (plus the associated gaps) === 3 columns */
+    @container (calc(400px + 1rem) <= width < calc(600px + 2rem)) {
+        &:nth-child(2n) {
+            background: hotpink;
+        }
+    }
+ 
+    /* 600px -> 800px wide (plus the associated gaps) === 4 columns */
+    @container (calc(600px + 2rem) <= width < calc(800px + 3rem)) {
+        &:nth-child(3n) {
+            background: hotpink;
+        }
+    }
+
+    /* 800px -> 1000px wide (plus the associated gaps) === 4 columns */
+    @container (calc(800px + 3rem) <= width < calc(1000px + 4rem)) {
+        &:nth-child(4n) {
+            background: hotpink;
+        }
+    }
+
+    /* 1000px -> 1200px wide (plus the associated gaps) === 4 columns */
+    @container (calc(1000px + 4rem) <= width < calc(1200px + 5rem)) {
+        &:nth-child(5n) {
+            background: hotpink;
+        }
+
+        /* easy to select any column */
+        &:nth-child(5n - 2) {
+            background: orange;
+        }
+    }
+}
+
+/* visualization */
+body {
+    margin: 0 2rem;
+    font-family: system-ui;
+    text-align: center;
+    width: unset;
+}
+
+.grid {
+    border: 2px dotted;
+    padding: 1rem;
+    margin-block: 1rem;
+}
+
+.grid>* {
+    padding: 1rem;
+    background: dodgerblue;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px hsl(0 0 0 / 0.2);
+}

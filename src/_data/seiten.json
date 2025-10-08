@@ -54,5 +54,9 @@
   {
     "name": "Die zweite Reihe selektieren",
     "url": "select-2nd-row.html"
+  },
+  {
+    "name": "Eine bestimmte Spalte selektieren",
+    "url": "select-specific-col.html"
   }
 ]
