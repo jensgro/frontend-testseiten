@@ -7,10 +7,35 @@ css:
   - indexlist
 ---
 
+<h2>Layout-Testseiten</h2>
 <ol class="indexlist">
-  {% for i in seiten %}
+  {% for i in seiten.layouts %}
     <li>
-      <a href="{{ i.url }}">{{ i.name }}</a>
+      <a href="{{ i.url }}" target="_blank">{{ i.name }}</a>
     </li>
   {% endfor %}
 </ol>
+<h2>Selektoren</h2>
+<ol class="indexlist">
+  {% for i in seiten.selektoren %}
+    <li>
+      <a href="{{ i.url }}" target="_blank">{{ i.name }}</a>
+    </li>
+  {% endfor %}
+</ol>
+{# <h2>Accessibility</h2>
+<ol class="indexlist">
+  {% for i in seiten.accessibility %}
+    <li>
+      <a href="{{ i.url }}" target="_blank">{{ i.name }}</a>
+    </li>
+  {% endfor %}
+</ol>
+<h2>Sonstige Testseiten</h2>
+<ol class="indexlist">
+  {% for i in seiten.testseiten %}
+    <li>
+      <a href="{{ i.url }}" target="_blank">{{ i.name }}</a>
+    </li>
+  {% endfor %}
+</ol> #}

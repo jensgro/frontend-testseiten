@@ -1,20 +1,49 @@
-[
-  {
-    "name": "Modernes Layout 1",
-    "url": "modernes-layout-1.html"
-  },
-  {
-    "name": "Modernes Layout 2",
-    "url": "modernes-layout-2.html"
-  },
-  {
-    "name": "Einfacher Zweispalter mit Container Queries",
-    "url": "einfacher-zweispalter-container-queries.html"
-  },
-  {
-    "name": "Einfacher Zweispalter",
-    "url": "einfacher-zweispalter.html"
-  },
+{
+  "selektoren": [
+    {
+      "name": "has()-Selector",
+      "url": "has-selector.html"
+    },
+    {
+      "name": "Die zweite Reihe selektieren",
+      "url": "select-2nd-row.html"
+    },
+    {
+      "name": "Eine bestimmte Spalte selektieren",
+      "url": "select-specific-col.html"
+    },
+    {
+      "name": "Letzte Reihe selektieren",
+      "url": "select-last-row.html"
+    }
+  ],
+  "layouts": [
+    {
+      "name": "Modernes Layout 1",
+      "url": "modernes-layout-1.html"
+    },
+    {
+      "name": "Modernes Layout 2",
+      "url": "modernes-layout-2.html"
+    },
+    {
+      "name": "Einfacher Zweispalter mit Container Queries",
+      "url": "einfacher-zweispalter-container-queries.html"
+    },
+    {
+      "name": "Einfacher Zweispalter",
+      "url": "einfacher-zweispalter.html"
+    },
+    {
+      "name": "Testseite für Layouts",
+      "url": "testlayout-1.html"
+    },
+    {
+      "name": "Testseite für Layouts 2",
+      "url": "testlayout-2.html"
+    }
+  ],
+  "testseiten": [
   {
     "name": "Testseite für Teaser",
     "url": "teaser-container.html"
@@ -34,7 +63,8 @@
   {
     "name": "Komponentenansammlung",
     "url": "testlayout-3.html"
-  },
+  }],
+  "accessibility": [
   {
     "name": "Navigationstest für Screenreader",
     "url": "navigation-1.html"
@@ -46,21 +76,6 @@
   {
     "name": "Infobox und ARIA",
     "url": "infobox.html"
-  },
-  {
-    "name": "has()-Selector",
-    "url": "has-selector.html"
-  },
-  {
-    "name": "Die zweite Reihe selektieren",
-    "url": "select-2nd-row.html"
-  },
-  {
-    "name": "Eine bestimmte Spalte selektieren",
-    "url": "select-specific-col.html"
-  },
-  {
-    "name": "Letzte Reihe selektieren",
-    "url": "select-last-row.html"
   }
 ]
+}
