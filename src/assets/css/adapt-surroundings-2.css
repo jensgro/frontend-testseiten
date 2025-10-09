@@ -1,0 +1,39 @@
+@layer grid-elements, thumbnail, grid-modification;
+
+
+@layer grid-elements {
+
+    .content {
+        height: unset;
+    }
+
+    .sidebar-1 {
+        background-color: var(--green-1);
+    }
+}
+
+@layer thumbnail {
+    .thumbnail {
+            aspect-ratio: 1 / 0.25;
+            margin-block-end: 1rem;
+            background-color: var(--thumbnail-1);
+        }
+}
+
+@layer grid-modification {
+
+    @media (width >=800px) {
+        /* Anpassung wenn in der linken Sidebar 2 Thumbnails sind und in der rechten nur eins */
+        .wrapper:has(.sidebar-1 .thumbnail:nth-child(-n + 2):last-child):has(.sidebar-2 .thumbnail:nth-child(1):last-child) {
+                grid-template-rows: auto 1fr auto;
+                grid-template-areas:
+                    "header header header header"
+                    "main main main sidebar-1"
+                    "main main main sidebar-2"
+                    "footer footer footer footer";
+        }
+        
+    }
+}
+
+

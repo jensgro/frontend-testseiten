@@ -1,0 +1,33 @@
+.teaser-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.teaser {
+    display: grid;
+    border: 1px solid black;
+    padding: 10px 20px;
+}
+
+.teaser-header {
+    display: flex;
+}
+
+.teaser :is(h2, h3) {
+    margin: 0;
+}
+
+.teaser-header:not(:has(.teaser-mark)) :is(h2, h3) {
+    text-align: center;
+}
+
+.teaser-mark {
+    background-color: black;
+    color: white;
+    padding: 6px 12px;
+    margin-top: -10px;
+    margin-right: -20px;
+    align-self: start;
+
+}

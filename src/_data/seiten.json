@@ -19,9 +19,24 @@
     {
       "name": "Letzte Reihe selektieren",
       "url": "select-last-row.html"
+    },
+    {
+      "name": "Content Aware",
+      "url": "content-aware.html"
     }
   ],
   "layouts": [
+    { "name": "Adapt Surroundings-1", 
+      "url": "adapt-surroundings-1.html" 
+    },
+    {
+      "name": "Adapt Surroundings 2",
+      "url": "adapt-surroundings-2.html"
+    },
+    {
+      "name": "Einfaches Layout 2",
+      "url": "einfaches-layout-2.html"
+    },
     {
       "name": "Modernes Layout 1",
       "url": "modernes-layout-1.html"

@@ -1,0 +1,104 @@
+@layer base, grid, grid-elements;
+
+/* ====================== */
+:root {
+    --yellow-1: #f1d23a;
+    --yellow-2: #b89900;
+    --yellow-3: #fbf4d6;
+    --yellow-4: #e7d586;
+    --yellow-5: #ffe566;
+
+    --green-1: darkkhaki;
+
+    --black: #101010;
+    --my-red: #a20000;
+
+    --area-bg: var(--yellow-3);
+    --area-border: var(--yellow-4);
+    --area-padding: 1rem 1.5rem;
+
+    --border-color: var(--yellow-1);
+
+    --text-color: var(--black);
+    --link-color-hover: var(--yellow-2);
+
+    --thumbnail-1: var(--yellow-5);
+    --thumbnail-2: var(--green-1, #000);
+
+    --height-1: 60px;
+    --height-2: 80px;
+    --height-3: 160px;
+    --height-4: 200px;
+}
+
+/* ================== */
+
+@layer grid {
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto 1fr auto auto;
+        grid-template-areas:
+            "header header header header"
+            "main main main main"
+            "sidebar-1 sidebar-1 sidebar-2 sidebar-2"
+            "footer footer footer footer";
+        gap: 1rem;
+    }
+
+    @media (width >=800px) {
+        .wrapper {
+            grid-template-rows: auto 1fr auto;
+            grid-template-areas:
+                "header header header header"
+                "sidebar-1 main main sidebar-2"
+                "footer footer footer footer";
+        }
+    }
+}
+
+@layer grid-elements {
+    .site-header {
+        grid-area: header;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        height: var(--height-2);
+    }
+
+    .content {
+        grid-area: main;
+        height: var(--height-4);
+    }
+
+    .sidebar-1 {
+        grid-area: sidebar-1;
+    }
+
+    .sidebar-2 {
+        grid-area: sidebar-2;
+    }
+
+    .site-footer {
+        grid-area: footer;
+    }
+
+    .site-header,
+    .site-footer,
+    .content,
+    .sidebar-1,
+    .sidebar-2 {
+        padding: var(--area-padding);
+        background-color: var(--area-bg);
+        border: 1px solid var(--area-border);
+    }
+
+    .sidebar-1 {
+        background-color: var(--yellow-1);
+    }
+
+    .sidebar-2 {
+        background-color: var(--yellow-2);
+    }
+}
