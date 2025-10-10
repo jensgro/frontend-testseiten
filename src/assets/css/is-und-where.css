@@ -1,0 +1,12 @@
+article :is(h1, h2, h3, h4) {
+    color: red;
+}
+
+section :where(h1, h2, h3, h4) {
+    color: green;
+}
+
+h2 {
+    color: blue;
+}
+

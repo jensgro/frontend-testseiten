@@ -23,6 +23,22 @@
     {
       "name": "Content Aware",
       "url": "content-aware.html"
+    },
+    {
+      "name": "Support für CSS",
+      "url": "support-fuer-css.html"
+    },
+    {
+      "name": "Baseline Status",
+      "url": "baseline-status.html"
+    },
+    {
+      "name": "Kitchen Sink",
+      "url": "kitchensink.html"
+    },
+    {
+      "name": ":is() und :where()",
+      "url": "is-und-where.html"
     }
   ],
   "layouts": [
@@ -86,7 +102,12 @@
   {
     "name": "Anpassbare Bilderhöhe",
     "url": "anpassbare-bilderhoehe.html"
-  }],
+  },
+  {
+    "name": "Baseline Status",
+    "url": "baseline-status.html"
+  }
+],
   "accessibility": [
   {
     "name": "Navigationstest für Screenreader",

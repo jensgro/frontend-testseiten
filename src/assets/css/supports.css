@@ -1,0 +1,95 @@
+/* === Basis ========= */
+body {
+    font-family: system-ui, sans-serif;
+    font-size: 24px;
+}
+
+main {
+    display: grid;
+    gap: 20px;
+}
+
+@media (min-width: 720px) {
+    main {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+div {
+    background: red;
+    color: #fff;
+    padding-block: 6px;
+    display: grid;
+    place-items: center;
+}
+
+/* =============================== */
+/* ============ Features ========= */
+/* =============================== */
+@media not all and (min-resolution: 0.001dpcm) {
+    .min-resolution {
+        background: lime;
+        color: #000;
+    }
+}
+
+@supports (-webkit-touch-callout: none) {
+    .check-ios {
+        background: lime;
+        color: #000;
+    }
+}
+
+main:has(div) .check-has {
+    background: lime;
+    color: #000;
+}
+
+@supports (display: flow-root) {
+    .check-flow-root {
+        background: lime;
+        color: #000;
+    }
+}
+
+@supports (accent-color: red) {
+    .accent-color {
+        background: lime;
+        color: #000;
+    }
+}
+
+@supports (anchor-name: none) {
+    .anchor-name {
+        background: lime;
+        color: #000;
+    }
+}
+
+@supports (container-name: test) {
+    .container-name {
+        background: lime;
+        color: #000;
+    }
+}
+
+@supports (appearance: base-select) {
+    .base-select {
+        background: lime;
+        color: #000;
+    }
+}
+
+@supports (hyphenate-limit-chars: 10) {
+    .hyphenate-limit-chars {
+        background: lime;
+        color: #000;
+    }
+}
+
+@supports (width: stretch) {
+    .width-stretch {
+        background: lime;
+        color: #000;
+    }
+}
