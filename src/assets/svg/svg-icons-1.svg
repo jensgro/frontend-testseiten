@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+    <symbol id="icon-minus" class="icon" viewBox="0 0 10 10">
+        <rect height="2" width="8" y="4" x="1" />
+    </symbol>
+
+    <symbol id="icon-star" class="icon" viewBox="0 0 10 10">
+        <path d="m7.4 8.8-2.4-1.3-2.4 1.3.46-2.7-2-1.9 2.7-.39 1.2-2.5 1.2 2.5 2.7.39-1.9 1.9z" />
+    </symbol>
+
+    <symbol id="icon-tick" class="icon" viewBox="0 0 10 10">
+        <path d="m7.5125 1.123 1.7321 1-4 6.9282-4.3301-2.5 1-1.7321 2.5981 1.5z" />
+    </symbol>
+
+    <symbol id="icon-cross" class="icon" viewBox="0 0 10 10">
+        <path d="m7.1 1.4 1.4 1.4-5.6 5.6-1.4-1.4zm-4.2 0l5.6 5.6-1.4 1.4-5.6-5.6z" />
+    </symbol>
+
+    <symbol id="icon-plus" class="icon" viewBox="0 0 10 10">
+        <path d="m1 4h8v2h-8zm3-3h2v8h-2z" />
+    </symbol>
+
+    <symbol id="icon-menu" class="icon" viewBox="0 0 10 10">
+        <path d="m1 7h8v2h-8zm0-3h8v2h-8zm0-3h8v2h-8z" />
+    </symbol>
+
+    <symbol id="icon-arrow-left" class="icon" viewBox="0 0 10 10">
+        <path d="m9 4h-4v-2l-4 3 4 3v-2h4z" />
+    </symbol>
+
+    <symbol id="icon-arrow-right" class="icon" viewBox="0 0 10 10">
+        <path d="m1 4h4v-2l4 3-4 3v-2h-4z" />
+    </symbol>
+
+    <symbol id="icon-arrow-left-2" class="icon" viewBox="0 0 10 10">
+        <path d="m9 4h-4v-2l-4 3 4 3v-2h4z" transform-origin="center" transform="rotate(180)" />
+    </symbol>
+
+    <symbol id="icon-arrow-up" class="icon" viewBox="0 0 10 10">
+        <path d="m5 1-3 4h2v4h2v-4h2z" />
+    </symbol>
+
+    <symbol id="icon-arrow-down" class="icon" viewBox="0 0 10 10">
+        <path d="m5 9-3-4h2v-4h2v4h2z" />
+    </symbol>
+
+    <symbol id="icon-arrow-up-2" class="icon" viewBox="0 0 10 10">
+        <path d="m5 9-3-4h2v-4h2v4h2z" transform-origin="center" transform="rotate(360)" />
+    </symbol>
+
+    <symbol id="icon-star2" class="icon" viewbox="0 0 600 600">
+        <polygon fill="#93111e" stroke="black" stroke-width="10"
+            points="350,75 379,161 469,161 397,215 423,301 350,250 277,301 303,215 231,161 321,161" />
+    </symbol>
+
+    <symbol id="icon-trend-up" class="icon" role="img" viewBox="0 0 24 24">
+        <path role="presentation"
+            d="M16.8 0l2.748 2.748-5.856 5.856-4.8-4.8L0 12.708 1.692 14.4l7.2-7.2 4.8 4.8 7.56-7.548L24 7.2V0" />
+    </symbol>
+
+    <symbol id="icon-thumbs-up" class="icon" viewBox="0 0 10 10">
+        <path
+            d="m2.8 1c-.7 0-.8.3-.7 1 .5 2.3-1 5.9.6 6.9h.4 4c.8 0 .8-1 .3-1.2.7-.4.4-1 .1-1.2.7-.3.5-1.1.1-1.3.3-.1.5-.3.5-.6 0-.4-.3-.7-.6-.7h-3.5c.1-2-.6-2.8-1.2-2.9z" />
+    </symbol>
+
+    <symbol id="icon-thumbs-down" class="icon" viewBox="0 0 10 10">
+        <path
+            d="m2.8 8.9c-.7 0-.8-.3-.7-1 .5-2.3-.9-6.5.6-6.9h.4 4c.8 0 .8 1 .3 1.2.7.4.4 1 .1 1.2.7.3.5 1.1.1 1.3.3.1.5.3.5.6 0 .4-.3.7-.6.7h-3.5c.1 2-.6 2.8-1.2 2.9z" />
+    </symbol>
+
+    <symbol id="icon-warning" class="icon" viewBox="0 0 10 10">
+        <path
+            d="m5 1-4 8h8zm-.36 2.6h.7v3h-.7v-2.8594zm.36 3.4c.4 0 .5.3.5.6-.1.3-.4.45-.63.4-.27-.1-.47-.4-.37-.63.07-.17.20-.37.50-.37z" />
+    </symbol>
+
+    <symbol id="icon-eye" class="icon" viewBox="0 0 32 32" stroke-linecap="round">
+        <path d="M4,16 C9,28 23,28 28,16" stroke-width="3" />
+        <path d="M4,16 C9,4 23,4 28,16" stroke-width="3" />
+        <circle cx="16" cy="16" r="4.5" stroke-width="5" />
+    </symbol>
+
+    <symbol id="icon-home" class="icon" viewBox="0 0 512 512">
+        <path
+            d="M512 295.222l-256-198.713-256 198.714v-81.019l256-198.713 256 198.714zM448 288v192h-128v-128h-128v128h-128v-192l192-144z">
+        </path>
+    </symbol>
+</svg>
