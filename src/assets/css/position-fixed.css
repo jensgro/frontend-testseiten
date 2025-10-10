@@ -1,0 +1,44 @@
+
+main {
+    max-width: 800px;
+    margin-inline: auto;
+}
+
+#playerbar {
+    --_spaceTopBottom: 8px;
+    --_playerbarCollapsedMaxHeight: 56px;
+    --_playerbarHeight: var(--_playerbarCollapsedMaxHeight);
+    --_playerbarMaxHeight: min(calc(100dvh - (var(--_spaceTopBottom) * 2)),
+            560px);
+
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: var(--_spaceTopBottom);
+
+    width: calc(100dvw - 8px - 8px);
+    max-width: 640px;
+    min-height: var(--_playerbarHeight);
+    max-height: var(--_playerbarMaxHeight);
+    z-index: 998;
+
+    background-color: #a20000;
+    color: #fff;
+    padding: 10px;
+    margin: 0 auto;
+    transition: all 0.3s ease-out;
+
+    cursor: pointer;
+}
+
+#playerbar:is(:hover, :focus) {
+    background-color: teal;
+}
+
+#playerbar.open {
+    height: 200px;
+    background-color: #fd8700;
+    color: #000;
+    display: grid;
+    place-items: center;
+}

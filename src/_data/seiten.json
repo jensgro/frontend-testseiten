@@ -110,6 +110,10 @@
   {
     "name": "Dialog-Testseite 1",
     "url": "dialog-1.html"
+  },
+  {
+    "name": "Position Fixed",
+    "url": "position-fixed.html"
   }
 ],
   "accessibility": [
