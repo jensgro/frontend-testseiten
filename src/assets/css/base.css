@@ -1,10 +1,19 @@
 :root {
     --space: 10px;
+    --space-2: 20px;
+    --space-3: 30px;
+    --padding: 1rem;
+
     --body-width: 80%;
     --box-shadow-1: 1px 1px 5px rgba(0,0,0,0.5);
 
     --lightgrey: #efefef;
     --myred: #a20000;
+    --eggshell: #e6e3d4;
+    --ash-grey: #b3cbb9;
+    --pearl: #ddd8b8;
+    --ultra-violet: #6a66a3;
+    --eminence: #542e71;
   }
 
 

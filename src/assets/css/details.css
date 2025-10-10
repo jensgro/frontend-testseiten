@@ -1,0 +1,98 @@
+
+@layer presentation, details-base-styles, animated-content;
+
+@layer presentation {
+    :root {
+        --eggshell: #e6e3d4;
+        --ash-grey: #b3cbb9;
+        --pearl: #ddd8b8;
+        --ultra-violet: #6a66a3;
+        --eminence: #542e71;
+        --padding: 1rem;
+        /*     Allows us to animate to height: auto */
+        interpolate-size: allow-keywords;
+    }
+}
+
+@layer animated-content {
+    @supports selector(::details-content) {
+        ::details-content {
+            height: 0;
+            transition: padding-block 0.3s, height 0.3s ease,
+                content-visibility 0.3s ease allow-discrete;
+            overflow: clip;
+
+            /*  Content-visibility is key here, as this is a discrete property we can animate to show the details-content pseudo element. Remember that we allow-discrete properties to transition and that this should come last in the transition shorthand. */
+        }
+    }
+
+    details[open] {
+        summary {
+            border-bottom: 1px dashed var(--myred);
+
+            &::after {
+                transform: rotate(-180deg);
+            }
+        }
+
+        @supports selector(::details-content) {
+            &::details-content {
+                height: auto;
+            }
+        }
+    }
+}
+
+@layer details-base-styles {
+    details {
+        border: 3px solid var(--myred);
+        margin-bottom: var(--space-2);
+
+    }
+
+    summary {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        padding: var(--space);
+        font-size: 1.75rem;
+        color: var(--myred);
+        font-weight: 600;
+        font-style: normal;
+        cursor: pointer;
+
+        &::marker {
+            content: "";
+        }
+
+        &::-webkit-details-marker {
+            display: none;
+        }
+
+        &::after {
+            width: 1.5rem;
+            height: 1.5rem;
+            mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='black' class='size-6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='m19.5 8.25-7.5 7.5-7.5-7.5' /%3E%3C/svg%3E%0A");
+            background: var(--eminence);
+            content: "";
+            transition: transform 0.3s ease-out;
+        }
+    }
+
+    summary :is(h2, h3, h4, h5, h6) {
+        margin: 0;
+        font-size: inherit;
+        font-weight: inherit;
+        color: inherit;
+        font-style: inherit;
+    }
+
+    summary:is(:hover, :focus) {
+        background: var(--pearl);
+    }
+
+    .content-wrapper {
+        padding: var(--padding);
+    }
+}
+

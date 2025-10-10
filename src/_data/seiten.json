@@ -106,6 +106,10 @@
   {
     "name": "Baseline Status",
     "url": "baseline-status.html"
+  },
+  {
+    "name": "Dialog-Testseite 1",
+    "url": "dialog-1.html"
   }
 ],
   "accessibility": [

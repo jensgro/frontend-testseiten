@@ -5,37 +5,62 @@ layout: simple-2.njk
 css:
   - base
   - indexlist
+  - details
 ---
 
-<h2>Layout-Testseiten</h2>
-<ol class="indexlist">
-  {% for i in seiten.layouts %}
-    <li>
-      <a href="{{ i.url }}" target="_blank">{{ i.name }}</a>
-    </li>
-  {% endfor %}
-</ol>
-<h2>Selektoren</h2>
-<ol class="indexlist">
-  {% for i in seiten.selektoren %}
-    <li>
-      <a href="{{ i.url }}" target="_blank">{{ i.name }}</a>
-    </li>
-  {% endfor %}
-</ol>
-{# <h2>Accessibility</h2>
-<ol class="indexlist">
-  {% for i in seiten.accessibility %}
-    <li>
-      <a href="{{ i.url }}" target="_blank">{{ i.name }}</a>
-    </li>
-  {% endfor %}
-</ol>
-<h2>Sonstige Testseiten</h2>
-<ol class="indexlist">
-  {% for i in seiten.testseiten %}
-    <li>
-      <a href="{{ i.url }}" target="_blank">{{ i.name }}</a>
-    </li>
-  {% endfor %}
-</ol> #}
+<details>
+  <summary>
+    <h2>Layout-Testseiten</h2>
+  </summary>
+  <div class="details-content">
+    <ol class="indexlist">
+      {% for i in seiten.layouts %}
+        <li>
+          <a href="{{ i.url }}" target="_blank">{{ i.name }}</a>
+        </li>
+      {% endfor %}
+    </ol>
+  </div>
+</details>
+<details>
+  <summary>
+    <h2>Selektoren</h2>
+  </summary>
+  <div class="details-content">
+    <ol class="indexlist">
+      {% for i in seiten.selektoren %}
+        <li>
+          <a href="{{ i.url }}" target="_blank">{{ i.name }}</a>
+        </li>
+      {% endfor %}
+    </ol>
+  </div>
+</details>
+<details>
+  <summary>
+    <h2>Accessibility</h2>
+  </summary>
+  <div class="details-content">
+    <ol class="indexlist">
+      {% for i in seiten.accessibility %}
+        <li>
+          <a href="{{ i.url }}" target="_blank">{{ i.name }}</a>
+        </li>
+      {% endfor %}
+    </ol>
+  </div>
+</details>
+<details>
+  <summary>
+    <h2>Sonstige Testseiten</h2>
+  </summary>
+  <div class="details-content">
+    <ol class="indexlist">
+      {% for i in seiten.sonstige %}
+        <li>
+          <a href="{{ i.url }}" target="_blank">{{ i.name }}</a>
+        </li>
+      {% endfor %}
+    </ol>
+  </div>
+</details>

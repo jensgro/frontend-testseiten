@@ -5,7 +5,12 @@
         margin-bottom: 20px;
     }
 
-    a:hover, a:focus {
+    a {
+        display: block;
+        font-weight: 500;
+    }
+
+    a:is(:hover, :focus) {
         text-decoration: none;
     }
 }
