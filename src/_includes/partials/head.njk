@@ -8,6 +8,9 @@
     {% for style in css %}
       <link rel="stylesheet" href="assets/css/{{ style }}.css">
     {%- endfor %}
+    {% if externaljsmoduletop %}
+      <script src="{{ externaljsmoduletop }}" type="module"></script>
+    {% endif %}
   </head>
   <body></body>
 </html>
