@@ -10,6 +10,20 @@ css:
 
 <details>
   <summary>
+    <h2>Unkonf 2025</h2>
+  </summary>
+  <div class="details-content">
+    <ol class="indexlist">
+      {% for i in seiten.unkonf %}
+        <li>
+          <a href="{{ i.url }}" target="_blank">{{ i.name }}</a>
+        </li>
+      {% endfor %}
+    </ol>
+  </div>
+</details>
+<details>
+  <summary>
     <h2>Layout-Testseiten</h2>
   </summary>
   <div class="details-content">
