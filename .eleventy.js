@@ -12,7 +12,9 @@ const {
   simpleteaser,
   selectBundeslaender,
   selectCountries,
-  selectTitel
+  selectTitel,
+  liste8,
+  codeCss
 } = require(configPath + 'shortcodes/index.js');
 
 module.exports = (eleventyConfig) => {
@@ -43,6 +45,8 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addShortcode("selectBundeslaender", selectBundeslaender);
   eleventyConfig.addShortcode("selectCountries", selectCountries);
   eleventyConfig.addShortcode("selectTitel", selectTitel);
+  eleventyConfig.addShortcode("liste8", liste8);
+  eleventyConfig.addShortcode("codeCss", codeCss);
 
   return {
     templateFormats: [

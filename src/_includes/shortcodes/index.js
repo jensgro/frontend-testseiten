@@ -10,6 +10,8 @@ const simpleteaser = require('./teaser/simpleteaser.js');
 const selectBundeslaender = require('./blindtexte/select-bundeslaender.js');
 const selectCountries = require('./blindtexte/select-countries.js');
 const selectTitel = require('./blindtexte/select-titel.js');
+const liste8 = require('./blindtexte/liste-8.js');
+const codeCss = require('./code/code-css.js');
 
 module.exports = {
     card,
@@ -23,5 +25,7 @@ module.exports = {
     simpleteaser,
     selectBundeslaender,
     selectCountries,
-    selectTitel
+    selectTitel,
+    liste8,
+    codeCss
 };

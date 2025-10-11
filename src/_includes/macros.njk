@@ -9,3 +9,12 @@
     {%- endif -%}
   </h{{ params.level }}>
 {%- endmacro -%}
+{%- macro demolist(number) -%}
+  <ol class="demolist">
+    {% for i in number %}
+      <li>
+        <span>{{ i }}</span>
+      </li>
+    {% endfor %}
+  </ol>
+{%- endmacro -%}

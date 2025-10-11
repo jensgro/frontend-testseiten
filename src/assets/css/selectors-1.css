@@ -1,0 +1,52 @@
+.demolist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+.demolist li {
+    background: #eee;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 1rem;
+    line-height: 1;
+}
+
+.test1 li:nth-child(1) {
+    background: lightsteelblue;
+}
+
+.test2 li:is(:nth-child(2), :nth-child(4)) {
+    background: lightsteelblue;
+}
+
+.test3 li:nth-child(-n+2) {
+    background: lightsteelblue;
+}
+
+.test4 li:nth-child(2n) {
+    background: lightsteelblue;
+}
+
+.test5 li:nth-child(2n+1) {
+    background: lightsteelblue;
+}
+
+.test6 li:nth-child(3n) {
+    background: lightsteelblue;
+}
+
+.test7 li:nth-child(odd) {
+    background: lightsteelblue;
+}
+
+.test8 li:nth-child(3n+2) {
+    background: lightsteelblue;
+}
+
+.test9 li:last-child(n + 4) {
+    background: lightsteelblue;
+}

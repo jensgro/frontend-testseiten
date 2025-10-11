@@ -58,6 +58,10 @@
     {
       "name": ":is() und :where()",
       "url": "is-und-where.html"
+    },
+    {
+      "name": "Selektoren-Testseite 1",
+      "url": "selectors-1.html"
     }
   ],
   "layouts": [
@@ -133,6 +137,10 @@
   {
     "name": "Position Fixed",
     "url": "position-fixed.html"
+  },
+  {
+    "name": "Popover",
+    "url": "popover.html"
   }
 ],
   "accessibility": [
