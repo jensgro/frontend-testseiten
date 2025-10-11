@@ -1,0 +1,35 @@
+---
+layout: simple-1.njk
+title: Popover
+permalink: popover.html
+css:
+  - base
+  - popover
+---
+
+<div class="buttonleiste">
+  <button type="button" popovertarget="example-1">Textcontainer</button>
+  <button type="button" popovertarget="example-2">Bildcontainer</button>
+  <button type="button" popovertarget="example-3">Bild</button>
+  <button type="button" popovertarget="example-4">Mit Schliess-Funktion</button>
+</div>
+<div id="example-1" class="text-popup" popover>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est nihil nulla laudantium modi voluptate dolore voluptatum,
+    laboriosam doloremque dolores itaque.</p>
+</div>
+<figure id="example-2" class="image" popover>
+  <img
+    src='https://images.unsplash.com/photo-1724942462164-7c30f103d91c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MjYxNzQ4OTl8&ixlib=rb-4.0.3&q=80&w=400'
+    alt=''>
+</figure>
+<img
+  id="example-3"
+  class="image"
+  popover="manual"
+  src='https://images.unsplash.com/photo-1724515543157-e2ed5385d1a6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MjYxNzQ4OTl8&ixlib=rb-4.0.3&q=80&w=400'
+  alt=''>
+<div id="example-4" class="text-popup" popover>
+  <button class="close-button" popovertarget="example-4" popovertargetaction="hide">x</button>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est nihil nulla laudantium modi voluptate dolore voluptatum,
+    laboriosam doloremque dolores itaque.</p>
+</div>
