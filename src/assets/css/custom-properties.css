@@ -1,8 +1,37 @@
 :root {
+    /* primitives */
+
     --eggshell: #e6e3d4;
     --ash-grey: #b3cbb9;
     --pearl: #ddd8b8;
     --ultra-violet: #6a66a3;
     --eminence: #542e71;
+    --lightgrey: #efefef;
+
+    --yellow-1: #f1d23a;
+    --yellow-2: #b89900;
+    --yellow-3: #fbf4d6;
+    --yellow-4: #e7d586;
+    --yellow-5: #ffe566;
+
+    --green-1: darkkhaki;
+
+    --black: #101010;
+    --my-red: #a20000;
+    --myred: #a20000;
+
+    --text-color: var(--black);
+    --border-color: var(--yellow-1);
+    --box-shadow-1: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    --link-color-hover: var(--yellow-2);
+
+    --height-1: 60px;
+    --height-2: 80px;
+    --height-3: 160px;
+    --height-4: 200px;
+
+    --space: 10px;
+    --space-2: 20px;
+    --space-3: 30px;
     --padding: 1rem;
 }

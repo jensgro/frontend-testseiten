@@ -1,23 +1,12 @@
 /* ====================== */
 :root {
-    --yellow-1: #f1d23a;
-    --yellow-2: #b89900;
-    --yellow-3: #fbf4d6;
-    --yellow-4: #e7d586;
-    --yellow-5: #ffe566;
-
-    --green-1: darkkhaki;
-
-    --black: #101010;
-    --my-red: #a20000;
 
     --area-bg: var(--yellow-3);
     --area-border: var(--yellow-4);
     --area-padding: 1rem 1.5rem;
 
-    --border-color: var(--yellow-1);
+    --body-border-color: var(--yellow-1);
 
-    --text-color: var(--black);
     --link-color-hover: var(--yellow-2);
 
     --thumbnail-1: var(--yellow-5);
@@ -61,7 +50,7 @@
     font-size: 1rem;
     line-height: 1.7;
     color: var(--text-color);
-    border-top: 6px solid var(--border-color);
+    border-top: 6px solid var(--body-border-color);
     background: fixed var(--grid);
     padding: 2rem 3rem;
     margin-inline: auto;

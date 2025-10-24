@@ -1,44 +1,34 @@
 /* ====================== */
 
-@layer reset, grid, header, navigation, content, common, tools;
+@layer base.variables, base.reset, grid, header, navigation, content, common, tools;
 
-:root {
-    --yellow-1: #f1d23a;
-    --yellow-2: #b89900;
-    --yellow-3: #fbf4d6;
-    --yellow-4: #e7d586;
-    --yellow-5: #ffe566;
+@import url('custom-properties.css') layer(base.variables);
 
-    --green-1: darkkhaki;
+@layer base.variables { 
+    :root {
+        --area-bg: var(--yellow-3);
+        --area-border: var(--yellow-4);
+        --area-padding: 1rem 1.5rem;
 
-    --black: #101010;
-    --my-red: #a20000;
+        --body-border-color: var(--my-red);
 
-    --area-bg: var(--yellow-3);
-    --area-border: var(--yellow-4);
-    --area-padding: 1rem 1.5rem;
+        --thumbnail-1: var(--yellow-5);
+        --thumbnail-2: var(--green-1, #000);
 
-    --border-color: var(--my-red);
-
-    --text-color: var(--black);
-    --link-color-hover: var(--yellow-2);
-
-    --thumbnail-1: var(--yellow-5);
-    --thumbnail-2: var(--green-1, #000);
-
-    --grid: linear-gradient(transparent, #fff 70%),
-        fixed repeating-linear-gradient(#efefef,
-            #efefef 1px,
-            transparent 1px,
-            transparent 40px),
-        fixed repeating-linear-gradient(to right,
-            #efefef,
-            #efefef 1px,
-            transparent 1px,
-            transparent 40px) #fff;
+        --grid: linear-gradient(transparent, #fff 70%),
+            fixed repeating-linear-gradient(#efefef,
+                #efefef 1px,
+                transparent 1px,
+                transparent 40px),
+            fixed repeating-linear-gradient(to right,
+                #efefef,
+                #efefef 1px,
+                transparent 1px,
+                transparent 40px) #fff;
+    }
 }
 
-@layer reset {
+@layer base.reset {
     * {
         box-sizing: border-box;
     }
@@ -58,7 +48,7 @@
         font-size: 1rem;
         line-height: 1.7;
         color: var(--text-color);
-        border-top: 6px solid var(--border-color);
+        border-top: 6px solid var(--body-border-color);
         /* background: fixed var(--grid); */
         padding: 2rem 3rem;
         margin-inline: auto;
