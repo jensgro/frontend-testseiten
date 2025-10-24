@@ -1,20 +1,29 @@
 
-@layer presentation, details-base-styles, animated-content;
+@layer base.variables, details.variables, presentation, details.base-styles, content.animated;
+
+@import url("./custom-properties.css") layer(base.variables);
 
 @layer presentation {
+    /*     Allows us to animate to height: auto */
     :root {
-        --eggshell: #e6e3d4;
-        --ash-grey: #b3cbb9;
-        --pearl: #ddd8b8;
-        --ultra-violet: #6a66a3;
-        --eminence: #542e71;
-        --padding: 1rem;
-        /*     Allows us to animate to height: auto */
         interpolate-size: allow-keywords;
     }
 }
 
-@layer animated-content {
+@layer details.variables {
+    :root {
+        --details-border-color: var(--myred);
+        --details-margin-bottom: var(--space-3);
+        --details-summary-hover-bg: var(--pearl);
+        --details-summary-icon-bg: var(--eminence);
+        --details-summary-padding: var(--space);
+        --details-summary-color: var(--myred);
+        --details-marker-color: var(--myred);
+        --details-content-padding: var(--padding);
+    }
+}
+
+@layer content.animated {
     @supports selector(::details-content) {
         ::details-content {
             height: 0;
@@ -28,7 +37,7 @@
 
     details[open] {
         summary {
-            border-bottom: 1px dashed var(--myred);
+            border-bottom: 1px dashed var(--details-border-color);
 
             &::after {
                 transform: rotate(-180deg);
@@ -43,10 +52,10 @@
     }
 }
 
-@layer details-base-styles {
+@layer details.base-styles {
     details {
-        border: 3px solid var(--myred);
-        margin-bottom: var(--space-2);
+        border: 3px solid var(--details-border-color);
+        margin-bottom: var(--details-margin-bottom);
 
     }
 
@@ -54,9 +63,9 @@
         display: grid;
         grid-template-columns: 1fr auto;
         align-items: center;
-        padding: var(--space);
+        padding: var(--details-summary-padding);
+        color: var(--details-summary-color, currentColor);
         font-size: 1.75rem;
-        color: var(--myred);
         font-weight: 600;
         font-style: normal;
         cursor: pointer;
@@ -70,11 +79,11 @@
         }
 
         &::after {
+            content: "";
             width: 1.5rem;
             height: 1.5rem;
+            background: var(--details-marker-color);
             mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='black' class='size-6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='m19.5 8.25-7.5 7.5-7.5-7.5' /%3E%3C/svg%3E%0A");
-            background: var(--eminence);
-            content: "";
             transition: transform 0.3s ease-out;
         }
     }
@@ -88,11 +97,11 @@
     }
 
     summary:is(:hover, :focus) {
-        background: var(--pearl);
+        background: var(--details-summary-hover-bg);
     }
 
     .content-wrapper {
-        padding: var(--padding);
+        padding: var(--details-content-padding);
     }
 }
 
