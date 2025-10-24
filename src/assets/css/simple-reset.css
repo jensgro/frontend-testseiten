@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-color);
+    border-top: 6px solid var(--body-border-color);
+    /* background: fixed var(--grid); */
+    padding: 2rem 3rem;
+    margin-inline: auto;
+    max-inline-size: 1500px;
+    min-height: 100vh;
+}
