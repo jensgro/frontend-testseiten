@@ -12,13 +12,13 @@
 
 @layer details.variables {
     :root {
-        --details-border-color: var(--myred);
+        --details-border-color: var(--my-red);
         --details-margin-bottom: var(--space-3);
         --details-summary-hover-bg: var(--pearl);
         --details-summary-icon-bg: var(--eminence);
         --details-summary-padding: var(--space);
-        --details-summary-color: var(--myred);
-        --details-marker-color: var(--myred);
+        --details-summary-color: var(--my-red);
+        --details-marker-color: var(--my-red);
         --details-content-padding: var(--padding);
     }
 }
