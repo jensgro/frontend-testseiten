@@ -1,6 +1,9 @@
-@layer base, grid, areas, header, thumbnails, sidebar, sidebarcrowded;
+@layer base.vars, base.reset, base.local, grid, areas, header, thumbnails, sidebar, sidebarcrowded;
 
-@layer base {
+@import url('modernes-layout-vars.css') layer(base.vars);
+@import url('modernes-layout-reset.css') layer(base.reset);
+
+@layer base.local {
     body {
         font-family: system-ui, sans-serif;
         font-size: 1rem;

@@ -1,4 +1,10 @@
-@layer container, grid, teasergrid, components, demo, myContainerTests, utilities;
+@layer base.vars, base.reset, base.demo, grid, teasergrid, components,  myContainerTests, base.utilities;
+
+@import url('modernes-layout-vars.css') layer(base.vars);
+/* @import url('modernes-layout-reset.css') layer(base.reset); */
+@import url('utilities.css') layer(base.utilities);
+@import url('demo.css') layer(base.demo);
+
 
 @layer demo {
     * {
@@ -151,7 +157,7 @@
     } */
 }
 
-/* 
+
 @xlayer teasergrid {
 
     @media screen and (min-width: 800px) {
@@ -168,14 +174,6 @@
     }
 }
 
-@layer components {
-
-    .test-teaser-1 {}
-
-    .test-teaser-2 {}
-
-    .test-teaser-3 {}
-} */
 
 @layer utilities {
     [data-container] {

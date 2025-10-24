@@ -3,9 +3,7 @@ title: Teaser mit Container Queries
 layout: simple-2.njk
 permalink: teaser-container-2.html
 css:
-    - modernes-layout-vars
     - teaser-test-1
-    - utilities
 js:
     - width 
 ---
@@ -17,28 +15,28 @@ js:
   </div>
   <h2>Test 1 (max-width: 33.3333%)</h2>
   <div class="test test-1" data-container="data-container" data-width="">
-    {% teaser lorem.headline1, lorem.para1, "test-teaser-1" %}
-    {% teaser lorem.headline2, lorem.para1, "test-teaser-1" %}
-    {% teaser lorem.headline3, lorem.para1, "test-teaser-1" %}
-    {% teaser lorem.headline4, lorem.para1, "test-teaser-1" %}
+    {% teaser lorem.headline1, lorem.para1, "" %}
+    {% teaser lorem.headline2, lorem.para1, "" %}
+    {% teaser lorem.headline3, lorem.para1, "" %}
+    {% teaser lorem.headline4, lorem.para1, "" %}
   </div>
   <h2>Test 2 (max-width: 50%)</h2>
   <div class="test test-2" data-container="data-container" data-width="">
-    {% teaser lorem.headline2, lorem.para1, "test-teaser-1" %}
-    {% teaser lorem.headline5, lorem.para1, "test-teaser-2" %}
-    {% teaser lorem.headline6, lorem.para1, "test-teaser-2" %}
-    {% teaser lorem.headline1, lorem.para1, "test-teaser-2" %}
+    {% teaser lorem.headline2, lorem.para1, "" %}
+    {% teaser lorem.headline5, lorem.para1, "" %}
+    {% teaser lorem.headline6, lorem.para1, "" %}
+    {% teaser lorem.headline1, lorem.para1, "" %}
   </div>
   <h2>Test 3 (max-width: 80%)</h2>
   <div class="test test-3" data-container="data-container" data-width="">
-    {% teaser lorem.headline7, lorem.para1, "test-teaser-2" %}
-    {% teaser lorem.headline8, lorem.para1, "test-teaser-2" %}
-    {% teaser lorem.headline9, lorem.para1, "test-teaser-2" %}
-    {% teaser lorem.headline10, lorem.para1, "test-teaser-2" %}
+    {% teaser lorem.headline7, lorem.para1, "" %}
+    {% teaser lorem.headline8, lorem.para1, "" %}
+    {% teaser lorem.headline9, lorem.para1, "" %}
+    {% teaser lorem.headline10, lorem.para1, "" %}
   </div>
   <h2>Test 4 (resizable)</h2>
   <div class="test test-4" data-container="data-container" data-width="">
-    {% teaser lorem.headline11, lorem.para1, "test-teaser-2" %}
-    {% teaser lorem.headline10, lorem.para2, "test-teaser-2" %}
+    {% teaser lorem.headline11, lorem.para1, "" %}
+    {% teaser lorem.headline10, lorem.para2, "" %}
   </div>
 </main>
