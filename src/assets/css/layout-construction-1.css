@@ -88,6 +88,14 @@
             grid-column: feature-start / full-end;
         }
     }
+
+    .content .feature-left {
+        margin-left: -33.3333%;
+    }
+
+    .content .feature-right {
+        margin-right: -33.3333%;
+    }
 }
 
 
@@ -134,7 +142,7 @@
         padding-block: var(--padding);
     }
 
-    main > * {
+    main > *, .content > *  {
         margin-bottom: var(--space-2);
     }
 }
