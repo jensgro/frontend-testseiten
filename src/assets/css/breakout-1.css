@@ -1,0 +1,92 @@
+/* Column measurements */
+:root {
+  --gap: clamp(1rem, 4vw, 2rem);
+  --full: minmax(var(--gap), 1fr);
+  --content: min(clamp(30rem, 52vw, 60rem), 100% - var(--gap) * 2);
+  --popout: minmax(0, 2rem);
+  --feature: minmax(0, 12vw);
+  --content-inset: min(clamp(30rem, 52vw, 60rem), 100% - var(--gap));
+}
+
+/* Grid definition */
+.grid-breakout {
+  display: grid;
+  grid-template-columns:
+    [full-start] var(--full)
+    [feature-start] var(--feature)
+    [popout-start] var(--popout)
+    [content-start] var(--content) [content-end]
+    var(--popout) [popout-end]
+    var(--feature) [feature-end]
+    var(--full) [full-end];
+}
+
+.grid-breakout-feature-left {
+    display: grid;
+    grid-template-columns:
+        [full-start] var(--full) [feature-start] var(--feature) [popout-start] var(--popout) [content-start] var(--content-inset) [content-end] var(--popout) [popout-end] var(--feature) [feature-end full-end];
+}
+
+/* Column assignments */
+.grid-breakout > * {
+  grid-column: content;
+}
+
+.full {
+  grid-column: full;
+}
+
+.feature {
+  grid-column: feature;
+}
+
+.popout {
+  grid-column: popout;
+}
+
+.content {
+  grid-column: content;
+}
+
+.feature-left {
+    grid-column: full-start / feature-end;
+}
+
+.feature-right {
+    grid-column: feature-start / full-end;
+}
+
+.grid-breakout > * + * {
+  margin-top: 2rem;
+}
+
+.pad {
+  padding: var(--gap);
+}
+.pad-inline-end {
+    padding-inline-end: var(--gap);
+}
+
+.pad-block {
+    padding-block: var(--gap);
+}
+.radius-tr {
+    border-top-right-radius: 5rem;
+}
+
+.radius-tl {
+    border-top-left-radius: 5rem;
+}
+.bg-offset {
+  background-color: #294d8b;
+  color: #fff;
+}
+
+.bg-minimal {
+  background-color: #ede7e4;
+}
+
+body {
+    line-height: 1.5;
+    font-size: clamp(1rem, 0.5vw + 0.8rem, 1.25rem);
+}

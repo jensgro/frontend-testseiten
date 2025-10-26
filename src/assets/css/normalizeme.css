@@ -1,21 +1,22 @@
 *,
 ::after,
 ::before {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 /* ======================================================= */
 
 :where(html) {
-    -webkit-text-size-adjust: none;
-    color-scheme: dark light;
-    tab-size: 2;
+	-webkit-text-size-adjust: none;
+	color-scheme: dark light;
+	tab-size: 2;
 }
 
 :where(body) {
-    -webkit-font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
 	text-rendering: optimizeSpeed;
-    min-height: 100vh;
+	min-height: 100vh;
+	margin: 0;
 }
 
 /* === Formulare === */
@@ -47,7 +48,7 @@
 
 /* ========== */
 :where(a) {
-    color: currentColor;
+	color: currentColor;
 	text-underline-offset: 0.2ex;
 }
 
@@ -55,9 +56,10 @@
     barrierefreies Entfernen der Marker, auch für Voice Over
     https://matuzo.at/blog/2023/removing-list-styles-without-affecting-semantics
 */
-:where(ul, ol)[class], :where(ul, ol)[role="list"] {
-    list-style-type: "";
-    padding-left: 0;
+:where(ul, ol)[class],
+:where(ul, ol)[role="list"] {
+	list-style-type: "";
+	padding-left: 0;
 }
 
 /* ==== Medien ==== */
@@ -90,8 +92,9 @@
 /* ==== Headlines ======= */
 
 :where(h1, h2, h3, h4, h5, h6) {
-    text-wrap: balance;
-    overflow-wrap: break-word; /* auch für p??? */
+	text-wrap: balance;
+	overflow-wrap: break-word;
+	/* auch für p??? */
 }
 
 /* ================ */
@@ -142,25 +145,26 @@ https://keithjgrant.com/posts/2024/01/my-css-resets/
 
 */
 @media (prefers-reduced-motion: reduce) {
+
 	*,
 	*::before,
 	*::after {
-	  animation-duration: 0.01ms !important;
-	  animation-iteration-count: 1 !important;
-	  transition-duration: 0.01ms !important;
-	  scroll-behavior: auto !important;
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
 	}
 }
 
 /* ======================================================= */
 
 html {
-    font-size: 16px;
+	font-size: 16px;
 }
 
 body {
-    font-size: 1rem;
-    font-family: system-ui, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    line-height: 1.5;
+	font-size: 1rem;
+	font-family: system-ui, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	line-height: 1.5;
 }
