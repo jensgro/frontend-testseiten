@@ -48,11 +48,11 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addShortcode("liste8", liste8);
   eleventyConfig.addShortcode("codeCss", codeCss);
 
-  eleventyConfig.watchTarget('src/assets/css/');
-  eleventyConfig.watchTarget('src/assets/js/');
-  eleventyConfig.watchTarget('src/assets/svg/');
-  eleventyConfig.watchTarget('src/assets/img/');
-  eleventyConfig.watchTarget('src/content/');
+  eleventyConfig.addWatchTarget('src/assets/css/');
+  eleventyConfig.addWatchTarget('src/assets/js/');
+  eleventyConfig.addWatchTarget('src/assets/svg/');
+  eleventyConfig.addWatchTarget('src/assets/img/');
+  eleventyConfig.addWatchTarget('src/content/');
 
   return {
     templateFormats: [

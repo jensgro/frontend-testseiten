@@ -1,3 +1,4 @@
+@layer demo, layout;
 
 @layer layout {
     :root {
@@ -89,12 +90,23 @@
         }
     }
 
-    .content .feature-left {
-        margin-left: -33.3333%;
+    /*
+        Es gehen nicht:
+        margin-left: -33.33333%;
+        margin-left: -12%;
+        margin-left: minmax(0, 12vw)
+        margin-left: max(0, -12vw)
+        margin-left: -12vw
+        
+        
+        */
+        .content .feature-left {
+            margin-left: -33.33333%;
+            margin-left: max(0, -12vw);
     }
 
     .content .feature-right {
-        margin-right: -33.3333%;
+        margin-right: calc(var(--feature) * -1);
     }
 }
 

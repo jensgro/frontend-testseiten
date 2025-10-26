@@ -1,16 +1,17 @@
 ---
-title: Layout Construction 1
+title: Layout Construction 2
 layout: simple-1.njk
-permalink: layout-construction-1.html
+permalink: layout-construction-2.html
 css:
     - custom-properties
     - normalizeme
     - layout-construction-1
+    - layout-construction-2
 ---
 
 <div class="wrapper named-grid">
   <header class="full">
-    <h1>Layout Construction 1</h1>
+    <h1>Layout Construction 2</h1>
     <nav>nav</nav>
   </header>
   <main class="named-grid full">
@@ -24,17 +25,25 @@ css:
         Quaerat maxime quas consectetur, laborum voluptatibus debitis fugit tenetur sint amet id sed autem odit recusandae
         nostrum, beatae, animi cumque. Mollitia, cupiditate obcaecati quibusdam exercitationem inventore laborum dolores illum
         tenetur vel, laboriosam voluptatum tempore nulla quisquam labore sed repellendus.</p>
-      <aside class="feature-left pad">
-        <h2>Aside (feature-left)</h2>
-        <p>Auf diese Weise kann man leider die Funktionalität nicht vollständig nutzen. Der Container ist in
-          <code>.content</code>
-          verschachtelt. Das macht eine Ausrichtung an den äußeren Linien unmöglich. Und negative Margins lösen das Problem nicht.
-          Im Gegenteil: sie erzeugen ein neues Problem.</p>
-      </aside>
-      <aside class="feature-right pad">
-        <h2>Aside (feature-right)</h2>
-        <p>This is the sidebar content.</p>
-      </aside>
+      <div class="fullbleed named-grid">
+        <div>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima molestiae fuga incidunt aspernatur sint a
+            reiciendis, vero esse neque dolores vel assumenda omnis debitis qui facere excepturi explicabo quae velit voluptas
+            repellat. Aut obcaecati repellat ea qui ab ad architecto.</p>
+        </div>
+      </div>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam illum at et adipisci illo consequuntur laboriosam
+        maxime. Laboriosam, vitae ratione magnam expedita aut amet consequuntur ad quod quibusdam necessitatibus vero asperiores
+        ipsa doloremque. Exercitationem, alias quibusdam temporibus, est ratione consequuntur nesciunt provident cumque
+        accusantium accusamus saepe reiciendis eveniet quam ex!</p>
+      <div class="fullbleed named-grid no-pad">
+        <img src="assets/img/bridge-between-wi-and-mz.png" alt="">
+      </div>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo incidunt officiis, pariatur ullam minima dicta
+        suscipit itaque voluptatibus perferendis et obcaecati voluptatum, delectus autem, rem culpa! Pariatur voluptatibus
+        itaque officia perferendis blanditiis consequatur nesciunt, similique eligendi, modi delectus vero maxime tempora quod
+        consequuntur error quos dignissimos exercitationem architecto excepturi corrupti. Eveniet necessitatibus fuga officiis
+        atque rerum itaque quaerat harum hic.</p>
     </article>
     <aside class="feature pad">
       <h2>Aside (feature)</h2>
