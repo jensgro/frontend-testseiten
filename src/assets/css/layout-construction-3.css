@@ -1,0 +1,23 @@
+.fullbleed {
+    width: calc(100vw - 16px);
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.fullbleed > img {
+    width: 100%;
+    object-fit: cover;
+
+    /* ohne extra Klasse ... */
+    grid-column: full;
+
+    /* Mit einer extra Klasse kann man das Ergebnis über das HTML steuern. */
+}
+
+.fullbleed > *:not(img, video, audio) {
+    padding: var(--padding);
+}
+
+.content > * + * {
+    margin-top: var(--space-2);
+}

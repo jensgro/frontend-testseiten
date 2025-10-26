@@ -58,11 +58,6 @@
         grid-column: content;
     }
 
-    /* main {
-        display: grid;
-        grid-template-columns: subgrid;
-    }
-     */
     .full {
         grid-column: full;
     }
@@ -88,25 +83,6 @@
         &, & > * {
             grid-column: feature-start / full-end;
         }
-    }
-
-    /*
-        Es gehen nicht:
-        margin-left: -33.33333%;
-        margin-left: -12%;
-        margin-left: minmax(0, 12vw)
-        margin-left: max(0, -12vw)
-        margin-left: -12vw
-        
-        
-        */
-        .content .feature-left {
-            margin-left: -33.33333%;
-            margin-left: max(0, -12vw);
-    }
-
-    .content .feature-right {
-        margin-right: calc(var(--feature) * -1);
     }
 }
 

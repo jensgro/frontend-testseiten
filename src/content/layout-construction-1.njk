@@ -10,47 +10,35 @@ css:
 
 <div class="wrapper named-grid">
   <header class="full">
-    <h1>Layout Construction 1</h1>
+    <h1>{{title}}</h1>
     <nav>nav</nav>
   </header>
   <main class="named-grid full">
     <article class="content pad">
       <h2>Article (content)</h2>
       <p>This is the main article content.</p>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam ipsum vitae minima veniam, architecto quis nobis
-        in quo deserunt ab, recusandae incidunt. Qui labore consequuntur nemo incidunt dolores. Iste neque, fugiat pariatur
-        voluptates mollitia, laborum ipsam quidem, eligendi tempore necessitatibus in obcaecati totam dolor excepturi architecto
-        sunt? Aspernatur, quis? Itaque corrupti repellat magni, minus voluptate eveniet ratione praesentium ipsa et fugiat.
-        Quaerat maxime quas consectetur, laborum voluptatibus debitis fugit tenetur sint amet id sed autem odit recusandae
-        nostrum, beatae, animi cumque. Mollitia, cupiditate obcaecati quibusdam exercitationem inventore laborum dolores illum
-        tenetur vel, laboriosam voluptatum tempore nulla quisquam labore sed repellendus.</p>
-      <aside class="feature-left pad">
-        <h2>Aside (feature-left)</h2>
-        <p>Auf diese Weise kann man leider die Funktionalität nicht vollständig nutzen. Der Container ist in
-          <code>.content</code>
-          verschachtelt. Das macht eine Ausrichtung an den äußeren Linien unmöglich. Und negative Margins lösen das Problem nicht.
-          Im Gegenteil: sie erzeugen ein neues Problem.</p>
-      </aside>
-      <aside class="feature-right pad">
-        <h2>Aside (feature-right)</h2>
-        <p>This is the sidebar content.</p>
-      </aside>
+      <p>{{lorem.para1}}</p>
+      <p>{{lorem.para3}}</p>
     </article>
     <aside class="feature pad">
       <h2>Aside (feature)</h2>
       <p>This is the sidebar content.</p>
+      <p>{{lorem.para1}}</p>
     </aside>
     <aside class="popout pad">
       <h2>Aside (popout)</h2>
       <p>This is the sidebar content.</p>
+      <p>{{lorem.para2}}</p>
     </aside>
     <aside class="feature-left named-grid-feature-left pad">
       <h2>Aside (feature-left)</h2>
       <p>This is the sidebar content.</p>
+      <p>{{lorem.para1}}</p>
     </aside>
     <aside class="feature-right named-grid-feature-right pad">
       <h2>Aside (feature-right)</h2>
       <p>This is the sidebar content.</p>
+      <p>{{lorem.para3}}</p>
     </aside>
   </main>
 </div>

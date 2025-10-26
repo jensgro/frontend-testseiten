@@ -12,7 +12,7 @@
         margin-left: 50%;
         transform: translateX(-50%);
 
-        background-color: var(--green-1);
+        background-color: var(--lightgrey);
         padding: var(--padding);
     }
 

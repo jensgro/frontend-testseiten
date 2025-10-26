@@ -1,0 +1,42 @@
+---
+title: Layout Construction 3
+layout: simple-1.njk
+permalink: layout-construction-3.html
+css:
+    - custom-properties
+    - normalizeme
+    - layout-construction-1
+    - layout-construction-3
+---
+
+<div class="wrapper named-grid">
+  <header class="full">
+    <h1>{{title}}</h1>
+    <nav>nav</nav>
+  </header>
+  <main class="named-grid full">
+    <article class="content pad">
+      <h2>Article (content)</h2>
+      <p>This is the main article content.</p>
+      <p>{{lorem.para1}}</p>
+      <aside class="fullbleed named-grid">
+        <div class="feature">
+          <h3>{{lorem.headline1}}</h3>
+          <p>{{lorem.para1}}</p>
+        </div>
+      </aside>
+      <p>{{lorem.para2}}</p>
+      <div class="fullbleed named-grid no-pad">
+        <img src="assets/img/bridge-between-wi-and-mz.png" alt="Die Brücke zwischen Wiesbaden und Mainz">
+      </div>
+      <p>{{lorem.para3}}</p>
+      <aside class="fullbleed named-grid">
+        <div class="popout">
+          <h3>{{lorem.headline2}}</h3>
+          <p>{{lorem.para2}}</p>
+        </div>
+      </aside>
+      <p>{{lorem.para2}}</p>
+    </article>
+  </main>
+</div>
