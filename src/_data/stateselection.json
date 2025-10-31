@@ -1,0 +1,20 @@
+{
+    "infoboxes": [
+      {
+        "name": "default",
+        "checked": true
+      },
+      {
+        "name": "error"
+      },
+      {
+        "name": "info"
+      },
+      {
+        "name": "success"
+      },
+      {
+        "name": "warning"
+      }
+    ]
+}

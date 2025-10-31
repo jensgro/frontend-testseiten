@@ -62,6 +62,10 @@
     {
       "name": "Selektoren-Testseite 1",
       "url": "selectors-1.html"
+    },
+    {
+      "name": "Systemfarben",
+      "url": "systemcolor-keywords.html"
     }
   ],
   "layouts": [
@@ -167,6 +171,12 @@
   {
     "name": "Infobox und ARIA",
     "url": "infobox.html"
+  }
+],
+"module": [
+  {
+    "name": "Infoboxen",
+    "url": "infoboxes.html"
   }
 ]
 }

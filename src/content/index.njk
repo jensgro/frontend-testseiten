@@ -78,3 +78,17 @@ css:
     </ol>
   </div>
 </details>
+<details name="index">
+  <summary>
+    <h2>Module</h2>
+  </summary>
+  <div class="details-content">
+    <ol class="indexlist">
+      {% for i in seiten.module %}
+        <li>
+          <a href="{{ i.url }}" target="_blank">{{ i.name }}</a>
+        </li>
+      {% endfor %}
+    </ol>
+  </div>
+</details>

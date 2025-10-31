@@ -1,0 +1,10 @@
+.state-selector ul {
+    display: flex;
+    gap: 10px;
+}
+
+.state-selector li {
+    display: flex;
+    flex-direction: row-reverse;
+}
+

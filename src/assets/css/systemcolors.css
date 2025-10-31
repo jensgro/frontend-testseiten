@@ -1,0 +1,276 @@
+.container {
+    display: grid;
+    grid-template-columns:
+        repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: #FFF;
+
+    border: 1px solid #e6e6e6;
+    padding: 10px;
+}
+
+.card h2 {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.card p {
+    color: #666;
+    font-size: 14px;
+    min-height: 32px;
+}
+
+/* Die einzelnen keywords*/
+
+/* Canvas */
+@supports (background: Canvas) {
+    [data-support="Canvas"] h2 {
+        color: green;
+    }
+}
+
+@supports not (background: Canvas) {
+    [data-support="Canvas"] h2 {
+        color: red;
+    }
+}
+
+/* CanvasText */
+@supports (color: CanvasText) {
+    [data-support="CanvasText"] h2 {
+        color: green;
+    }
+}
+
+@supports not (color: CanvasText) {
+    [data-support="CanvasText"] h2 {
+        color: red;
+    }
+}
+
+/* LinkText */
+@supports (color: LinkText) {
+    [data-support="LinkText"] h2 {
+        color: green;
+    }
+}
+
+@supports not (color: LinkText) {
+    [data-support="LinkText"] h2 {
+        color: red;
+    }
+}
+
+/* VisitedText */
+@supports (color: VisitedText) {
+    [data-support="VisitedText"] h2 {
+        color: green;
+    }
+}
+
+@supports not (color: VisitedText) {
+    [data-support="VisitedText"] h2 {
+        color: red;
+    }
+}
+
+/* ActiveText */
+@supports (color: ActiveText) {
+    [data-support="ActiveText"] h2 {
+        color: green;
+    }
+}
+
+@supports not (color: ActiveText) {
+    [data-support="ActiveText"] h2 {
+        color: red;
+    }
+}
+
+/* ButtonFace */
+@supports (background: ButtonFace) {
+    [data-support="ButtonFace"] h2 {
+        color: green;
+    }
+}
+
+@supports not (background: ButtonFace) {
+    [data-support="ButtonFace"] h2 {
+        color: red;
+    }
+}
+
+/* ButtonText */
+@supports (color: ButtonText) {
+    [data-support="ButtonText"] h2 {
+        color: green;
+    }
+}
+
+@supports not (color: ButtonText) {
+    [data-support="ButtonText"] h2 {
+        color: red;
+    }
+}
+
+/* ButtonBorder */
+@supports (border: ButtonBorder) {
+    [data-support="ButtonBorder"] h2 {
+        color: green;
+    }
+}
+
+@supports not (border: ButtonBorder) {
+    [data-support="ButtonBorder"] h2 {
+        color: red;
+    }
+}
+
+/* Field */
+@supports (background: Field) {
+    [data-support="Field"] h2 {
+        color: green;
+    }
+}
+
+@supports not (background: Field) {
+    [data-support="Field"] h2 {
+        color: red;
+    }
+}
+
+/* FieldText */
+@supports (color: FieldText) {
+    [data-support="FieldText"] h2 {
+        color: green;
+    }
+}
+
+@supports not (color: FieldText) {
+    [data-support="FieldText"] h2 {
+        color: red;
+    }
+}
+
+/* Highlight */
+@supports (background: Highlight) {
+    [data-support="Highlight"] h2 {
+        color: green;
+    }
+}
+
+@supports not (background: Highlight) {
+    [data-support="Highlight"] h2 {
+        color: red;
+    }
+}
+
+
+/* HighlightText */
+@supports (color: HighlightText) {
+    [data-support="HighlightText"] h2 {
+        color: green;
+    }
+}
+
+@supports not (color: HighlightText) {
+    [data-support="HighlightText"] h2 {
+        color: red;
+    }
+}
+
+/* SelectedItem */
+@supports (background: SelectedItem) {
+    [data-support="SelectedItem"] h2 {
+        color: green;
+    }
+}
+
+@supports not (background: SelectedItem) {
+    [data-support="SelectedItem"] h2 {
+        color: red;
+    }
+}
+
+/* SelectedItemText */
+@supports (color: SelectedItemText) {
+    [data-support="SelectedItemText"] h2 {
+        color: green;
+    }
+}
+
+@supports not (color: SelectedItemText) {
+    [data-support="SelectedItemText"] h2 {
+        color: red;
+    }
+}
+
+/* Mark */
+@supports (background: Mark) {
+    [data-support="Mark"] h2 {
+        color: green;
+    }
+}
+
+@supports not (background: Mark) {
+    [data-support="Mark"] h2 {
+        color: red;
+    }
+}
+
+/* MarkText */
+@supports (color: MarkText) {
+    [data-support="MarkText"] h2 {
+        color: green;
+    }
+}
+
+@supports not (color: MarkText) {
+    [data-support="MarkText"] h2 {
+        color: red;
+    }
+}
+
+/* GrayText */
+@supports (color: GrayText) {
+    [data-support="GrayText"] h2 {
+        color: green;
+    }
+}
+
+@supports not (color: GrayText) {
+    [data-support="GrayText"] h2 {
+        color: red;
+    }
+}
+
+
+/* AccentColor */
+@supports (background: AccentColor) {
+    [data-support="AccentColor"] h2 {
+        color: green;
+    }
+}
+
+@supports not (background: AccentColor) {
+    [data-support="AccentColor"] h2 {
+        color: red;
+    }
+}
+
+/* AccentColorText */
+@supports (color: AccentColorText) {
+    [data-support="AccentColorText"] h2 {
+        color: green;
+    }
+}
+
+@supports not (color: AccentColorText) {
+    [data-support="AccentColorText"] h2 {
+        color: red;
+    }
+}

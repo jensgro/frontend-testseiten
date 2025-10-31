@@ -1,0 +1,31 @@
+.infobox {
+    --toggle-default: #fcc2d7;
+    --infobox-bg: var(--toggle-default);
+
+    padding: 10px;
+    background-color: var(--infobox-bg, #e6e3e3);
+    color: var(--infobox-color, #000);
+    margin-bottom: 20px;
+}
+
+:is(.infobox) {
+    --state-toggle: var(--toggle--default);
+}
+
+:has(#error:checked) ~ .infobox {
+    --infobox-bg: #a20000;
+    --infobox-color: #fff;
+}
+
+:has(#warning:checked) ~ .infobox {
+    --infobox-bg: #f33737;
+    --infobox-color: #fff;
+}
+
+:has(#success:checked) ~ .infobox {
+    --infobox-bg: #25ce6b;
+    --infobox-color: #fff;
+}
+:has(#info:checked) ~ .infobox {
+    --infobox-bg: #259ece;
+}
