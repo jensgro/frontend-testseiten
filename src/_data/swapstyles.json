@@ -1,0 +1,39 @@
+[
+    {
+       "id": "browser-default",
+       "css": "default.css",
+       "name": "Browser Stylesheet"
+    },    {
+       "id": "meyer-reset",
+       "css": "https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css",
+       "name": "Meyer Rest"
+    },    {
+       "id": "normalize",
+       "css": "https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css",
+       "name": "Normalize 4.1.1"
+    },    {
+       "id": "sanitize",
+       "css": "https://rawgit.com/csstools/sanitize.css/master/sanitize.css",
+       "name": "Sanitize"
+    },    {
+       "id": "reeeset",
+       "css": "https://dl.dropboxusercontent.com/u/18590/reeeset.css",
+       "name": "reeeset"
+    },    {
+       "id": "bootstrap3",
+       "css": "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css",
+       "name": "Bootstrap 3.3.6"
+    },    {
+       "id": "bootstrap4",
+       "css": "https://rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap-reboot.min.css",
+       "name": "Bootstrap 4 - Reboot"
+    },    {
+       "id": "semantic-ui",
+       "css": "https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.css",
+       "name": "Semantic UI"
+    },    {
+       "id": "foundation5",
+       "css": "http:// cdn.foundation5.zurb.com/foundation.css",
+       "name": "Foundation 5"
+    }
+]
