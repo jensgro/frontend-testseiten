@@ -1,0 +1,30 @@
+---
+title: dummy article
+layout: simple-1.njk
+permalink: dummy-article.html
+css:
+    - custom-properties
+    - normalizeme
+    - dummy-article
+    - dummy-article-examples
+---
+
+<div class="grid">
+  <div>
+    {% dummyArticle "3", true %}
+  </div>
+  <div>
+    {% dummyArticle "5", true %}
+  </div>
+  <div>
+    {% dummyArticle 5 %}
+  </div>
+</div>
+<div class="grid dummy-article-v2">
+  <div>
+    {% dummyArticle 4, true %}
+  </div>
+  <div>
+    {% dummyArticle 6 %}
+  </div>
+</div>

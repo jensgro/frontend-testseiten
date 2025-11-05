@@ -1,0 +1,15 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-2);
+    margin-bottom: 20px;
+}
+
+.dummy-article-v2 {
+    --dummy-article-padding: 1em;
+    --dummy-article-bg: rgba(0, 0, 0, 0.1);
+    --dummy-article-shadow: none;
+    --dummy-article-hr-height: 10px;
+    --dummy-article-hr-bg: rgba(128, 0, 0, 0.6);
+    --dummy-article-image-bg: rgba(128, 0, 0, 0.3);
+}

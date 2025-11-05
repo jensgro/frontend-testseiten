@@ -1,0 +1,28 @@
+:root {
+    --dummy-article-padding: 1em;
+    --dummy-article-bg: #fff;
+    --dummy-article-shadow: 0 5px 10px rgba(0, 0, 0, 0.1), 0 20px 20px rgba(0, 0, 0, 0.05);
+    --dummy-article-hr-height: 6px;
+    --dummy-article-hr-bg: rgba(0, 0, 0, 0.1);
+}
+
+.dummy-article {
+    padding: var(--dummy-article-padding);
+    background: var(--dummy-article-bg);
+    box-shadow: var(--dummy-article-shadow);
+
+    hr {
+        height: var(--dummy-article-hr-height);
+        border: none;
+        background: var(--dummy-article-hr-bg);
+
+        &:last-child {
+            margin-right: 60%;
+        }
+
+        &.image {
+            padding-bottom: 50%;
+            background-color: var(--dummy-article-image-bg, var(--dummy-article-hr-bg));
+        }
+    }
+}

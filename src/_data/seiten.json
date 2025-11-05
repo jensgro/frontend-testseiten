@@ -119,6 +119,9 @@
   ],
   "testseiten": [
   {
+    "name": "dummy Article",
+    "url": "dummy-article.html"
+  },{
     "name": "Testseite für Teaser",
     "url": "teaser-container.html"
   },
