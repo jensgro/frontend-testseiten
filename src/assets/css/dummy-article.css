@@ -23,6 +23,10 @@
         &.image {
             padding-bottom: 50%;
             background-color: var(--dummy-article-image-bg, var(--dummy-article-hr-bg));
+
+            &:last-child {
+                margin-right: 0;
+            }
         }
     }
 }
