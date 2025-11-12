@@ -1,0 +1,40 @@
+@property --_w {
+    syntax: '<length>';
+    inherits: true;
+    initial-value: 100vw;
+}
+
+@property --_h {
+    syntax: '<length>';
+    inherits: true;
+    initial-value: 100vh;
+}
+
+:root {
+    --w: tan(atan2(var(--_w), 1px));
+    /* screen width */
+    --h: tan(atan2(var(--_h), 1px));
+    /* screen height*/
+    /* The result is an integer without unit  */
+}
+
+body {
+    padding-top: 75px;
+}
+body:before {
+    content: counter(w) "x" counter(h);
+    counter-reset: h var(--h) w var(--w);
+    font-size: 30px;
+    font-family: system-ui, sans-serif;
+    font-weight: 900;
+    color: #000;
+    background-color: #fd8700;
+    padding: 6px 12px;
+    position: absolute;
+    top: 10px;
+}
+
+/* Quelle:
+https: //codepen.io/t_afif/pen/ExBVLBW?editors=1100 
+https: //css-tip.com/screen-dimension/ 
+*/
