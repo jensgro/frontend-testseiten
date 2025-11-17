@@ -180,6 +180,10 @@
   {
     "name": "Infoboxen",
     "url": "infoboxes.html"
+  },
+  {
+    "name": "Browser Window",
+    "url": "browser-window.html"
   }
 ]
 }
