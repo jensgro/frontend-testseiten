@@ -1,0 +1,70 @@
+{
+  "english1": [
+    { "name": "Home" },
+    { "name": "Politics" },
+    { "name": "World" },
+    { "name": "Business" },
+    { "name": "Sports" },
+    { "name": "Science" },
+    { "name": "Culture" }
+  ],
+  "english2": [
+    { "name": "Home" },
+    { "name": "Scores" },
+    { "name": "Teams" },
+    { "name": "Transfers" },
+    { "name": "Highlights" },
+    { "name": "Opinion" }
+  ],
+  "deutsch1": [
+    { "name": "Startseite" },
+    { "name": "Politik" },
+    { "name": "Bundestagswahl" },
+    { "name": "Wirtschaft" },
+    { "name": "Sport" },
+    { "name": "Wissen" },
+    { "name": "Kultur" }
+  ],
+  "deutsch2": [
+    { "name": "Startseite" },
+    { "name": "Arbeiterstrandbadstraße" },
+    { "name": "Leben" },
+    { "name": "Soziales" },
+    { "name": "Kunst" }
+  ],
+  "deutsch3": [
+    { "name": "Startseite" },
+    { "name": "Nachrichten" },
+    { "name": "Politik" },
+    { "name": "Wirtschaft" },
+    { "name": "Sport" },
+    { "name": "Wissen" },
+    { "name": "Kultur" },
+    { "name": "Meinung" },
+    { "name": "Panorama" }
+  ],
+  "deutsch4": [
+    {"name":"Nachrichten"},
+    {"name":"Sport"},
+    {"name":"Kultur"},
+    {"name":"Leben"},
+    {"name":"Wetter"},
+    {"name":"Verkehr"},
+    {"name":"Video"},
+    {"name":"Audio"}
+  ],
+  "deutsch5": [
+    {"name":"Bayern"},
+    {"name":"Wirtschaft"},
+    {"name":"Verteidigung"},
+    {"name":"Sport"},
+    {"name":"#Faktenfuchs"},
+    {"name":"Dein Arument"},
+    {"name":"BR24live"},
+    {"name":"Kultur"},
+    {"name":"Netzwelt"},
+    {"name":"Wetter"},
+    {"name":"Verkehr"},
+    {"name":"Suche"}
+  ]
+}
