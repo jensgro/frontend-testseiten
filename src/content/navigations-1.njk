@@ -5,60 +5,63 @@ permalink: navigations-1.html
 css:
   - fremd/open-props/open-props
   - fremd/open-props/normalize/normalize
+  - testwrapper
   - navigations
 ---
 
-<nav>
-  <ul>
-    {% for i in navigations.english1 %}
-      <li>
-        <a href="#">{{ i.name }}</a>
-      </li>
-    {% endfor %}
-  </ul>
-</nav>
-<nav>
-  <ul>
-    {% for i in navigations.english2 %}
-      <li>
-        <a href="#">{{ i.name }}</a>
-      </li>
-    {% endfor %}
-  </ul>
-</nav>
-<nav>
-  <ul>
-    {% for i in navigations.deutsch1 %}
-      <li>
-        <a href="#">{{ i.name }}</a>
-      </li>
-    {% endfor %}
-  </ul>
-</nav>
-<nav>
-  <ul>
-    {% for i in navigations.deutsch2 %}
-      <li>
-        <a href="#">{{ i.name }}</a>
-      </li>
-    {% endfor %}
-  </ul>
-</nav>
-<nav>
-  <ul>
-    {% for i in navigations.deutsch3 %}
-      <li>
-        <a href="#">{{ i.name }}</a>
-      </li>
-    {% endfor %}
-  </ul>
-</nav>
-<nav>
-  <ul>
-    {% for i in navigations.deutsch4 %}
-      <li>
-        <a href="#">{{ i.name }}</a>
-      </li>
-    {% endfor %}
-  </ul>
-</nav>
+<div class="test-wrapper">
+  <nav>
+    <ul class="horizontal-nav nav-1">
+      {% for i in navigations.english1 %}
+        <li>
+          <a href="#">{{ i.name }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+  <nav>
+    <ul class="horizontal-nav nav-2">
+      {% for i in navigations.english2 %}
+        <li>
+          <a href="#">{{ i.name }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+  <nav>
+    <ul class="horizontal-nav nav-3">
+      {% for i in navigations.deutsch1 %}
+        <li>
+          <a href="#">{{ i.name }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+  <nav>
+    <ul class="horizontal-nav nav-4">
+      {% for i in navigations.deutsch2 %}
+        <li>
+          <a href="#">{{ i.name }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+  <nav>
+    <ul class="horizontal-nav nav-5">
+      {% for i in navigations.deutsch3 %}
+        <li>
+          <a href="#">{{ i.name }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+  <nav>
+    <ul class="horizontal-nav nav-6">
+      {% for i in navigations.deutsch4 %}
+        <li>
+          <a href="#">{{ i.name }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+</div>
