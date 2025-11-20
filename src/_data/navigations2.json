@@ -1,0 +1,63 @@
+{
+  "english1": [
+    "Home",
+    "Politics",
+    "World",
+    "Business",
+    "Sports",
+    "Science",
+    "Culture"
+  ],
+  "english2": ["Home", "Scores", "Teams", "Transfers", "Highlights", "Opinion"],
+  "deutsch1": [
+    "Startseite",
+    "Politik",
+    "Bundestagswahl",
+    "Wirtschaft",
+    "Sport",
+    "Wissen",
+    "Kultur"
+  ],
+  "deutsch2": [
+    "Startseite",
+    "Arbeiterstrandbadstraße",
+    "Leben",
+    "Soziales",
+    "Kunst"
+  ],
+  "deutsch3": [
+    "Startseite",
+    "Nachrichten",
+    "Politik",
+    "Wirtschaft",
+    "Sport",
+    "Wissen",
+    "Kultur",
+    "Meinung",
+    "Panorama"
+  ],
+  "deutsch4": [
+    "Nachrichten",
+    "Sport",
+    "Kultur",
+    "Leben",
+    "Wetter",
+    "Verkehr",
+    "Video",
+    "Audio"
+  ],
+  "deutsch5": [
+    "Bayern",
+    "Wirtschaft",
+    "Verteidigung",
+    "Sport",
+    "#Faktenfuchs",
+    "Dein Arument",
+    "BR24live",
+    "Kultur",
+    "Netzwelt",
+    "Wetter",
+    "Verkehr",
+    "Suche"
+  ]
+}

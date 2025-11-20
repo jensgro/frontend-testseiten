@@ -13,6 +13,7 @@ const selectTitel = require('./blindtexte/select-titel.js');
 const liste8 = require('./blindtexte/liste-8.js');
 const codeCss = require('./code/code-css.js');
 const dummyArticle = require('./dummy-article/index.js');
+const horizontalnav = require('./lists/horizontalnav.js');
 
 module.exports = {
     card,
@@ -29,5 +30,6 @@ module.exports = {
     selectTitel,
     liste8,
     codeCss,
-    dummyArticle
+    dummyArticle,
+    horizontalnav
 };

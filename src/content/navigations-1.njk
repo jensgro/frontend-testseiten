@@ -10,58 +10,10 @@ css:
 ---
 
 <div class="test-wrapper">
-  <nav>
-    <ul class="horizontal-nav nav-1">
-      {% for i in navigations.english1 %}
-        <li>
-          <a href="#">{{ i.name }}</a>
-        </li>
-      {% endfor %}
-    </ul>
-  </nav>
-  <nav>
-    <ul class="horizontal-nav nav-2">
-      {% for i in navigations.english2 %}
-        <li>
-          <a href="#">{{ i.name }}</a>
-        </li>
-      {% endfor %}
-    </ul>
-  </nav>
-  <nav>
-    <ul class="horizontal-nav nav-3">
-      {% for i in navigations.deutsch1 %}
-        <li>
-          <a href="#">{{ i.name }}</a>
-        </li>
-      {% endfor %}
-    </ul>
-  </nav>
-  <nav>
-    <ul class="horizontal-nav nav-4">
-      {% for i in navigations.deutsch2 %}
-        <li>
-          <a href="#">{{ i.name }}</a>
-        </li>
-      {% endfor %}
-    </ul>
-  </nav>
-  <nav>
-    <ul class="horizontal-nav nav-5">
-      {% for i in navigations.deutsch3 %}
-        <li>
-          <a href="#">{{ i.name }}</a>
-        </li>
-      {% endfor %}
-    </ul>
-  </nav>
-  <nav>
-    <ul class="horizontal-nav nav-6">
-      {% for i in navigations.deutsch4 %}
-        <li>
-          <a href="#">{{ i.name }}</a>
-        </li>
-      {% endfor %}
-    </ul>
-  </nav>
+  {% horizontalnav "nav-1", navigations2.english1 %}
+  {% horizontalnav "nav-2", navigations2.english2 %}
+  {% horizontalnav "nav-3", navigations2.deutsch1 %}
+  {% horizontalnav "nav-4", navigations2.deutsch2 %}
+  {% horizontalnav "nav-5", navigations2.deutsch3 %}
+  {% horizontalnav "nav-6", navigations2.deutsch4 %}
 </div>
