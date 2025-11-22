@@ -1,5 +1,5 @@
 {
-  "layout": "layouts/simple-1.njk",
+  "layout": "simple-1.njk",
   "permalink": "{{title | slugify}}.html",
   "tags": "testseiten"
 }

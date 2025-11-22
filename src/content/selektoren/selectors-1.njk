@@ -1,5 +1,4 @@
 ---
-layout: simple-2.njk
 title: selectors 1
 permalink: selectors-1.html
 css:
@@ -9,39 +8,22 @@ css:
 ---
 
 {% codeCss ".test1 li:nth-child(1) {}" %}
-{% liste8 "test1" %} 
-
+{% liste8 "test1" %}
 {% codeCss ".test2 li:is(:nth-child(2), :nth-child(4))" %}
-
-{% liste8 "test2" %} 
-
-
+{% liste8 "test2" %}
 {% codeCss ".test3 li:nth-child(-n+2)" %}
-
-{% liste8 "test3" %} 
-
+{% liste8 "test3" %}
 {% codeCss ".test4 li:nth-child(2n)" %}
-
 {% liste8 "test4" %}
-
 {% codeCss ".test5 li:nth-child(2n+1)" %}
-
-{% liste8 "test5" %} 
-
+{% liste8 "test5" %}
 {% codeCss ".test6 li:nth-child(3n)" %}
-
 {% liste8 "test6" %}
-
 {% codeCss ".test7 li:nth-child(odd)" %}
 {% liste8 "test7" %}
-
-{% liste8 "test7" %} 
-
+{% liste8 "test7" %}
 {% codeCss ".test8 li:nth-child(3n+2)" %}
-
-{% liste8 "test8" %} 
-
+{% liste8 "test8" %}
 {% codeCss ".test9 li:last-child(n + 4)" %}
 {% liste8 "test9" %}
-
 {% liste8 "test10" %}
