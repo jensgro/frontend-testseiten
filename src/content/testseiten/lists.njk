@@ -5,19 +5,19 @@ permalink: lists.html
 bodyClass: page
 css:
     - main
-    - base
+    - basics/base
 ---
 
 <ol>
-    {% for listitem in list %}
-        <li>{{ listitem.item }}</li>
-    {% endfor %}
+  {% for listitem in list %}
+    <li>{{ listitem.item }}</li>
+  {% endfor %}
 </ol>
 <hr>
-    <ol>
-        {% for listitem in list %}
-            {% if (loop.index <= 5) %}
-                <li>{{ listitem.item }}</li>
-            {% endif %}
-        {% endfor %}
-    </ol>
+  <ol>
+    {% for listitem in list %}
+      {% if (loop.index <= 5) %}
+        <li>{{ listitem.item }}</li>
+      {% endif %}
+    {% endfor %}
+  </ol>

@@ -1,0 +1,23 @@
+:root {
+    --spacing-1: ;
+}
+.btn-2 {
+    --btn-margin: 0 0 1em;
+    --btn--padding: 4px 8px;
+    display: flex;
+    gap: var(--btn-gap, 0);
+    align-items: center;
+    align-content: center;
+    width: fit-content;
+    height: auto;
+    margin: var(--btn-margin);
+    padding: var(--btn-padding);
+    color: #fff;
+    background-color: #0099e5;
+    border: var(--btn-border, none);
+    border-radius: var(--btn-border-radius, 0);
+    box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.15) inset;
+    transition: color .1slinear;
+    cursor: pointer;
+    user-select: none;
+}
