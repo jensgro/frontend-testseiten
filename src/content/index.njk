@@ -14,9 +14,9 @@ css:
   </summary>
   <div class="details-content">
     <ol class="indexlist">
-      {% for i in seiten.unkonf %}
+      {% for i in collections.unkonf25 %}
         <li>
-          <a href="{{ i.url }}" target="_blank">{{ i.name }}</a>
+          <a href="{{ i.url }}" target="_blank">{{ i.data.title }}</a>
         </li>
       {% endfor %}
     </ol>
@@ -28,9 +28,9 @@ css:
   </summary>
   <div class="details-content">
     <ol class="indexlist">
-      {% for i in seiten.layouts %}
+      {% for i in collections.layouts %}
         <li>
-          <a href="{{ i.url }}" target="_blank">{{ i.name }}</a>
+          <a href="{{ i.url }}" target="_blank">{{ i.data.title }}</a>
         </li>
       {% endfor %}
     </ol>
@@ -42,9 +42,9 @@ css:
   </summary>
   <div class="details-content">
     <ol class="indexlist">
-      {% for i in seiten.selektoren %}
+      {% for i in collections.selektoren %}
         <li>
-          <a href="{{ i.url }}" target="_blank">{{ i.name }}</a>
+          <a href="{{ i.url }}" target="_blank">{{ i.data.title }}</a>
         </li>
       {% endfor %}
     </ol>
@@ -56,9 +56,9 @@ css:
   </summary>
   <div class="details-content">
     <ol class="indexlist">
-      {% for i in seiten.accessibility %}
+      {% for i in collections.accessibility %}
         <li>
-          <a href="{{ i.url }}" target="_blank">{{ i.name }}</a>
+          <a href="{{ i.url }}" target="_blank">{{ i.data.title }}</a>
         </li>
       {% endfor %}
     </ol>
@@ -70,9 +70,9 @@ css:
   </summary>
   <div class="details-content">
     <ol class="indexlist">
-      {% for i in seiten.testseiten %}
+      {% for i in collections.testseiten %}
         <li>
-          <a href="{{ i.url }}" target="_blank">{{ i.name }}</a>
+          <a href="{{ i.url }}" target="_blank">{{ i.data.title }}</a>
         </li>
       {% endfor %}
     </ol>
@@ -84,9 +84,9 @@ css:
   </summary>
   <div class="details-content">
     <ol class="indexlist">
-      {% for i in seiten.module %}
+      {% for i in collections.module %}
         <li>
-          <a href="{{ i.url }}" target="_blank">{{ i.name }}</a>
+          <a href="{{ i.url }}" target="_blank">{{ i.data.title }}</a>
         </li>
       {% endfor %}
     </ol>

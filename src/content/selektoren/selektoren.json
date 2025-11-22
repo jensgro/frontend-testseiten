@@ -1,0 +1,5 @@
+{
+  "layout": "layouts/simple-2.njk",
+  "permalink": "{{title | slugify}}.html",
+  "tags": "selektoren"
+}
