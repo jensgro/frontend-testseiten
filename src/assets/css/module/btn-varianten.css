@@ -1,0 +1,51 @@
+.fake-button {
+    display: inline-block;
+    padding: 8px;
+    background-color: #a20000;
+    color: #fff;
+    cursor: pointer;
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+.fake-button:hover,
+.fake-button:focus {
+    background-color: #000;
+}
+
+/* =========== */
+.real-button {
+    border: none;
+    padding: 8px;
+    background-color: #a20000;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.real-button:hover,
+.real-button:focus {
+    background-color: #000;
+}
+
+.button-appearance {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+
+.button-looks-like-a-link {
+    border: none;
+    background: transparent;
+    text-decoration: underline;
+    padding: 0;
+    display: inline;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.button-looks-like-a-link:hover,
+.button-looks-like-a-link:focus {
+    text-decoration: none;
+}

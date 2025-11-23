@@ -1,0 +1,45 @@
+---
+title: Buttonvarianten
+permalink: button-varianten.html
+css:
+  - basics/base
+  - basics/normalizeme
+  - module/btn-varianten
+---
+
+<h2>Kein echter Button</h2>
+<div class="fake-button">Ich bin KEIN Button</div>
+<h3 class="fake-button">Ich bin KEIN Button</h3>
+<p>Mit ein wenig CSS habe ich hier einen
+  <code>DIV</code>-Container und eine Überschrift so aussehen lassen, als handele es sich um einen -Button. Doch die
+    schlichte Optik erzeugt keine Funktion. Alle Button-Eigenschaften müssten per JavaScript nachgerüstet werden. Ein
+    wirklich sinnloses Unterfangen.</p>
+<h2>Ein ungestalteter Button</h2>
+<button type="button">Ich bin ein echter Button</button>
+<p>Ich habe hier bewusst keine Gestaltung eingefügt, um die armseligen Browserstyles zu demonstrieren. Schauen Sie sich
+  diesen Button am Besten auf unterschiedlichen Betriebssystemen und in unterschiedlichen Browsern an. Das Ergebnis ist
+  immer unterschiedlich.
+  <br>Alle anderen Beipiele dieser Seite sind hingegen immer identisch, egal auf welchem Betriebssystem und mit welchem
+    Browser man den Test macht.</p>
+  <h2>Ein gestalteter Button</h2>
+  <p>Den hover-Effekt mit
+    <code>cursor:pointer</code>
+    muss man händisch hinzufügen. Die Browser-Stylesheets sehen kein visuelles Feedback vor. Ich persönlich empfinde es als
+    wichtig.</p>
+  <button type="button" class="real-button">Ich bin ein echter Button</button>
+  <h2>Ein Test mit
+    <code>appearance</code>
+  </h2>
+  <button type="button" class="button-appearance">Ich bin ein echter Button</button>
+  <p>So richtig viel tut sich nicht, wenn man
+    <code>appearance: none</code>
+    eingibt. Die Border muss immernoch selber per CSS wegdefiniert werden. In Chrome unter macOS fehlen dank der hier
+    getesteten Eigenschaft schlicht die runden Ecken. Wow! Für Buttons ist diese Eigenschaft also eher unwichtig.</p>
+  <h2>Ein Button sieht wie ein Link aus</h2>
+  <p>Mit ein wenig CSS kann ich einen Button so weit verändern, dass er wie ein Link ausschaut. Das macht ihn nicht zum
+    Link. Aber es reduziert die optische Wucht eines normalen Buttons. Allerdings sollten wir immer bedenken, dass unsere
+    User sich über die Jahre an optische Merkmale gewöhnt haben und diese mit bestimmten Elementen in Verbindung bringen.</p>
+  <p>Das gilt natürlich auch umgekehrt für die Gestaltung eines Links in Button-Optik. Keine der beiden Varianten ist
+    wirklich empfehlenswert.</p>
+  <button class="button-looks-like-a-link" type="button">Ich bin ein echter Button!</button>
+</p>
