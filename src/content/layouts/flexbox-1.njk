@@ -1,0 +1,41 @@
+---
+title: Flexbox mit und ohne Media Query
+permalink: flexbox-1.html
+css:
+    - basics/base
+    - layouts/flexbox-1
+---
+
+<div id="wrapper">
+  <p>Zwei Flexbox-Container ohne Media Queries:</p>
+  <div class="row-a r1">
+    <div class="item">Reihe 1, Element 1</div>
+    <div class="item">Reihe 1, Element 2</div>
+    <div class="item">Reihe 1, Element 3</div>
+    <div class="item">Reihe 1, Element 4</div>
+  </div>
+  <div class="row-a r2">
+    <div class="item">Reihe 2, Element 1</div>
+    <div class="item">Reihe 2, Element 2</div>
+    <div class="item">Reihe 2, Element 3</div>
+    <div class="item">Reihe 2, Element 4</div>
+  </div>
+  <hr/>
+  <p>Zwei Flexbox-Container mit Media Queries
+    <ul>
+      <li>(max-width: 768px) f&uuml;r Tablets (Portrait) &amp; Smartphones (Landscape)</li>
+      <li>(max-width: 480px) für Smartphones (Portrait):</li>
+    </ul>
+    <div class="row-b r1">
+      <div class="item">Reihe 1, Element 1</div>
+      <div class="item">Reihe 1, Element 2</div>
+      <div class="item">Reihe 1, Element 3</div>
+      <div class="item">Reihe 1, Element 4</div>
+    </div>
+    <div class="row-b r2">
+      <div class="item">Reihe 2, Element 1</div>
+      <div class="item">Reihe 2, Element 2</div>
+      <div class="item">Reihe 2, Element 3</div>
+      <div class="item">Reihe 2, Element 4</div>
+    </div>
+  </div>

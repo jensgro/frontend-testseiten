@@ -1,0 +1,44 @@
+
+/* ============== */
+.row-a,
+.row-b {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.item {
+    padding: 4% 2%;
+    flex: 1 1 auto;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.row-b .item {
+    flex: 1 1 20%;
+}
+
+.r1 .item {
+    background: #30a3bf;
+    color: #e5faff;
+}
+
+.r2 .item {
+    background: #f29524;
+    color: #fff4e5;
+}
+
+@media (max-width: 768px) {
+    .row-b .item {
+        flex-grow: 0;
+        flex-basis: 44%
+    }
+
+@media (max-width: 480px) {
+    .row-b .item {
+        flex-grow: 0;
+        flex-basis: 100%;
+    }
+}
