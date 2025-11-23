@@ -16,7 +16,8 @@ const {
   liste8,
   codeCss,
   dummyArticle,
-  horizontalnav
+  horizontalnav,
+  testicon
 } = require(configPath + 'shortcodes/index.js');
 
 module.exports = (eleventyConfig) => {
@@ -51,6 +52,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addShortcode("codeCss", codeCss);
   eleventyConfig.addShortcode("dummyArticle", dummyArticle);
   eleventyConfig.addShortcode("horizontalnav", horizontalnav);
+  eleventyConfig.addShortcode("testicon", testicon);
 
   eleventyConfig.addWatchTarget('src/assets/css/');
   eleventyConfig.addWatchTarget('src/assets/js/');
