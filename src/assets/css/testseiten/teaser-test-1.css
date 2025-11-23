@@ -1,9 +1,9 @@
 @layer base.vars, base.reset, base.demo, grid, teasergrid, components,  myContainerTests, base.utilities;
 
-@import url('modernes-layout-vars.css') layer(base.vars);
-/* @import url('modernes-layout-reset.css') layer(base.reset); */
-@import url('utilities.css') layer(base.utilities);
-@import url('demo.css') layer(base.demo);
+@import url('../layouts/modernes-layout-vars.css') layer(base.vars);
+/* @import url('../layouts/modernes-layout-reset.css') layer(base.reset); */
+@import url('../basics/utilities.css') layer(base.utilities);
+@import url('../basics/demo.css') layer(base.demo);
 
 
 @layer demo {

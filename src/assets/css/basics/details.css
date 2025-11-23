@@ -1,7 +1,7 @@
 
 @layer base.variables, details.variables, presentation, details.base-styles, content.animated;
 
-@import url("./custom-properties.css") layer(base.variables);
+@import url("custom-properties.css") layer(base.variables);
 
 @layer presentation {
     /*     Allows us to animate to height: auto */

@@ -1,7 +1,7 @@
 @layer base.vars, base.demo, container, grid, simpleteaser, simpleteasergrid;
 
-@import url('modernes-layout-vars.css') layer(base.vars);
-@import url('demo.css') layer(base.demo);
+@import url('../layouts/modernes-layout-vars.css') layer(base.vars);
+@import url('../basics/demo.css') layer(base.demo);
 
 @layer container {
     .test {

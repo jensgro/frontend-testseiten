@@ -4,18 +4,18 @@ title: Card-Testseite
 permalink: card.html
 bodyClass: page
 css:
-    - main
+    - basics/base
 ---
 
 {% for image in images %}
-    {% if (loop.index <= 5) %}
-        <div class="card">
-            <header class="card__head">
-                <h3>{{ image.headline }}</h3>
-            </header>
-            <div class="card__content">
-                <img src="{{ image.filename }}"/>
-            </div>
-        </div>
-    {% endif %}
+  {% if (loop.index <= 5) %}
+    <div class="card">
+      <header class="card__head">
+        <h3>{{ image.headline }}</h3>
+      </header>
+      <div class="card__content">
+        <img src="{{ image.filename }}"/>
+      </div>
+    </div>
+  {% endif %}
 {% endfor %}

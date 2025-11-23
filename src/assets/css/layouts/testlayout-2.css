@@ -2,7 +2,7 @@
 
 @layer base.variables, base.reset, grid, placeholder, tools;
 
-@import url('custom-properties.css') layer(base.variables);
+@import url('../basics/custom-properties.css') layer(base.variables);
 
 :root {
 
