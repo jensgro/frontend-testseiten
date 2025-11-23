@@ -7,5 +7,28 @@ css:
   - module/btn-2
 ---
 
-<button>Button</button>
-<button class="btn-2">Button .btn</button>
+<button>Button ohne Klasse</button>
+<div style="margin-top: 40px;">
+  <button class="btn">Button .btn</button>
+  <button class="btn btn-small">Button .btn.btn-small</button>
+  <button class="btn btn-medium">Button .btn.btn-medium</button>
+  <button class="btn btn-large">Button .btn.btn-large</button>
+</div>
+<div style="margin-top: 40px;">
+  <a href="#" class="btn">Link .btn</a>
+  <a href="#" class="btn btn-small">Link .btn.btn-small</a>
+  <a href="#" class="btn btn-medium">Link .btn.btn-medium</a>
+  <a href="#" class="btn btn-large">Link .btn.btn-large</a>
+</div>
+<div style="margin-top: 40px;">
+  <button class="btn">{% testicon "hearing" %} Button .btn</button>
+  <button class="btn btn-small">{% testicon "snooze" %} Button .btn.btn-small</button>
+  <button class="btn btn-medium">{% testicon "insert_emoticon" %}Button .btn.btn-medium</button>
+  <button class="btn btn-large">{% testicon "mode_comment" %}Button .btn.btn-large</button>
+</div>
+<div style="margin-top: 40px;">
+  <a href="#" class="btn">{% testicon "hearing" %}Link .btn</a>
+  <a href="#" class="btn btn-small">{% testicon "snooze" %} Link .btn.btn-small</a>
+  <a href="#" class="btn btn-medium">{% testicon "insert_emoticon" %}Link .btn.btn-medium</a>
+  <a href="#" class="btn btn-large">{% testicon "mode_comment" %}Link .btn.btn-large</a>
+</div>

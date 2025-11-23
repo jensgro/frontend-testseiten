@@ -1,23 +1,93 @@
-:root {
-    --spacing-1: ;
-}
-.btn-2 {
+.btn {
+    --btn-spacing-1: 4px;
+    --btn-spacing-2: 8px;
+    --btn-spacing-3: 12px;
+    --btn-spacing-4: 16px;
+
     --btn-margin: 0 0 1em;
-    --btn--padding: 4px 8px;
-    display: flex;
+    --btn-padding: var(--btn-spacing-1) var(--btn-spacing-2);
+
+    --btn-border-radius: 4px;
+
+    --btn-color: #fff;
+    --btn-bg-color: #0099e5;
+    --btn-color-hover: #fff;
+    --btn-bg-color-hover: teal;
+    --btn-fz: 1rem;
+
+    --btn-icon: 24px;
+
+    --btn-transition: color .3s linear, background-color .3s linear;
+}
+
+/* ========== Basics ================ */
+
+.btn {
+    all: unset;
+    display: inline-flex;
     gap: var(--btn-gap, 0);
     align-items: center;
     align-content: center;
+
+    font-family: inherit;
+    font-size: var(--btn-fz);
+
     width: fit-content;
-    height: auto;
+
     margin: var(--btn-margin);
     padding: var(--btn-padding);
-    color: #fff;
-    background-color: #0099e5;
+
+    color: var(--btn-color);
+    background-color: var(--btn-bg-color);
+
     border: var(--btn-border, none);
     border-radius: var(--btn-border-radius, 0);
-    box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.15) inset;
-    transition: color .1slinear;
+    box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.5) inset;
+
     cursor: pointer;
     user-select: none;
+    transition: var(--btn-transition, none);
+
+    &:is(:hover, :focus) {
+        color: var(--btn-color-hover, #fff);
+        background-color: var(--btn-bg-color-hover, #000);
+    }
+
+    &:is(a) {
+        text-decoration: none;
+
+        &:is(:hover, :focus) {
+            text-decoration: var(--btn-link-hover, underline);
+        }
+    }
 }
+
+/* ========== Icons ================ */
+
+.btn .icon {
+    width: var(--btn-icon);
+    height: var(--btn-icon);
+}
+
+.btn:has(.icon) {
+    --btn-gap: 12px;
+}
+
+/* ========== Größen ================ */
+
+.btn-small {
+    --btn-fz: 0.75rem;
+}
+
+.btn-medium {
+    --btn-fz: 1.25rem;
+    --btn-padding: var(--btn-spacing-2) var(--btn-spacing-3);
+}
+
+.btn-large {
+    --btn-fz: 1.5rem;
+    --btn-border-radius: 8px;
+    --btn-padding: var(--btn-spacing-3) var(--btn-spacing-4);
+    --btn-link-hover: none;
+}
+
