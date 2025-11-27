@@ -1,0 +1,125 @@
+
+body *,
+body *:before,
+body *:after {
+    box-sizing: inherit;
+}
+
+html {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #434d50;
+    box-sizing: border-box;
+    color: snow;
+    font-family: system-ui, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0;
+    min-height: 100vh;
+    padding: 0;
+    overflow-y: scroll;
+}
+
+
+header {
+    background-color: #00b6e3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+}
+
+h1 {
+    font-size: 2.5em;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+nav {
+    background-color: snow;
+    box-shadow: 0 3px 10px rgba(204, 204, 204, 0.5);
+    position: sticky;
+    top: 0;
+    transition: background-color 250ms linear;
+    width: 100%;
+    z-index: 999;
+}
+
+nav ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    line-height: 50px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: #00b6e3;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0 25px;
+    display: block;
+    transition: all 150ms linear;
+}
+
+nav a:is(:hover, :focus) {
+    background-color: #00b6e3;
+    color: snow;
+}
+
+.is-scrolled {
+    background-color: #00b6e3;
+    transition: background-color 250ms linear;
+}
+
+.is-scrolled a {
+    color: #fff;
+}
+
+.is-scrolled a:is(:hover, :focus, :active, .is-selected) {
+    background-color: snow;
+    color: #00b6e3;
+}
+
+.main {
+    max-width: 80ch;
+    margin-inline: auto;
+}
+p {
+    margin: 2em auto;
+}
+
+.main h3 {
+    scroll-margin-top: 70px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.main h3:first-child {
+    margin-top: 2em;
+}
+
+/*
+Remove decorative motion for users who don’t want them. [...] The one thing of note here is that these don’t set transitions and animations to none, rather they shorten the durations a super short interval. This way, they’re impossible to perceive, but they still run; browser events like transitionend will fire as normal and any code depending on those events won’t break.
+
+https://keithjgrant.com/posts/2024/01/my-css-resets/
+
+*/
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
