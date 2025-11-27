@@ -1,0 +1,42 @@
+.test {
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+#mobile {
+    color: #fff;
+    background-color: teal;
+}
+
+#desktop {
+    color: #fff;
+    background-color: #a20000;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    width: 100vw;
+    min-height: 100vh;
+    background-color: #cecece;
+
+    display: grid;
+    grid-auto-rows: 1fr 1fr;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
