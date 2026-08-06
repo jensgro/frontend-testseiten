@@ -1,0 +1,174 @@
+---
+layout: simple-3.njk
+title: Listenvarianten
+permalink: listenvarianten.html
+bodyClass: page
+css:
+    - testseiten/listenvarianten
+---
+
+<!-- 1. Einfache Liste -->
+<section class="section">
+  <span class="section__eyebrow">Variante 01</span>
+  <h2 class="section__title">Einfache Liste</h2>
+  <ul class="simple-list">
+    {% for listitem in websites %}
+      <li class="simple-list__item">
+        <span class="simple-list__head">
+          <img class="favicon" src="{{ listitem.url }}/favicon.ico" alt="" loading="lazy">
+            <a class="simple-list__link" href="{{ listitem.url }}" target="_blank" rel="noopener noreferrer">{{ listitem.title }}</a>
+          </span>
+          <p class="simple-list__desc">{{ listitem.desc }}</p>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+  <!-- 2. Karten-Grid -->
+  <section class="section">
+    <span class="section__eyebrow">Variante 02</span>
+    <h2 class="section__title">Karten-Raster</h2>
+    <ul class="card-grid">
+      {% for listitem in websites %}
+        <li class="card-grid__item">
+          <span class="card-grid__head">
+            <img class="favicon" src="{{ listitem.url }}/favicon.ico" alt="" loading="lazy">
+              <a class="card-grid__link" href="{{ listitem.url }}" target="_blank" rel="noopener noreferrer">{{ listitem.title }}</a>
+            </span>
+            <p class="card-grid__desc">{{ listitem.desc }}</p>
+          </li>
+        {% endfor %}
+      </ul>
+    </section>
+    <!-- 3. Media-Liste -->
+    <section class="section">
+      <span class="section__eyebrow">Variante 03</span>
+      <h2 class="section__title">Media-Liste</h2>
+      <ul class="media-list">
+        {% for listitem in websites %}
+          <li class="media-list__item">
+            <span class="media-list__figure">
+              <img class="favicon" src="{{ listitem.url }}/favicon.ico" alt="" loading="lazy"></span>
+              <span class="media-list__body">
+                <a class="media-list__link" href="{{ listitem.url }}" target="_blank" rel="noopener noreferrer">{{ listitem.title }}</a>
+                <p class="media-list__desc">{{ listitem.desc }}</p>
+              </span>
+            </li>
+          {% endfor %}
+        </ul>
+      </section>
+      <!-- 4. Tabellen-Zeilen -->
+      <section class="section">
+        <span class="section__eyebrow">Variante 04</span>
+        <h2 class="section__title">Tabellen-Zeilen</h2>
+        <ul class="table-list">
+          {% for listitem in websites %}
+            <li class="table-list__item">
+              <span class="table-list__head">
+                <img class="favicon" src="{{ listitem.url }}/favicon.ico" alt="" loading="lazy">
+                  <a class="table-list__link" href="{{ listitem.url }}" target="_blank" rel="noopener noreferrer">{{ listitem.title }}</a>
+                </span>
+                <p class="table-list__desc">{{ listitem.desc }}</p>
+              </li>
+            {% endfor %}
+          </ul>
+        </section>
+        <!-- 5. Nummerierte Liste -->
+        <section class="section">
+          <span class="section__eyebrow">Variante 05</span>
+          <h2 class="section__title">Nummerierte Rangliste</h2>
+          <ol class="numbered-list">
+            {% for listitem in websites %}
+              <li class="numbered-list__item">
+                <span>
+                  <span class="numbered-list__head">
+                    <img class="favicon" src="{{ listitem.url }}/favicon.ico" alt="" loading="lazy">
+                      <a class="numbered-list__link" href="{{ listitem.url }}" target="_blank" rel="noopener noreferrer">{{ listitem.title }}</a>
+                    </span>
+                    <p class="numbered-list__desc">{{ listitem.desc }}</p>
+                  </span>
+                </li>
+              {% endfor %}
+            </ol>
+          </section>
+          <!-- 6. Timeline -->
+          <section class="section">
+            <span class="section__eyebrow">Variante 06</span>
+            <h2 class="section__title">Timeline</h2>
+            <ul class="timeline">
+              {% for listitem in websites %}
+                <li class="timeline__item">
+                  <span class="timeline__head">
+                    <img class="favicon" src="{{ listitem.url }}/favicon.ico" alt="" loading="lazy">
+                      <a class="timeline__link" href="{{ listitem.url }}" target="_blank" rel="noopener noreferrer">{{ listitem.title }}</a>
+                    </span>
+                    <p class="timeline__desc">{{ listitem.desc }}</p>
+                  </li>
+                {% endfor %}
+              </ul>
+            </section>
+            <!-- 7. Chips / Tags -->
+            <section class="section">
+              <span class="section__eyebrow">Variante 07</span>
+              <h2 class="section__title">Chips &amp; Tags</h2>
+              <ul class="chip-list">
+                {% for listitem in websites %}
+                  <li class="chip-list__item">
+                    <a class="chip-list__link" href="{{ listitem.url }}" target="_blank" rel="noopener noreferrer">
+                      <img class="favicon" src="{{ listitem.url }}/favicon.ico" alt="" loading="lazy">{{ listitem.title }}
+                      </a>
+                      <p class="chip-list__desc">{{ listitem.desc }}</p>
+                    </li>
+                  {% endfor %}
+                </ul>
+              </section>
+              <!-- 8. Magazin -->
+              <section class="section">
+                <span class="section__eyebrow">Variante 08</span>
+                <h2 class="section__title">Magazin-Spalten</h2>
+                <ul class="magazine">
+                  {% for listitem in websites %}
+                    <li class="magazine__item">
+                      <span class="magazine__head">
+                        <a class="magazine__link" href="{{ listitem.url }}" target="_blank" rel="noopener noreferrer">
+                          <img class="favicon" src="{{ listitem.url }}/favicon.ico" alt="" loading="lazy">{{ listitem.title }}</a>
+                        </span>
+                        <p class="magazine__desc">{{ listitem.desc }}</p>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                </section>
+                <!-- 9. Accordion -->
+                <section class="section">
+                  <span class="section__eyebrow">Variante 09</span>
+                  <h2 class="section__title">Ausklappbare Liste</h2>
+                  <ul class="accordion">
+                    {% for listitem in websites %}
+                      <li class="accordion__item">
+                        <details class="accordion__details">
+                          <summary class="accordion__summary">
+                            <img class="favicon" src="{{ listitem.url }}/favicon.ico" alt="" loading="lazy">
+                              <a class="accordion__link" href="{{ listitem.url }}" target="_blank" rel="noopener noreferrer">{{ listitem.title }}</a>
+                            </summary>
+                            <p class="accordion__desc">{{ listitem.desc }}</p>
+                          </details>
+                        </li>
+                      {% endfor %}
+                    </ul>
+                  </section>
+                  <!-- 10. Kacheln -->
+                  <section class="section">
+                    <span class="section__eyebrow">Variante 10</span>
+                    <h2 class="section__title">Kachel-Raster</h2>
+                    <ul class="tile-grid">
+                      {% for listitem in websites %}
+                        <li class="tile-grid__item">
+                          <span class="tile-grid__head">
+                            <span class="tile-grid__figure">
+                              <img class="favicon" src="{{ listitem.url }}/favicon.ico" alt="" loading="lazy"></span>
+                              <a class="tile-grid__link" href="{{ listitem.url }}" target="_blank" rel="noopener noreferrer">{{ listitem.title }}</a>
+                            </span>
+                            <p class="tile-grid__desc">{{ listitem.desc }}</p>
+                          </li>
+                        {% endfor %}
+                      </ul>
+                    </section>
