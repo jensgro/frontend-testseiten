@@ -10,11 +10,11 @@ css:
 
 <details name="index">
   <summary>
-    <h2>Unkonf 2025</h2>
+    <h2>Unkonf 2026</h2>
   </summary>
   <div class="details-content">
     <ol class="indexlist">
-      {% for i in collections.unkonf25 %}
+      {% for i in collections.vt %}
         <li>
           <a href="{{ i.url }}" target="_blank">{{ i.data.title }}</a>
         </li>
@@ -85,6 +85,20 @@ css:
   <div class="details-content">
     <ol class="indexlist">
       {% for i in collections.module %}
+        <li>
+          <a href="{{ i.url }}" target="_blank">{{ i.data.title }}</a>
+        </li>
+      {% endfor %}
+    </ol>
+  </div>
+</details>
+<details name="index">
+  <summary>
+    <h2>Unkonf 2025</h2>
+  </summary>
+  <div class="details-content">
+    <ol class="indexlist">
+      {% for i in collections.unkonf25 %}
         <li>
           <a href="{{ i.url }}" target="_blank">{{ i.data.title }}</a>
         </li>

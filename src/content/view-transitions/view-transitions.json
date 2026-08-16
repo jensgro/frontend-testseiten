@@ -1,0 +1,5 @@
+{
+  "layout": "simple-1.njk",
+  "permalink": "{{title | slugify}}.html",
+  "tags": "vt"
+}

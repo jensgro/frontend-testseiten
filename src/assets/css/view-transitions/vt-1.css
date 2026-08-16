@@ -1,0 +1,8 @@
+@view-transition {
+    navigation: auto;
+}
+
+.active {
+    font-weight: bold;
+    color: #a20000
+}
