@@ -1,0 +1,62 @@
+---
+title: View Transition Test 2c
+permalink: vt-2c.html
+eleventyExcludeFromCollections: true
+css:
+    - layouts/testlayout
+    - basics/code
+    - components/cards
+    - view-transitions/vt-2
+js:
+    - syntaxp.min
+---
+
+<div class="wrapper">
+  <header class="site-header">
+    <div class="logo">Logo</div>
+    <button class="site-nav-toggle" aria-label="Open Navigation" aria-expanded="false">
+      &#9776;
+    </button>
+    <nav class="site-nav">
+      <a href="vt-2.html">Startseite</a>
+      <a href="vt-2a.html">Gegrillte Paprika</a>
+      <a href="vt-2b.html">Bolognese</a>
+      <a href="vt-2c.html" class="active">Gefüllte Paprika</a>
+    </nav>
+  </header>
+  <main class="content">
+    <div class="header-image">
+      <img src="assets/img/gefuellte-paprika-nordafrikanisch-7x2.jpg" alt="Gefüllte Paprika" style="view-transition-name: gefuellte-paprika-img;">
+    </div>
+    <h1 style="view-transition-name: gefuellte-paprika-title;">Gefüllte Paprika</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, maiores cum? Provident debitis error vel, amet animiratione sed inventore explicabo blanditiis quibusdam ipsum laborum libero fugit totam doloribus vero.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore totam, temporibus, debitis magnam earum eos, qui velit harum architecto eum sunt corporis voluptate commodi ratione!</p>
+    
+    <div class="card-grid">
+      <article class="card">
+        <img
+          src="assets/img/gegrillte-paprika-16x9.jpg"
+          alt="Gegrillte Paprika"
+          style="view-transition-name: gegrillte-paprika-img;">
+        <p>
+          <a href="vt-2a.html" style="view-transition-name: gegrillte-paprika-title;">Gegrillte Paprika</a>
+        </p>
+      </article>
+      <article class="card">
+        <img src="assets/img/bolognese-1-16x9.jpg" alt="Bolognese" style="view-transition-name: bolognese-img;">
+        <p>
+          <a href="vt-2b.html" style="view-transition-name: bolognese-title;">Bolognese</a>
+        </p>
+      </article>
+    </div>
+    
+  </main>
+  <aside class="sidebar">
+    <h2>Abseitiges</h2>
+    <div class="post-thumbnails">
+      <div class="thumbnail"></div>
+      <div class="thumbnail"></div>
+    </div>
+  </aside>
+  <footer class="site-footer">Footer</footer>
+</div>

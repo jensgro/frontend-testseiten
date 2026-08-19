@@ -1,0 +1,18 @@
+@view-transition {
+    navigation: auto;
+}
+
+.active {
+    font-weight: bold;
+    color: #a20000
+}
+
+.header-image {
+    margin-bottom: 20px;
+
+    img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+}

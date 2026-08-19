@@ -1,0 +1,92 @@
+---
+title: View Transition Test 3
+permalink: vt-3.html
+css:
+    - layouts/testlayout
+    - basics/code
+    - components/cards
+    - view-transitions/vt-3
+js:
+    - syntaxp.min
+---
+
+<div class="wrapper">
+  <header class="site-header">
+    <div class="logo">Logo</div>
+    <button class="site-nav-toggle" aria-label="Open Navigation" aria-expanded="false">
+      &#9776;
+    </button>
+    <nav class="site-nav">
+      <a href="vt-3.html" class="active">Startseite</a>
+      <a href="vt-3a.html">Gegrillte Paprika</a>
+      <a href="vt-3b.html">Bolognese</a>
+      <a href="vt-3c.html">Gefüllte Paprika</a>
+    </nav>
+  </header>
+  <main class="content">
+    <h1>Animation durch einen Teaser</h1>
+    <p>Die Animation von einem kleinen zu einem großen Element hat kleine Hürden. Wichtig ist, dass jedes zu animierende
+      Element eine eindeutige Identität hat, wie eine ID. Diese bekommt sie durch den
+      <code>view-transition-name</code>. Dieser Name muss auf der alten wie der neuen Seite identisch sein. Deshalb empfiehlt
+        es sich, den Namen zu durchdenken. Ein überspezifischer Name wie im Folgenden passt nicht überall:</p>
+    
+    
+    {# Version 1: nur das Header-Element hat eine Animation, die Cards haben keine. #}
+    <div class="card-grid">
+      <article class="card">
+        <img
+          src="assets/img/gegrillte-paprika-16x9.jpg"
+          alt="Gegrillte Paprika"
+          style="view-transition-name: gegrillte-paprika-img;">
+        <p>
+          <a href="vt-3a.html" style="view-transition-name: gegrillte-paprika-title;">
+          Gegrillte Paprika</a>
+        </p>
+      </article>
+      <article class="card">
+        <img
+          src="assets/img/bolognese-1-16x9.jpg"
+          alt="Bolognese"
+          style="view-transition-name: bolognese-img;">
+        <p>
+          <a href="vt-3b.html" style="view-transition-name: bolognese-title;">Bolognese</a>
+        </p>
+      </article>
+      <article class="card">
+        <img
+          src="assets/img/gefuellte-paprika-nordafrikanisch-16x9.jpg"
+          alt="Gefüllte Paprika nach nordafrikanischer Art"
+          style="view-transition-name: gefuellte-paprika-img;">
+        <p>
+          <a href="vt-3c.html" style="view-transition-name: gefuellte-paprika-title;">
+          Gefüllte Paprika</a>
+        </p>
+      </article>
+    </div>
+    {# Version 2: alle Card-Elemente haben eine Animation #}
+    {# 
+        <div class="card-grid">
+          <article class="card">
+            <img src="assets/img/gegrillte-paprika-16x9.jpg" alt="Gegrillte Paprika" style="view-transition-name: gegrillte-paprika-img; animation: fade-out 0.5s ease-in-out;">
+            <p><a href="vt-3a.html" style="view-transition-name: gegrillte-paprika-title; animation: fade-out 0.5s ease-in-out;">Gegrillte Paprika</a></p>
+          </article>
+          <article class="card">
+            <img src="assets/img/bolognese-1-16x9.jpg" alt="Bolognese" style="view-transition-name: bolognese-img; animation: fade-out 0.5s ease-in-out;">
+            <p><a href="vt-3b.html" style="view-transition-name: bolognese-title; animation: fade-out 0.5s ease-in-out;">Bolognese</a></p>
+          </article>
+          <article class="card">
+            <img src="assets/img/gefuellte-paprika-nordafrikanisch-16x9.jpg" alt="Gefüllte Paprika nach nordafrikanischer Art" style="view-transition-name: gefuellte-paprika-img; animation: fade-out 0.5s ease-in-out;">
+            <p><a href="vt-3c.html" style="view-transition-name: gefuellte-paprika-title; animation: fade-out 0.5s ease-in-out;">Gefüllte Paprika</a></p>
+          </article>
+        </div> 
+    #}
+  </main>
+  <aside class="sidebar">
+    <h2>Abseitiges</h2>
+    <div class="post-thumbnails">
+      <div class="thumbnail"></div>
+      <div class="thumbnail"></div>
+    </div>
+  </aside>
+  <footer class="site-footer">Footer</footer>
+</div>

@@ -1,0 +1,98 @@
+---
+title: View Transition Test 3b
+permalink: vt-3b.html
+eleventyExcludeFromCollections: true
+css:
+    - layouts/testlayout
+    - basics/code
+    - components/cards
+    - view-transitions/vt-3
+---
+
+<div class="wrapper">
+  <header class="site-header">
+    <div class="logo">Logo</div>
+    <button class="site-nav-toggle" aria-label="Open Navigation" aria-expanded="false">
+      &#9776;
+    </button>
+    <nav class="site-nav">
+      <a href="vt-3.html">Startseite</a>
+      <a href="vt-3a.html">Gegrillte Paprika</a>
+      <a href="vt-3b.html" class="active">Bolognese</a>
+      <a href="vt-3c.html">Gefüllte Paprika</a>
+    </nav>
+  </header>
+  <main class="content">
+    <div class="header-image">
+      <img
+        src="assets/img/bolognese-1-7x2.jpg"
+        alt="Bolognese"
+        style="view-transition-name: bolognese-img; animation: fade-in 0.5s ease-in-out;">
+    </div>
+    <h1 style="view-transition-name: bolognese-title; animation: fade-in 0.5s ease-in-out;">Bolognese</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, maiores cum? Provident debitis error vel, amet
+      animiratione sed inventore explicabo blanditiis quibusdam ipsum laborum libero fugit totam doloribus vero.</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium quia magnam quae earum cupiditate saepe ullam
+      eveniet voluptatum omnis eos accusamus rerum deserunt obcaecati qui tempora aperiam, vitae maiores adipisci, ipsam
+      labore neque similique fuga? Ab inventore ipsa modi illo pariatur perspiciatis. Sed voluptatibus provident adipisci
+      placeat amet! Aliquid fuga, reiciendis deleniti alias quibusdam neque cumque officiis ipsum quos rem suscipit aut hic,
+      quasi illo ipsa!
+    </p>
+
+    {# Version 1: nur das Header-Element hat eine Animation, die Cards haben keine. #}
+    <div class="card-grid">
+      <article class="card">
+        <img
+          src="assets/img/gegrillte-paprika-16x9.jpg"
+          alt="Gegrillte Paprika"
+          style="view-transition-name: gegrillte-paprika-img;">
+        <p>
+          <a href="vt-3a.html" style="view-transition-name: gegrillte-paprika-title;">
+          Gegrillte Paprika</a>
+        </p>
+      </article>
+      <article class="card">
+        <img
+          src="assets/img/gefuellte-paprika-nordafrikanisch-16x9.jpg"
+          alt="Gefüllte Paprika nach nordafrikanischer Art"
+          style="view-transition-name: gefuellte-paprika-img;">
+        <p>
+          <a href="vt-3c.html" style="view-transition-name: gefuellte-paprika-title;">
+          Gefüllte Paprika</a>
+        </p>
+      </article>
+    </div>
+    
+    {# Version 2: alle Card-Elemente haben eine Animation #}
+    {# 
+        <div class="card-grid">
+          <article class="card">
+            <img
+              src="assets/img/gegrillte-paprika-16x9.jpg"
+              alt="Gegrillte Paprika"
+              style="view-transition-name: gegrillte-paprika-img; animation: fade-out 0.5s ease-in-out;">
+            <p>
+              <a href="vt-3a.html" style="view-transition-name: gegrillte-paprika-title; animation: fade-out 0.5s ease-in-out;">Gegrillte Paprika</a>
+            </p>
+          </article>
+          <article class="card">
+            <img
+              src="assets/img/gefuellte-paprika-nordafrikanisch-16x9.jpg"
+              alt="Gefüllte Paprika nach nordafrikanischer Art"
+              style="view-transition-name: gefuellte-paprika-img; animation: fade-out 0.5s ease-in-out;">
+            <p>
+              <a href="vt-3c.html" style="view-transition-name: gefuellte-paprika-title; animation: fade-out 0.5s ease-in-out;">Gefüllte Paprika</a>
+            </p>
+          </article>
+        </div> 
+    #}
+  </main>
+  <aside class="sidebar">
+    <h2>Abseitiges</h2>
+    <div class="post-thumbnails">
+      <div class="thumbnail"></div>
+      <div class="thumbnail"></div>
+    </div>
+  </aside>
+  <footer class="site-footer">Footer</footer>
+</div>
