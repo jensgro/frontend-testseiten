@@ -1,0 +1,46 @@
+:root {
+  --_oli-font-stack-humanist: Seravek, "Gill Sans Nova", Ubuntu, Calibri,"DejaVu Sans", source-sans-pro, sans-serif;
+  --_oli-font-stack-geometric: Avenir, Montserrat, Corbel, "URW Gothic", source-sans-pro, sans-serif;
+  --_oli-font-stack-old: "Iowan Old Style", "Palatino Linotype", "URW Palladio L", P052, serif;
+  --_oli-font-stack-slab-serif: Rockwell, "Rockwell Nova", "Roboto Slab", "DejaVu Serif", "Sitka Small", serif;
+  --_oli-font-stack-transitional: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
+  --_oli-font-stack-monospace-slab-serif: 'Nimbus Mono PS', 'Courier New', monospace;
+  --_oli-font-stack-monospace: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+}
+
+body, :is(h1, h2, h3, h4, h5, h6)  {
+  @container style(--oli-s-font-stack: geometric) {
+    --oli-s-font-family: var(--_oli-font-stack-geometric);
+  }
+
+  @container style(--oli-s-font-stack: old) {
+    --oli-s-font-family: var(--_oli-font-stack-old);
+  }
+
+  @container style(--oli-s-font-stack: humanist) {
+    --oli-s-font-family: var(--_oli-font-stack-humanist);
+  }
+
+  @container style(--oli-s-font-stack: slab-serif) {
+    --oli-s-font-family: var(--_oli-font-stack-slab-serif);
+  }
+
+  @container style(--oli-s-font-stack: transitional) {
+    --oli-s-font-family: var(--_oli-font-stack-transitional);
+  }
+
+  @container style(--oli-s-font-stack: monospace-slab-serif) {
+    --oli-s-font-family: var(--_oli-font-stack-monospace-slab-serif);
+  }
+  @container style(--oli-s-font-stack: monospace) {
+    --oli-s-font-family: var(--_oli-font-stack-monospace);
+  }
+}
+
+
+@container style(--oli-s-magic: true) {
+	body {
+    --_body-padding: 0;
+		--_wrapper-padding: var(--oli-s-page-padding);
+  }
+}

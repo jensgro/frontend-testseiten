@@ -1,0 +1,16 @@
+/* Establish the order of layers upfront */
+@layer core, third-party, components, utility;
+@layer core.reset, core.tokens, core.base;
+@layer third-party.imports, third-party.overrides;
+@layer components.base, components.variations;
+
+/* Reset, normalize, etc. */
+@import url('third-party/uaplus.css') layer(core.reset);
+@import url('third-party/oli/global.css') layer(core.tokens);
+@import url('third-party/oli/settings-tokens.css') layer(core.tokens);
+@import url('third-party/oli/settings.css') layer(core.tokens);
+@import url('third-party/oli/index.css') layer(core.base);
+@import url('third-party/oli/backend.css') layer(core.base);
+@import url('third-party/phili/index.css') layer(core.base);
+@import url('third-party/phili/plugins/prism.css') layer(third-party.imports);
+/* @import url('third-party/oli/api.css') layer(core.tokens); */

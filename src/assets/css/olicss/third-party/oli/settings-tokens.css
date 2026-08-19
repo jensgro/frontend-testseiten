@@ -1,0 +1,101 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+:root {
+  --oli-s-magic: false; /** Make opinionated design decisions based on the markup */
+  --oli-s-layout: horizontal; /** Page layout */
+  --oli-s-scroll-behavior: smooth; /** Always auto if prefers-reduced-motion is active  */
+  --oli-s-font-stack: humanist; /** Based on modernfontstacks.com */
+  --oli-s-break-points-m: 48rem;
+  --oli-s-break-points-l: 64rem;
+  --oli-s-page-max-width: 80rem; /** Maximum width of the page */
+  --oli-s-page-start-column-width: 16rem; /** Width of the start column */
+  --oli-s-page-base-font-size-s: var(--oli-g-text-size-base-s);
+  --oli-s-page-base-font-size-m: var(--oli-g-text-size-base-m);
+  --oli-s-page-text-scale: 1; /** Scalefactor for the page font size */
+  --oli-s-page-line-height-s: 1.7;
+  --oli-s-page-line-height-m: 1.7;
+  --oli-s-page-padding: clamp(1rem, 0.6667rem + 1.6667vw, 2rem); /** Padding for header, main, footer */
+  --oli-s-page-background-color: var(--oli-g-colors-background); /** Background color for the page */
+  --oli-s-page-color: var(--oli-g-colors-text); /** Text color for the page */
+  --oli-s-content-max-width: 54rem; /** Maximum width for p, ol, ul, figure, blockquote, picture */
+  --oli-s-content-vertical-offset: initial; /** Extra block-start padding for the content in vertical layouts */
+  --oli-s-content-spacing: var(--oli-g-spacing-m);
+  --oli-s-content-hyphens: none;
+  --oli-s-heading-1-line-height: 1.1;
+  --oli-s-heading-1-color: var(--oli-g-colors-highlight);
+  --oli-s-heading-1-font-weight: 600;
+  --oli-s-heading-1-margin-block: revert-layer;
+  --oli-s-heading-1-scalefactor: 5;
+  --oli-s-heading-2-line-height: 1.2;
+  --oli-s-heading-2-color: var(--oli-g-colors-highlight);
+  --oli-s-heading-2-font-weight: 600;
+  --oli-s-heading-2-margin-block: var(--oli-g-spacing-xl) var(--oli-g-spacing-m);
+  --oli-s-heading-2-scalefactor: 3;
+  --oli-s-heading-3-line-height: 1.2;
+  --oli-s-heading-3-font-weight: 600;
+  --oli-s-heading-3-margin-block: var(--oli-g-spacing-xl) var(--oli-g-spacing-m);
+  --oli-s-heading-3-scalefactor: 2;
+  --oli-s-heading-4-line-height: 1.2;
+  --oli-s-heading-4-font-weight: 500;
+  --oli-s-heading-4-margin-block: var(--oli-g-spacing-m) var(--oli-g-spacing-s);
+  --oli-s-heading-4-scalefactor: 1;
+  --oli-s-heading-5-scalefactor: 1;
+  --oli-s-heading-6-scalefactor: 1;
+  --oli-s-section-background-color: transparent;
+  --oli-s-section-color: inherit;
+  --oli-s-section-margin: calc(var(--oli-g-spacing-base) * pow(var(--oli-g-spacing-scale), 4));
+  --oli-s-section-padding-block: 0;
+  --oli-s-link-color: var(--oli-g-colors-cta);
+  --oli-s-link-color-visited: var(--oli-g-colors-cta-alt);
+  --oli-s-states-error: var(--oli-g-colors-state-error);
+  --oli-s-states-highlight: var(--oli-g-colors-state-highlight);
+  --oli-s-header-alignment: end;
+  --oli-s-header-background-color: transparent;
+  --oli-s-header-border-image: conic-gradient(transparent 0 0) fill 1 / /0 50vw;
+  --oli-s-header-color: var(--oli-g-colors-highlight);
+  --oli-s-header-margin-block-end: var(--oli-g-spacing-xxxl);
+  --oli-s-header-title-margin-block-end: var(--oli-g-spacing-xxl); /** Only in vertical layouts */
+  --oli-s-header-logo-inline-size: 150px; /** Only in vertical layouts */
+  --oli-s-main-nav-gap: var(--oli-g-spacing-m);
+  --oli-s-main-nav-gap-vertical: var(--oli-g-spacing-m);
+  --oli-s-main-nav-color: var(--oli-g-colors-cta-alt);
+  --oli-s-main-nav-color-active: var(--oli-g-colors-cta);
+  --oli-s-main-nav-text-scale: 0.5;
+  --oli-s-footer-margin-block-start: var(--oli-g-spacing-xl);
+  --oli-s-figure-background-color: var(--oli-g-colors-background-alt2);
+  --oli-s-figure-color: var(--oli-g-colors-text);
+  --oli-s-blockquote-margin-block: var(--oli-g-spacing-xxl);
+  --oli-s-blockquote-pseudo-before-color: var(--oli-g-colors-highlight);
+  --oli-s-hr-border-color: var(--oli-g-colors-highlight);
+  --oli-s-code-font-family: 'Fira Code', monospace;
+  --oli-s-strong-font-weight: 600;
+  --oli-s-table-background-color: var(--oli-g-colors-background);
+  --oli-s-table-th-font-weight: 600;
+  --oli-s-table-th-background-color: var(--oli-g-colors-background-alt2);
+  --oli-s-table-th-color: var(--oli-g-colors-text);
+  --oli-s-list-flex-direction: column;
+  --oli-s-list-marker-color: var(--oli-g-colors-highlight);
+  --oli-s-form-item-background-color: var(--oli-g-colors-background);
+  --oli-s-form-item-spacing: var(--oli-g-spacing-s);
+  --oli-s-form-button-background-color: var(--oli-g-colors-cta);
+  --oli-s-form-button-background-color-pressed: var(--oli-g-colors-cta-alt);
+  --oli-s-form-button-background-color-disabled: var(--oli-g-colors-state-disabled);
+  --oli-s-form-button-border-radius: 3px;
+  --oli-s-form-button-color: var(--oli-g-colors-light);
+  --oli-s-form-legend-border-color: var(--oli-g-colors-highlight);
+  --oli-s-text-scale: 1.26;
+  --oli-s-page-base-font-size-m: 1.1rem;
+  --oli-g-spacing-base: clamp(0.5rem, 0.3333rem + 0.8333vw, 1rem);
+  --oli-g-spacing-scale: 1.414;
+  --oli-g-spacing-xxxs: calc(var(--oli-g-spacing-base) * pow(var(--oli-g-spacing-scale), -3)); /** Defaults to 6px */
+  --oli-g-spacing-xxs: calc(var(--oli-g-spacing-base) * pow(var(--oli-g-spacing-scale), -2)); /** Defaults to 8px */
+  --oli-g-spacing-xs: calc(var(--oli-g-spacing-base) * pow(var(--oli-g-spacing-scale), -1)); /** Defaults to 11px */
+  --oli-g-spacing-s: calc(var(--oli-g-spacing-base) * pow(var(--oli-g-spacing-scale), 0)); /** Defaults to 16px */
+  --oli-g-spacing-m: calc(var(--oli-g-spacing-base) * pow(var(--oli-g-spacing-scale), 1)); /** Defaults to 23px */
+  --oli-g-spacing-l: calc(var(--oli-g-spacing-base) * pow(var(--oli-g-spacing-scale), 2)); /** Defaults to 32px */
+  --oli-g-spacing-xl: calc(var(--oli-g-spacing-base) * pow(var(--oli-g-spacing-scale), 3)); /** Defaults to 45px */
+  --oli-g-spacing-xxl: calc(var(--oli-g-spacing-base) * pow(var(--oli-g-spacing-scale), 4)); /** Defaults to 63px */
+  --oli-g-spacing-xxxl: calc(var(--oli-g-spacing-base) * pow(var(--oli-g-spacing-scale), 5)); /** Defaults to 90px */
+}

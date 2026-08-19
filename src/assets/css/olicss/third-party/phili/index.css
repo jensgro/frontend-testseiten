@@ -1,0 +1,169 @@
+/**
+ * Skip link
+ */
+
+.phi-skiplink {
+  position: absolute;
+  background: var(--oli-g-colors-color-4-400);
+  color: var(--oli-g-colors-light);
+  text-decoration: none;
+  padding: 0.1rem 0.7rem;
+  border-radius: 3px;
+}
+
+.phi-skiplink:not(:focus) {
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  white-space: nowrap;
+}
+/**
+ * Section
+ */
+
+.phi-section {
+  margin-block-end: var(--oli-s-section-margin);
+}
+
+.phi-section-full {
+  --oli-s-section-background-color: var(--oli-g-colors-color-1);
+  --oli-s-section-padding-block: var(--oli-g-spacing-xl);
+  padding-inline: var(--oli-s-page-padding);
+
+  margin-inline: calc(
+    -1 * (var(--_wrapper-layout) + var(--oli-s-page-padding))
+  );
+}
+
+.phi-section-full > div {
+  margin-inline: auto;
+  max-inline-size: calc(
+    var(--oli-s-page-max-width) - var(--oli-s-page-padding) * 2
+  );
+  color: var(--oli-s-section-color);
+}
+
+@container style(--oli-s-section-background-color: var(--oli-g-colors-color-1)) {
+  div {
+    --oli-s-section-color: #fff;
+  }
+}
+
+/**
+ * Grid
+ */
+
+.phi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+  gap: 2rem;
+}
+
+.phi-grid .phi-card {
+  --phi-card-max-inline-size: 100%;
+}
+
+/**
+ * Tabs
+ */
+
+[role="tablist"] {
+  --oli-s-text-exponent: 0;
+  display: flex;
+}
+
+[role="tabpanel"] {
+  --oli-s-text-exponent: 0;
+  border: 3px solid var(--oli-s-form-button-background-color-pressed);
+  border-radius: 0 0 var(--oli-s-form-button-border-radius) var(--oli-s-form-button-border-radius);
+  padding: 1em;
+  max-inline-size: var(--oli-s-content-max-width);
+}
+
+[role="tabpanel"].is-hidden {
+  display: none;
+}
+
+[role="tab"] {
+  --_button-radius: var(--oli-s-form-button-border-radius) var(--oli-s-form-button-border-radius) 0 0; 
+}
+
+/**
+ * Breadcrumbs
+ */
+
+.phi-breadcrumbs {
+  --oli-s-list-flex-direction: row;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.phi-breadcrumbs:not(:first-child) {
+  margin-block: var(--oli-g-spacing-xl);
+}
+
+/**
+ * Notes
+ */
+
+ .phi-note {
+		max-inline-size: var(--oli-s-content-max-width);
+	}
+
+	.phi-note > div {
+		--_note-background-color: var(--oli-g-colors-color-1-100);
+		--_note-background-alpha: 0.4;
+		background-color: oklch(
+			from var(--_note-background-color) l c h / var(--_note-background-alpha)
+		);
+		padding: var(--oli-g-spacing-m);
+		border-radius: 8px;
+		margin-block-end: var(--oli-s-content-spacing);
+		container-name: note;
+	}
+
+	.phi-note > div::before {
+		--_note-type: "Info";
+		--oli-s-text-exponent: 0;
+
+		content: var(--_note-type);
+		display: block;
+		background-color: var(--_note-background-color);
+		border-start-end-radius: inherit;
+		border-end-start-radius: inherit;
+		margin: calc(var(--oli-g-spacing-m) * -1) calc(var(--oli-g-spacing-m) * -1)
+			0 auto;
+		inline-size: min-content;
+		font-weight: bold;
+		padding: 0 var(--oli-g-spacing-xs);
+	}
+
+	@container style(--type: demo) or style(--type: output) {
+		.phi-note > div {
+			--_note-background-color: var(--oli-g-colors-color-3-100);
+			--_note-background-alpha: 0.3;
+		}
+
+		.phi-note > div::before {
+			--_note-type: "Demo";
+		}
+	}
+
+	@container style(--type: output) {
+    .phi-note > div::before {
+			--_note-type: "Output";
+		}
+  }
+
+.phi-visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}

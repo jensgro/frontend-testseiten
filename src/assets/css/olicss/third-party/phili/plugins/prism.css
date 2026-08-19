@@ -1,0 +1,112 @@
+
+/**
+ * matuzo theme for JavaScript, CSS, and HTML
+ * Based on the a11y-dark theme: https://github.com/PrismJS/prism-themes/blob/master/themes/prism-a11y-dark.css
+ * @author matuzo
+ */
+
+pre[class*='language-'] {
+  --code-background: var(--oli-g-colors-background-alt);
+  --code-font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+  --code-text-regular: var(--oli-g-colors-light);
+  --code-padding: 1.6rem;
+  --code-border-radius: 6px;
+  --code-line-height: 1.7;
+  --code-tab-size: 8;
+}
+
+pre[class*='language-'] {
+  background: var(--code-background);
+  border-radius: var(--code-border-radius);
+  color: var(--code-text-regular);
+  font-family: var(--code-font-family);
+  hyphens: none;
+  line-height: var(--code-line-height);
+  tab-size: var(--code-tab-size);
+  overflow: auto;
+  padding: var(--code-padding);
+  white-space: normal;
+  width: 100%;
+  max-inline-size: var(--oli-s-content-max-width);
+  tab-size: 2;
+}
+
+pre[class*='language-'] code {
+  --oli-s-text-exponent: 0;
+
+  font-family: var(--code-font-family);
+  white-space: pre;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted,
+.token.url .url {
+  color: var(--oli-g-colors-property-tag-constant);
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted,
+.token.atrule .rule {
+  color: var(--oli-g-colors-selector-attribute-atrule);
+}
+
+.token.comment, 
+.token.prolog, 
+.token.doctype, 
+.token.cdata {
+  color: var(--oli-g-colors-comment-doctype);
+}
+
+.token.string,
+.token.attr-value,
+.token.function,
+.token.punctuation,
+.token.keyword {
+  color: var(--oli-g-colors-string-value-function);
+}
+
+/* .token.operator,
+.token.entity,
+.token.url .url,
+.style .token.string,
+.token.variable {
+  color: green;
+} */
+
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.important {
+  color: oklch(from var(--c6) calc(l + 0.1) c h)
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.language-css .token.string {
+  font-style: italic;
+}
+
+
+
+/* [role="group"] > pre[class*='language-'] {
+  margin: 0;
+}
+
+[role="group"]:has(>pre[class*='language-']) {
+  margin: 1em 0;
+}
+
+[role=group]:has(> pre[class*='language-']) {
+  overflow: auto;
+} */

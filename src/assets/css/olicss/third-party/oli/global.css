@@ -1,0 +1,71 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+:root {
+  --oli-g-colors-base-hue: 130;
+  --oli-g-colors-base-chroma: 0.09;
+  --oli-g-colors-base-light: 0.5;
+  --oli-g-colors-light: oklch(from var(--oli-g-colors-neutral-10) 0.96 c h);
+  --oli-g-colors-dark: var(--oli-g-colors-main-80);
+  --oli-g-colors-background: var(--oli-g-colors-neutral-5);
+  --oli-g-colors-background-alt: var(--oli-g-colors-contrast-80);
+  --oli-g-colors-background-alt2: var(--oli-g-colors-contrast2-20);
+  --oli-g-colors-highlight: var(--oli-g-colors-main);
+  --oli-g-colors-text: var(--oli-g-colors-dark);
+  --oli-g-colors-text-alt: var(--oli-g-colors-light);
+  --oli-g-colors-cta: var(--oli-g-colors-main-50);
+  --oli-g-colors-cta-text: var(--oli-g-colors-light);
+  --oli-g-colors-cta-alt: var(--oli-g-colors-contrast-50);
+  --oli-g-colors-state-highlight: var(--oli-g-colors-contrast-10);
+  --oli-g-colors-state-error: oklch(from var(--oli-g-colors-contrast) 0.4 0.6 0);
+  --oli-g-colors-state-disabled: var(--oli-g-colors-neutral-30);
+  --oli-g-colors-selector-attribute-atrule: var(--oli-g-colors-contrast2-10);
+  --oli-g-colors-comment-doctype: var(--oli-g-colors-neutral-30);
+  --oli-g-colors-property-tag-constant: var(--oli-g-colors-main-10);
+  --oli-g-colors-string-value-function: var(--oli-g-colors-contrast-5);
+  --oli-g-colors-main: oklch(var(--oli-g-colors-base-light) var(--oli-g-colors-base-chroma) var(--oli-g-colors-base-hue));
+  --oli-g-colors-main-10: oklch(from var(--oli-g-colors-main) 0.9 c h);
+  --oli-g-colors-main-20: oklch(from var(--oli-g-colors-main) 0.8 c h);
+  --oli-g-colors-main-30: oklch(from var(--oli-g-colors-main) 0.7 c h);
+  --oli-g-colors-main-40: oklch(from var(--oli-g-colors-main) 0.6 c h);
+  --oli-g-colors-main-50: oklch(from var(--oli-g-colors-main) 0.5 c h);
+  --oli-g-colors-main-60: oklch(from var(--oli-g-colors-main) 0.4 c h);
+  --oli-g-colors-main-70: oklch(from var(--oli-g-colors-main) 0.3 c h);
+  --oli-g-colors-main-80: oklch(from var(--oli-g-colors-main) 0.2 c h);
+  --oli-g-colors-main-90: oklch(from var(--oli-g-colors-main) 0.1 c h);
+  --oli-g-colors-neutral: oklch(from var(--oli-g-colors-main) l calc(c - 0.087) h);
+  --oli-g-colors-neutral-5: oklch(from var(--oli-g-colors-neutral) 0.95 c h);
+  --oli-g-colors-neutral-10: oklch(from var(--oli-g-colors-neutral) 0.9 c h);
+  --oli-g-colors-neutral-20: oklch(from var(--oli-g-colors-neutral) 0.8 c h);
+  --oli-g-colors-neutral-30: oklch(from var(--oli-g-colors-neutral) 0.7 c h);
+  --oli-g-colors-neutral-40: oklch(from var(--oli-g-colors-neutral) 0.6 c h);
+  --oli-g-colors-neutral-50: oklch(from var(--oli-g-colors-neutral) 0.5 c h);
+  --oli-g-colors-neutral-60: oklch(from var(--oli-g-colors-neutral) 0.4 c h);
+  --oli-g-colors-neutral-70: oklch(from var(--oli-g-colors-neutral) 0.3 c h);
+  --oli-g-colors-neutral-80: oklch(from var(--oli-g-colors-neutral) 0.2 c h);
+  --oli-g-colors-neutral-90: oklch(from var(--oli-g-colors-neutral) 0.1 c h);
+  --oli-g-colors-contrast: oklch(from var(--oli-g-colors-main) l c calc(h + 240));
+  --oli-g-colors-contrast-5: oklch(from var(--oli-g-colors-contrast) 0.95 c h);
+  --oli-g-colors-contrast-10: oklch(from var(--oli-g-colors-contrast) 0.9 c h);
+  --oli-g-colors-contrast-20: oklch(from var(--oli-g-colors-contrast) 0.8 c h);
+  --oli-g-colors-contrast-30: oklch(from var(--oli-g-colors-contrast) 0.7 c h);
+  --oli-g-colors-contrast-40: oklch(from var(--oli-g-colors-contrast) 0.6 c h);
+  --oli-g-colors-contrast-50: oklch(from var(--oli-g-colors-contrast) 0.5 c h);
+  --oli-g-colors-contrast-60: oklch(from var(--oli-g-colors-contrast) 0.4 c h);
+  --oli-g-colors-contrast-70: oklch(from var(--oli-g-colors-contrast) 0.3 c h);
+  --oli-g-colors-contrast-80: oklch(from var(--oli-g-colors-contrast) 0.2 c h);
+  --oli-g-colors-contrast-90: oklch(from var(--oli-g-colors-contrast) 0.1 c h);
+  --oli-g-colors-contrast2: oklch(from var(--oli-g-colors-main) l calc(c + 0.05) calc(h - 50));
+  --oli-g-colors-contrast2-10: oklch(from var(--oli-g-colors-contrast2) 0.9 c h);
+  --oli-g-colors-contrast2-20: oklch(from var(--oli-g-colors-contrast2) 0.8 c h);
+  --oli-g-colors-contrast2-30: oklch(from var(--oli-g-colors-contrast2) 0.7 c h);
+  --oli-g-colors-contrast2-40: oklch(from var(--oli-g-colors-contrast2) 0.6 c h);
+  --oli-g-colors-contrast2-50: oklch(from var(--oli-g-colors-contrast2) 0.5 c h);
+  --oli-g-colors-contrast2-60: oklch(from var(--oli-g-colors-contrast2) 0.4 c h);
+  --oli-g-colors-contrast2-70: oklch(from var(--oli-g-colors-contrast2) 0.3 c h);
+  --oli-g-colors-contrast2-80: oklch(from var(--oli-g-colors-contrast2) 0.2 c h);
+  --oli-g-colors-contrast2-90: oklch(from var(--oli-g-colors-contrast2) 0.1 c h);
+  --oli-g-text-size-base-s: 0.95rem;
+  --oli-g-text-size-base-m: 1.2rem;
+}

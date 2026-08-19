@@ -1,0 +1,32 @@
+@layer core.tokens {
+  :root {
+    --oli-s-content-vertical-offset: 12rem;
+  }
+}
+
+@layer components {
+  body {
+    background-image: url(/assets/bg.avif);
+    background-size: auto 100vh;
+    background-repeat: no-repeat;
+    background-position: top right;
+    backface-visibility: visible;
+    
+    @container style(--oli-inline-size-m: var(--oli-s-break-points-m)) {
+      background-attachment: fixed;
+    }
+  }
+}
+
+.fly-out {
+    margin: 0 0 0 auto;
+    height: 100dvh;
+    inset: 0;
+    inline-size: min(90vw, 25rem);
+    box-shadow: -10px 0 10px oklch(0 0 0 / 0.1);
+}
+
+.stack {
+  display: flex;
+  justify-content: space-between;
+}
