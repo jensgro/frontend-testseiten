@@ -1,0 +1,533 @@
+---
+layout: simple-1.njk
+title: Kitchensink 1
+permalink: kitchensink-1.html
+bodyClass: page
+css:
+    - olicss/index
+---
+
+<header>
+  <h1>Kitchen Sink: Umfangreiche HTML-Demo</h1>
+  <p>Diese Seite enthält viele HTML-Elemente in typischen Bereichen.</p>
+  <nav aria-label="Hauptnavigation">
+    <ul>
+      <li><a href="#hauptinhalt">Hauptinhalt</a></li>
+      <li><a href="#sektion-formulare">Formulare</a></li>
+      <li><a href="#sektion-medien">Medien</a></li>
+      <li><a href="#sektion-tabellen">Tabellen</a></li>
+      <li><a href="#sektion-texte">Text</a></li>
+      <li><a href="#sektion-dialog">Dialog</a></li>
+      <li><a href="#sektion-footer">Fußbereich</a></li>
+    </ul>
+  </nav>
+</header>
+<main id="hauptinhalt">
+  <section aria-labelledby="s1-titel">
+    <h2 id="s1-titel">Einführung</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+      magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+    </p>
+    <aside>
+      <h3>Hinweis</h3>
+      <p>
+        Lorem ipsum dolor sit amet, nam utamur lobortis elaboraret ne. Justo vocibus appareat at nam, sea an augue omnes
+        putent.
+      </p>
+    </aside>
+    <figure>
+      <img
+        src="https://picsum.photos/seed/kitchensink/800/300"
+        alt="Platzhalterbild für die Küchen-Sink-Demo"
+        width="800"
+        height="300"
+        loading="lazy"
+        decoding="async"/>
+      <figcaption>
+        Abbildung: Lorem ipsum dolor sit amet, consetetur sadipscing elitr.
+      </figcaption>
+    </figure>
+  </section>
+  <section aria-labelledby="s2-titel">
+    <h2 id="s2-titel">Listen, Details und Fortschritt</h2>
+    <h3>Listen</h3>
+    <ul>
+      <li>Ungeordnete Listeinträge</li>
+      <li>
+        Eintrag mit verschachtelter Liste
+        <ul>
+          <li>Unterpunkt</li>
+          <li>Noch ein Unterpunkt</li>
+        </ul>
+      </li>
+      <li>Letzter Punkt</li>
+    </ul>
+    <ol>
+      <li>Erster Schritt</li>
+      <li>Zweiter Schritt</li>
+      <li>Dritter Schritt</li>
+    </ol>
+    <dl>
+      <dt>Begriff</dt>
+      <dd>Lorem ipsum dolor sit amet, sed diam nonumy.</dd>
+      <dt>Ein weiterer Begriff</dt>
+      <dd>
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam voluptua.
+      </dd>
+    </dl>
+    <h3>Fortschritt</h3>
+    <p>Beispiel für einen Fortschrittswert:</p>
+    <progress value="42" max="100">42%</progress>
+  <h3>Details/Summary</h3>
+  <details>
+    <summary>Klicke hier für weitere Informationen</summary>
+    <p>
+      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+      magna aliquyam erat.
+    </p>
+  </details>
+  <h3>Meter</h3>
+  <p>Beispiel für eine Messgröße:</p>
+  <meter value="0.65" min="0" max="1">0,65</meter>
+</section>
+<section aria-labelledby="s3-titel" id="sektion-formulare">
+  <h2 id="s3-titel">Formulare</h2>
+  <form action="#" method="post" autocomplete="on">
+    <fieldset>
+      <legend>Kontaktformular</legend>
+      <p>
+        <label for="name">Name</label><br/> <input
+          id="name"
+          name="name"
+          type="text"
+          placeholder="Max Mustermann"
+          required
+          minlength="2"
+          maxlength="80"
+          autocomplete="name"/>
+      </p>
+      <p>
+        <label for="email">E-Mail</label><br/> <input id="email" name="email" type="email" placeholder="max@example.com" required autocomplete="email"/>
+      </p>
+      <p>
+        <label for="pass">Passwort</label><br/> <input id="pass" name="passwort" type="password" placeholder="••••••••" minlength="6" autocomplete="current-password"/>
+      </p>
+      <p>
+        <label for="alter">Alter</label><br/> <input id="alter" name="alter" type="number" min="0" max="120" step="1" value="30"/>
+      </p>
+      <p>
+        <label for="web">Website</label><br/> <input id="web" name="webseite" type="url" placeholder="https://example.com" autocomplete="url"/>
+      </p>
+      <p>
+        <label for="datum">Datum</label><br/> <input id="datum" name="datum" type="date"/>
+      </p>
+      <p>
+        <label for="zeit">Uhrzeit</label><br/> <input id="zeit" name="zeit" type="time"/>
+      </p>
+      <p>
+        <label for="farbe">Lieblingsfarbe</label><br/> <input id="farbe" name="farbe" type="color" value="#3366ff"/>
+      </p>
+      <p>
+        <label for="menge">Menge</label><br/> <input id="menge" name="menge" type="range" min="0" max="100" value="25"/>
+        <output name="ausgabe">25</output>
+      </p>
+      <p>
+        <label for="geb">Geburtszeitraum</label><br/> <input id="geb" name="geburtsbereich" type="month"/>
+      </p>
+      <p>
+        <label for="woche">Woche</label><br/> <input id="woche" name="woche" type="week"/>
+      </p>
+      <p>
+        <label for="datetime">Datum &amp; Uhrzeit</label><br/> <input id="datetime" name="datetime" type="datetime-local"/>
+      </p>
+      <p>
+        <label for="suchen">Suche</label><br/> <input id="suchen" name="suchen" type="search" placeholder="Suchbegriff..."/>
+      </p>
+      <p>
+        <label for="tel">Telefon</label><br/> <input id="tel" name="telefon" type="tel" placeholder="+49 123 456789" autocomplete="tel"/>
+      </p>
+      <p>
+        <label for="datei">Datei hochladen</label><br/> <input id="datei" name="datei" type="file" accept="image/*"/>
+      </p>
+      <p>
+        <label for="textfeld">Mehrzeiliger Text</label><br/>
+        <textarea id="textfeld" name="nachricht" rows="5" cols="40" placeholder="Schreibe deine Nachricht..." required>Lorem
+          ipsum dolor sit amet, consetetur.</textarea>
+      </p>
+      <p>
+        <label for="auswahl">Auswahl</label><br/>
+        <select id="auswahl" name="option" required>
+          <optgroup label="Gruppe A">
+            <option value="a1">Option A1</option>
+            <option value="a2" selected>Option A2</option>
+          </optgroup>
+          <optgroup label="Gruppe B">
+            <option value="b1">Option B1</option>
+            <option value="b2">Option B2</option>
+          </optgroup>
+        </select>
+      </p>
+      <p>
+        <label for="datalist">Autovervollständigung</label><br/> <input id="datalist" name="datalistWert" list="beispiele" placeholder="Wähle einen Vorschlag..."/>
+        <datalist id="beispiele">
+          <option value="Beispiel 1"></option>
+          <option value="Beispiel 2"></option>
+          <option value="Beispiel 3"></option>
+        </datalist>
+      </p>
+      <p>
+        <strong>Radioauswahl</strong><br/> <input id="r1" name="radio" type="radio" value="x" checked/>
+        <label for="r1">Radio X</label><br/> <input id="r2" name="radio" type="radio" value="y"/>
+        <label for="r2">Radio Y</label>
+      </p>
+      <p>
+        <strong>Checkboxen</strong><br/> <input id="c1" name="check1" type="checkbox" value="1"/>
+        <label for="c1">Option 1</label><br/> <input id="c2" name="check2" type="checkbox" value="2" checked/>
+        <label for="c2">Option 2</label>
+      </p>
+      <p>
+        <label for="zahl">Hidden-Feld</label><br/> <input id="zahl" name="hiddenWert" type="hidden" value="12345"/>
+        <small>Dieses Feld ist nur demonstrativ.</small>
+      </p>
+      <p>
+        <label for="token">Eingabetoken (Demo)</label><br/> <input id="token" name="token" type="text" inputmode="verbatim"/>
+      </p>
+      <p>
+        <button type="submit">Absenden</button>
+        <button type="reset">Zurücksetzen</button>
+        <input type="button" value="Button-Demo"/>
+        <input type="submit" value="Submit-Input-Demo"/>
+        <input type="image" alt="Bild-Submit-Demo" src="https://picsum.photos/seed/submit/120/60" width="120" height="60"/>
+      </p>
+    </fieldset>
+    <fieldset>
+      <legend>Interaktiv: Tastatur &amp; Werte</legend>
+      <p>
+        <label for="key">Tastatur-Eingabe</label><br/> <input id="key" name="key" type="text" placeholder="A oder 123..."/>
+      </p>
+      <p>
+        <label for="bio">Kurze Bio</label><br/> <input id="bio" name="bio" type="text" size="40" maxlength="120"/>
+      </p>
+      <p>
+        <label for="readonly">Readonly</label><br/> <input id="readonly" name="readonly" type="text" value="Nur lesen" readonly/>
+      </p>
+      <p>
+        <label for="disabled">Disabled</label><br/> <input id="disabled" name="disabled" type="text" value="Deaktiviert" disabled/>
+      </p>
+      <p>
+        <label for="autofocus">Autofocus (Demo)</label><br/> <input id="autofocus" name="autofocus" type="text" value="Fokus" autofocus/>
+      </p>
+      <p>
+        <label for="range2">Skalierung</label><br/> <input id="range2" name="range2" type="number" step="0.01" value="3.14"/>
+      </p>
+    </fieldset>
+  </form>
+</section>
+<section aria-labelledby="s4-titel" id="sektion-medien">
+  <h2 id="s4-titel">Medien und Einbettungen</h2>
+  <h3>Audio</h3>
+  <audio controls preload="metadata">
+    <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg"/> Dein Browser unterstützt das Audio-Element
+    nicht.
+  </audio>
+  <h3>Video</h3>
+  <video controls width="640" height="360" preload="metadata">
+    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4"/>
+    <track kind="captions" src="https://example.com/captions.vtt" srclang="de" label="Deutsch" default/> Dein Browser
+    unterstützt das Video-Element nicht.
+  </video>
+  <h3>IFrame</h3>
+  <iframe
+    src="https://www.example.com/"
+    title="Beispiel-IFrame"
+    width="100%"
+    height="200"
+    loading="lazy"
+    referrerpolicy="no-referrer"
+    sandbox="allow-scripts allow-same-origin">
+    Dein Browser unterstützt das iframe-Element nicht.
+  </iframe>
+  <h3>Canvas</h3>
+  <canvas id="demoCanvas" width="400" height="120">
+    Dein Browser unterstützt das canvas-Element nicht.
+  </canvas>
+  <h3>SVG (inline)</h3>
+  <svg width="480" height="140" viewbox="0 0 480 140" role="img" aria-label="SVG Demo">
+    <title>SVG-Demo</title>
+    <desc>Ein kleines Rechteck mit Text.</desc>
+    <rect x="10" y="10" width="200" height="60" fill="none" stroke="black" stroke-width="2"/>
+    <circle cx="300" cy="40" r="30" fill="none" stroke="blue" stroke-width="3"/>
+    <path d="M20,100 C120,20 200,120 280,60" stroke="green" fill="none" stroke-width="3"/>
+    <text x="60" y="45" font-size="16">Lorem</text>
+  </svg>
+  <h3>Schrift- und Platzhalter-Elemente</h3>
+  <picture>
+    <source srcset="https://picsum.photos/seed/picture/900/300" media="(min-width: 700px)"/>
+    <img src="https://picsum.photos/seed/picture/600/240" alt="Bild in Picture" width="600" height="240" loading="lazy"/>
+  </picture>
+  <map name="demoMap">
+    <area shape="rect" coords="34,44,270,350" href="#sektion-tabellen" alt="Zum Tabellenbereich"/>
+    <area shape="circle" coords="450,200,80" href="#sektion-footer" alt="Zum Footerbereich"/>
+  </map>
+  <img
+    src="https://picsum.photos/seed/map/600/400"
+    alt="Karte mit klickbaren Bereichen"
+    usemap="#demoMap"
+    width="600"
+    height="400"
+    loading="lazy"/>
+</section>
+<section aria-labelledby="s5-titel" id="sektion-tabellen">
+  <h2 id="s5-titel">Tabellen</h2>
+  <table>
+    <caption>
+      Beispiel-Tabelle: Lorem ipsum dolor sit amet, consetetur sadipscing elitr.
+    </caption>
+    <thead>
+      <tr>
+        <th scope="col">Spalte A</th>
+        <th scope="col">Spalte B</th>
+        <th scope="col">Spalte C</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Zeile 1</th>
+        <td>Lorem ipsum</td>
+        <td>Dolor sit amet</td>
+      </tr>
+      <tr>
+        <th scope="row">Zeile 2</th>
+        <td colspan="2">colspan: Der Inhalt überspannt zwei Spalten</td>
+      </tr>
+      <tr>
+        <th scope="row">Zeile 3</th>
+        <td rowspan="1">rowspan: In dieser Demo nur ein Wert</td>
+        <td>Weitere Zelle</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th scope="row">Footer</th>
+        <td colspan="2">Lorem ipsum am Ende</td>
+      </tr>
+    </tfoot>
+  </table>
+</section>
+<section aria-labelledby="s6-titel" id="sektion-texte">
+  <h2 id="s6-titel">Textauszeichnung und semantische Inline-Elemente</h2>
+  <h3>Inline-Elemente</h3>
+  <p>
+    Normaler Text mit
+    <strong>starkem</strong>
+    Inhalt,
+    <b>fetter</b>
+    Markierung und
+    <em>betontem</em>
+    Text sowie
+    <i>kursiv</i>.
+  </p>
+  <p>
+    <u>Unterstrich</u>
+    (u),
+    <s>durchgestrichen</s>
+    (s) und
+    <mark>markierter</mark>
+    Bereich.
+  </p>
+  <p>
+    Subskript: H<sub>2</sub>O und Superskript: E = mc<sup>2</sup>.
+  </p>
+  <p>
+    <small>Kleiner Text</small>
+    und
+    <big>größer (nicht empfohlen)</big>
+    als Demo.
+  </p>
+  <p>
+    <span>Spannweite ohne Klasse (span)</span>
+    und <br/> Zeilenumbruch mit br.
+  </p>
+  <p>
+    <wbr/> (optional: Wortumbruchstelle)
+  </p>
+  <h3>Zitate und Code</h3>
+  <blockquote cite="https://example.com/">
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy.
+  </blockquote>
+  <q cite="https://example.com/">
+    Lorem ipsum dolor sit amet.
+  </q>
+  <pre>
+Lorem ipsum dolor sit amet,
+consetetur sadipscing elitr.
+        </pre>
+  <code>const x = 1;</code>
+  <pre><code>function demo() {
+  return "Lorem";
+}</code></pre>
+  <kbd>Strg</kbd>
+  +
+  <kbd>C</kbd>
+  zum Kopieren (Demo).
+  <samp>Ausgabe</samp>
+  eines Programms (Demo).
+  <var>i</var>
+  als Variable.
+  <time datetime="2026-08-19">19. August 2026</time>
+  <p>
+    Abkürzung:
+    <abbr title="Lorem Ipsum Dolor">LID</abbr>.
+  </p>
+  <p>
+    Adresse:
+    <address>Beispielstraße 1, 12345 Beispielstadt</address>
+  </p>
+  <p>
+    <bdi>مَرحَبًا</bdi>
+    und
+    <bdo dir="rtl">RTL-DEMO</bdo>
+  </p>
+  <p>
+    Text mit
+    <ruby>Rubin<rt>Demo</rt>
+    </ruby>
+  </p>
+  <p>
+    Bei Bedarf:
+    <data value="42">42</data>
+    als maschinenlesbarer Wert.
+  </p>
+  <p>
+    <del>Gelöschter Text</del>
+    und
+    <ins>eingefügter Text</ins>.
+  </p>
+  <p>
+    <dfn>Begriff</dfn>: Lorem ipsum dolor sit amet, consetetur sadipscing.
+  </p>
+</section>
+<section aria-labelledby="s7-titel">
+  <h2 id="s7-titel">Semantische Container und Gruppen</h2>
+  <article>
+    <header>
+      <h3>Artikel</h3>
+      <p>
+        <time datetime="2026-08-10">10. August 2026</time>
+        · Autor: Redaktion</p>
+    </header>
+    <p>
+      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+      magna aliquyam erat.
+    </p>
+    <section>
+      <h4>Unterabschnitt</h4>
+      <p>
+        Lorem ipsum dolor sit amet, At vero eos et accusam et justo duo dolores et ea rebum.
+      </p>
+    </section>
+    <section>
+      <h4>Weitere Untersektion</h4>
+      <ul>
+        <li>Lorem</li>
+        <li>Ipsum</li>
+        <li>Dolor</li>
+      </ul>
+    </section>
+    <footer>
+      <p>Artikel-Fußzeile: Lorem ipsum dolor sit amet.</p>
+    </footer>
+  </article>
+  <form>
+    <fieldset>
+      <legend>Demonstration: Ausgabe</legend>
+      <p>
+        <label for="calc-a">A</label>
+        <input id="calc-a" type="number" value="5"/>
+      </p>
+      <p>
+        <label for="calc-b">B</label>
+        <input id="calc-b" type="number" value="7"/>
+      </p>
+      <p>
+        <label for="calc-out">Ergebnis (output)</label><br/>
+        <output id="calc-out">12</output>
+      </p>
+    </fieldset>
+  </form>
+  <div>
+    <h3>div-Container</h3>
+    <p>
+      Lorem ipsum dolor sit amet, consetetur sadipscing elitr.
+    </p>
+  </div>
+  <hr/> <pre>
+Textblock mit hr vorher und pre hier drunter.
+      </pre>
+  <blockquote>
+    <p>
+      Lorem ipsum dolor sit amet, consetetur sadipscing elitr.
+    </p>
+  </blockquote>
+</section>
+<section aria-labelledby="s8-titel" id="sektion-dialog">
+  <h2 id="s8-titel">Dialog, Alerts und Bereiche</h2>
+  <dialog open>
+    <form method="dialog">
+      <h3>Dialog</h3>
+      <p>
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr.
+      </p>
+      <button value="ok" type="submit">OK</button>
+      <button value="abbrechen" type="submit">Abbrechen</button>
+    </form>
+  </dialog>
+  <section aria-label="Benachrichtigung">
+    <h3>Alert (rollenspezifisch)</h3>
+    <p>
+      <span role="status" aria-live="polite">Lorem ipsum: Statusmeldung (Demo).</span>
+    </p>
+    <p>
+      <span role="alert">Lorem ipsum: Warnmeldung (Demo).</span>
+    </p>
+  </section>
+  <section aria-label="Sichtbarer Bereich">
+    <h3>Content-Container</h3>
+    <p>
+      Lorem ipsum dolor sit amet, sed diam nonumy eirmod tempor invidunt ut labore.
+    </p>
+  </section>
+</section></main><footer id="sektion-footer">
+<h2>Footer-Bereich</h2>
+<p>
+  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam voluptua.
+</p>
+<section>
+  <h3>Links</h3>
+  <ul>
+    <li><a href="#hauptinhalt">Nach oben</a></li>
+    <li><a href="https://example.com" target="_blank" rel="noopener noreferrer">Externer Link (Demo)</a></li>
+    <li><a href="mailto:info@example.com">E-Mail senden</a></li>
+  </ul>
+</section>
+<section>
+  <h3>Obsolete/weit verbreitete Elemente (Demo)</h3>
+  <p>
+    <mark>Hinweis</mark>: Manche Elemente sind nicht modern (z. B. big/center, je nach Ziel).
+  </p>
+  <center>
+    <p>Lorem ipsum in center (Demo)</p>
+  </center>
+  <p>
+    <small>
+      <time datetime="2026-08-19">Stand: 19. August 2026</time>
+    </small>
+  </p>
+  <details>
+    <summary>Mehr im Footer</summary>
+    <p>
+      Lorem ipsum dolor sit amet, consetetur sadipscing elitr.
+    </p>
+  </details>
+</section></footer>

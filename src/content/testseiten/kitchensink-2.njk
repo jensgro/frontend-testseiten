@@ -1,0 +1,269 @@
+---
+layout: simple-1.njk
+title: Kitchensink 2
+permalink: kitchensink-2.html
+css:
+    - olicss/index
+---
+
+<header>
+  <h1>HTML Kitchensink</h1>
+  <p>Eine Demonstration möglichst aller HTML-Elemente in einem Dokument.</p>
+  <nav>
+    <ul>
+      <li><a href="#text">Text-Elemente</a></li>
+      <li><a href="#grouping">Gruppierung</a></li>
+      <li><a href="#forms">Formulare</a></li>
+      <li><a href="#media">Medien</a></li>
+      <li><a href="#table">Tabellen</a></li>
+      <li><a href="#interactive">Interaktive Elemente</a></li>
+    </ul>
+  </nav>
+</header>
+<hr>
+<main>
+  <!-- Text-Elemente -->
+  <section id="text">
+    <h2>Text-Elemente</h2>
+    <p>Dies ist ein einfacher Absatz mit
+      <strong>fettem Text</strong>,
+      <em>kursivem Text</em>
+      und
+      <u>unterstrichenem Text</u>. Man kann auch
+      <mark>Text markieren</mark>,
+      <small>kleiner schreiben</small>
+      oder
+      <del>Text durchstreichen</del>
+      und ihn dann
+      <ins>ergänzen</ins>.</p>
+    <p>Hier ist ein Beispiel für
+      <s>veralteten Text</s>
+      und
+      <strong>starken Fokus</strong>
+      sowie
+      <em>betonten Text</em>. Es gibt auch
+      <sub>tiefgestellte</sub>
+      und
+      <sup>hochgestellte</sup>
+      Zeichen.</p>
+    <p>Ein Zitat:
+      <q>Dies ist ein kurzes Inline-Zitat.</q>
+    </p>
+    <blockquote>
+      Dies ist ein Blockzitat. Es wird verwendet, um längere Zitate aus anderen Quellen deutlich vom Haupttext abzuheben.
+    </blockquote>
+    <p>Präzise Begriffe:
+      <dfn>HTML</dfn>
+      steht für Hypertext Markup Language.</p>
+    <p>Ein Beispiel für einen Link:
+      <a href="https://www.example.com">Besuche Example.com</a>
+    </p>
+    <p>Adress-Informationen:
+      <address>
+        Max Mustermann<br> Musterstraße 1<br> 12345 Musterstadt
+      </address>
+    </p>
+    <p>Code-Beispiel:
+      <code>console.log("Hallo Welt");</code>
+    </p>
+    <pre>
+                Dies ist ein vorformatiertes Textblock:
+                Zeile 1
+                Zeile 2 (Einrückungen bleiben erhalten)
+            </pre>
+    <p>Mathematische Formel:
+      <var>E</var>
+      =
+      <var>m</var>c<sup>2</sup>
+    </p>
+    <p>Zeitangabe:
+      <time datetime="2026-08-19">Heute</time>
+    </p>
+  </section>
+  <hr>
+  <!-- Gruppierung & Listen -->
+  <section id="grouping">
+    <h2>Gruppierung und Listen</h2>
+    <div>
+      <p>Dies ist ein einfacher
+        <code>div</code>-Container, der oft zur Gruppierung genutzt wird.</p>
+    </div>
+    <p>Ungeordnete Liste:</p>
+    <ul>
+      <li>Erster Punkt</li>
+      <li>Zweiter Punkt
+        <ul>
+          <li>Unterpunkt A</li>
+          <li>Unterpunkt B</li>
+        </ul>
+      </li>
+      <li>Dritter Punkt</li>
+    </ul>
+    <p>Geordnete Liste:</p>
+    <ol>
+      <li>Schritt eins</li>
+      <li>Schritt zwei</li>
+      <li>Schritt drei</li>
+    </ol>
+    <p>Beschreibungsliste:</p>
+    <dl>
+      <dt>HTML</dt>
+      <dd>Eine Auszeichnungssprache für Webseiten.</dd>
+      <dt>CSS</dt>
+      <dd>Eine Stylesheet-Sprache zur Gestaltung.</dd>
+    </dl>
+  </section>
+  <hr>
+  <!-- Formulare -->
+  <section id="forms">
+    <h2>Formulare und Eingaben</h2>
+    <form action="#" method="post">
+      <fieldset>
+        <legend>Persönliche Daten</legend>
+        <p>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" placeholder="Max Mustermann">
+        </p>
+        <p>
+          <label for="email">E-Mail:</label>
+          <input type="email" id="email" name="email">
+        </p>
+        <p>
+          <label for="pass">Passwort:</label>
+          <input type="password" id="pass" name="pass">
+        </p>
+        <p>
+          <label for="age">Alter:</label>
+          <input type="number" id="age" name="age" min="0" max="120">
+        </p>
+        <p>
+          <label for="date">Datum:</label>
+          <input type="date" id="date" name="date">
+        </p>
+        <p>
+          <label for="color">Lieblingsfarbe:</label>
+          <input type="color" id="color" name="color">
+        </p>
+      </fieldset>
+      <fieldset>
+        <legend>Präferenzen</legend>
+        <p>
+          <input type="checkbox" id="newsletter" name="newsletter">
+          <label for="newsletter">Newsletter abonnieren</label>
+        </p>
+        <p>
+          <input type="radio" id="option1" name="choice" value="1">
+          <label for="option1">Option 1</label>
+          <input type="radio" id="option2" name="choice" value="2">
+          <label for="option2">Option 2</label>
+        </p>
+        <p>
+          <label for="experience">Erfahrung:</label>
+          <input type="range" id="experience" name="experience" min="0" max="10">
+        </p>
+        <p>
+          <label for="browser">Browser wählen:</label>
+          <input list="browsers" id="browser" name="browser">
+          <datalist id="browsers">
+            <option value="Chrome"></option>
+            <option value="Firefox"></option>
+            <option value="Safari"></option>
+            <option value="Edge"></option>
+          </datalist>
+        </p>
+        <p>
+          <label for="message">Nachricht:</label><br>
+          <textarea id="message" name="message" rows="4" cols="50">Hier Text eingeben...</textarea>
+        </p>
+        <p>
+          <label for="category">Kategorie:</label>
+          <select id="category" name="category">
+            <optgroup label="Technik">
+              <option value="software">Software</option>
+              <option value="hardware">Hardware</option>
+            </optgroup>
+            <optgroup label="Andere">
+              <option value="divers">Diverses</option>
+            </optgroup>
+          </select>
+        </p>
+      </fieldset>
+      <p>
+        <button type="submit">Absenden</button>
+        <button type="reset">Zurücksetzen</button>
+      </p>
+    </form>
+  </section>
+  <hr>
+  <!-- Tabellen -->
+  <section id="table">
+    <h2>Tabellen</h2>
+    <table border="1">
+      <caption>Beispielhafte Datentabelle</caption>
+      <thead>
+        <tr>
+          <th>Produkt</th>
+          <th>Menge</th>
+          <th>Preis</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Apfel</td>
+          <td>5</td>
+          <td>2,00 €</td>
+        </tr>
+        <tr>
+          <td>Birne</td>
+          <td>3</td>
+          <td>3,50 €</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>Gesamt</td>
+          <td>8</td>
+          <td>5,50 €</td>
+        </tr>
+      </tfoot>
+    </table>
+  </section>
+  <hr>
+  <!-- Medien -->
+  <section id="media">
+    <h2>Medien</h2>
+    <p>Ein Bild mit Alternativtext:</p>
+    <figure>
+      <img src="https://via.placeholder.com/150" alt="Beispielbild">
+      <figcaption>Bildunterschrift: Ein Platzhalterbild</figcaption>
+    </figure>
+    <p>Ein Audio-Element:</p>
+    <audio controls>
+      <source src="audio.mp3" type="audio/mpeg"> Ihr Browser unterstützt das Audio-Element nicht.
+    </audio>
+    <p>Ein Video-Element:</p>
+    <video controls width="250">
+      <source src="video.mp4" type="video/mp4"> Ihr Browser unterstützt das Video-Element nicht.
+    </video>
+    <p>Ein eingebetteter Iframe:</p>
+    <iframe src="about:blank" title="Beispiel Iframe" width="300" height="100"></iframe>
+  </section>
+  <hr>
+  <!-- Interaktive Elemente -->
+  <section id="interactive">
+    <h2>Interaktive Elemente</h2>
+    <details>
+      <summary>Klicke hier, um mehr zu erfahren</summary>
+      <p>Dies ist der Inhalt, der durch das
+        <code>details</code>-Element versteckt war.</p>
+    </details>
+    <div>
+      <label for="progress-bar">Uploading Document</label>
+      <progress id="progress-bar" value="70" max="100">70 %</progress>
+    </div>
+    <div>Ein Meter-Element:<meter value="0.6">60%</meter></div>
+  </section>
+</main>
+<footer>
+  <p>&copy; 2026 HTML Kitchensink Dokument</p>
+</footer>
