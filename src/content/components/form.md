@@ -3,6 +3,7 @@ title: Formular
 css:
   - components/components-base
   - components/form
+  - components/button
 ---
 <section class="panel">
   <h1>Formular</h1>

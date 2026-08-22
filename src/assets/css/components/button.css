@@ -5,13 +5,19 @@
 }
 
 .btn {
-  border: 1px solid var(--button-border-color, transparent);
-  border-radius: var(--btn-border-radius, 0);
-  padding: 0.75rem 1rem;
+  --button-background: #000;
+  --button-color: #fff;
+  --button-border-color: transparent;
+  --btn-border-radius: 0;
+  --button-padding: var(space-3) var(--spacing-4);
+
+  background-color: var(--button-background);
+  color: var(--button-color);
+  border: 1px solid var(--button-border-color);
+  border-radius: var(--btn-border-radius);
+  padding: var(--button-padding);
   font-weight: 700;
   cursor: pointer;
-  background-color: var(--button-background, #000);
-  color: var(--button-color, #fff);
 }
 
 .btn--primary {

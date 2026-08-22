@@ -1,12 +1,17 @@
 dialog {
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 1.5rem;
-  box-shadow: 0 12px 32px rgba(16, 24, 40, 0.15);
+  --dialog-border-color: var(--border);
+  --dialog-border-radius: var(--radius-4);
+  --dialog-spacing: var(--spacing-4);
+  --dialog-box-shadow: 0 12px 32px rgba(16, 24, 40, 0.15);
+  --dialog-backdrop: rgba(16, 24, 40, 0.45);
+  
+  border: 1px solid var(--dialog-border-color);
+  border-radius: var(--dialog-border-radius);
+  padding: var(--dialog-spacing);
+  box-shadow: var(--dialog-box-shadow);
 }
 
 dialog::backdrop {
-  --dialog-backdrop: rgba(16, 24, 40, 0.45);
   background: var(--dialog-backdrop);
 }
 

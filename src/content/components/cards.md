@@ -2,19 +2,27 @@
 title: Card
 css:
   - components/components-base
-  - components/cards
+  - components/card
 ---
 <section class="card-grid">
   <article class="card">
-    <p class="eyebrow">New</p>
-    <h2>Produkt-Update</h2>
+    <header class="card__header">
+      <p class="card__topline">New</p>
+      <h2 class="card__headline">Produkt-Update</h2>
+    </header>
     <p>Neue Funktionen sind jetzt verfügbar und können sofort getestet werden.</p>
-    <a href="#">Mehr erfahren</a>
+    <footer class="card__footer">
+      <a href="#">Mehr erfahren</a>
+    </footer>
   </article>
-  <article class="card featured">
-    <p class="eyebrow">Empfohlen</p>
-    <h2>Premium-Plan</h2>
+  <article class="card card--featured">
+    <header class="card__header">
+      <p class="card__topline">Empfohlen</p>
+      <h2 class="card__headline">Premium-Plan</h2>
+    </header>
     <p>Ideal für Teams mit erweiterten Workflows und mehr Freigaben.</p>
-    <a href="#">Jetzt starten</a>
+    <footer class="card__footer">
+      <a href="#">Jetzt starten</a>
+    </footer>
   </article>
 </section>

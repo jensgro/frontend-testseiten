@@ -13,6 +13,22 @@
     --success-bg: rgb(236, 253, 243);
     --warning-bg: rgb(255, 250, 235);
     --error-bg: rgb(254, 243, 242);
+
+    --radius-1: 4px;
+    --radius-2: 8px;
+    --radius-3: 12px;
+    --radius-4: 14px;
+    --radius-round: 100%;
+
+    --spacing-1: 4px;
+    --spacing-2: 8px;
+    --spacing-3: 12px;
+    --spacing-4: 16px;
+
+    --gap-1: 5px;
+    --gap-2: 10px
+    --gap-3: 15px;
+    --gap-4: 20px;
 }
 
 * {
@@ -42,5 +58,13 @@ body {
     margin-bottom: 1rem;
     color: var(--accent);
     text-decoration: none;
+    font-weight: 700;
+}
+
+.eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 0.75rem;
+    color: var(--accent);
     font-weight: 700;
 }
