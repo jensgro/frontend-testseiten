@@ -1,8 +1,8 @@
 ---
-title: Card-Komponente
-permalink: components/cards.html
+title: Card
 css:
-  - components/components
+  - components/components-base
+  - components/cards
 ---
 <section class="card-grid">
   <article class="card">

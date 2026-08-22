@@ -1,8 +1,8 @@
 ---
-title: Tooltip-Komponente
-permalink: components/tooltip.html
+title: Tooltip
 css:
-  - components/components
+  - components/components-base
+  - components/tooltip
 ---
 <div class="tooltip-trigger">
   <span class="label">Hover mich</span>

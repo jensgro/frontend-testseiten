@@ -1,8 +1,8 @@
 ---
-title: Dialog-Komponente
-permalink: components/dialog.html
+title: Dialog
 css:
-  - components/components
+  - components/components-base
+  - components/dialog
 ---
   <button class="btn" onclick="document.getElementById('demo-dialog').showModal()">Dialog öffnen</button>
 

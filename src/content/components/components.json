@@ -1,4 +1,5 @@
 {
   "layout": "components.njk",
+  "permalink": "components-{{title | slugify}}.html",
   "tags": "components"
 }

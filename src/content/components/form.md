@@ -1,8 +1,8 @@
 ---
-title: Formular-Komponenten
-permalink: components/forms.html
+title: Formular
 css:
-  - components/components
+  - components/components-base
+  - components/form
 ---
 <section class="panel">
   <h1>Formular</h1>

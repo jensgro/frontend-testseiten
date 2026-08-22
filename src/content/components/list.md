@@ -1,8 +1,8 @@
 ---
-title: Listen-Komponente
-permalink: components/lists.html
+title: Liste
 css:
-  - components/components
+  - components/components-base
+  - components/list
 ---
 <section class="panel">
   <h1>Listen-Beispiele</h1>

@@ -1,8 +1,8 @@
 ---
-title: Popup-Komponente
-permalink: components/popup.html
+title: Popup
 css:
-  - components/components
+  - components/components-base
+  - components/popup
 ---
 <div class="popup-trigger">
   <button class="btn">Info anzeigen</button>

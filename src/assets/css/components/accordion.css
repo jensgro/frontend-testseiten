@@ -1,17 +1,16 @@
-:root {
-  font-family: Inter, Arial, sans-serif;
-  --bg: #f8faff;
-  --panel: #ffffff;
-  --text: #101828;
-  --muted: #667085;
-  --accent: #4f46e5;
-  --border: #d0d5dd;
+details {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.9rem 1rem;
+  margin-bottom: 0.75rem;
 }
-* { box-sizing: border-box; }
-body { margin: 0; background: var(--bg); color: var(--text); }
-.demo { max-width: 760px; margin: 0 auto; padding: 2rem 1.25rem; }
-.back-link { display: inline-block; margin-bottom: 1rem; color: var(--accent); text-decoration: none; font-weight: 700; }
-.panel { background: var(--panel); border: 1px solid var(--border); border-radius: 16px; padding: 2rem; box-shadow: 0 10px 30px rgba(16,24,40,0.06); }
-details { border: 1px solid var(--border); border-radius: 12px; padding: 0.9rem 1rem; margin-bottom: 0.75rem; }
-summary { cursor: pointer; font-weight: 700; }
-p { margin: 0.6rem 0 0; color: var(--muted); }
+
+summary {
+  cursor: pointer;
+  font-weight: 700;
+}
+
+details p {
+  margin: 0.6rem 0 0;
+  color: var(--muted);
+}

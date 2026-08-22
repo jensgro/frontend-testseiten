@@ -1,0 +1,23 @@
+.alert {
+  padding: var(--alert-padding, 1em);
+  border-radius: (var(--alert-border-radius), 8px);
+  margin-bottom: var(--alert-margin-bottom, 1em);
+  font-weight: 600;
+  background-color: var(--alert-bg, #000);
+  color: var(--alert-color, #fff);
+}
+
+.alert--success {
+  --alert-bg: var(--success-bg);
+  --alert-color: var(--success);
+}
+
+.alert--warning {
+  --alert-bg: var(--warning-bg);
+  --alert-color: var(--warning);
+}
+
+.alert--error {
+  --alert-bg: var(--error-bg);
+  --alert-color: var(--error);
+}

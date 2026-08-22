@@ -1,20 +1,4 @@
-:root {
-  color-scheme: light;
-  font-family: Inter, Arial, sans-serif;
-  --bg: #f5f7ff;
-  --card: #ffffff;
-  --text: #101828;
-  --muted: #667085;
-  --accent: #4f46e5;
-  --border: #e4e7ec;
-}
 
-* { box-sizing: border-box; }
-body {
-  margin: 0;
-  background: var(--bg);
-  color: var(--text);
-}
 .page {
   max-width: 1100px;
   margin: 0 auto;
@@ -34,20 +18,4 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1rem;
-}
-.card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 1.25rem;
-  box-shadow: 0 10px 30px rgba(16, 24, 40, 0.06);
-}
-.card h2 { margin-top: 0; }
-.card p { color: var(--muted); }
-.card a {
-  display: inline-block;
-  margin-top: 0.5rem;
-  color: var(--accent);
-  font-weight: 700;
-  text-decoration: none;
 }

@@ -1,0 +1,35 @@
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--button-row-gap, 10px);
+}
+
+.btn {
+  border: 1px solid var(--button-border-color, transparent);
+  border-radius: var(--btn-border-radius, 0);
+  padding: 0.75rem 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: var(--button-background, #000);
+  color: var(--button-color, #fff);
+}
+
+.btn--primary {
+  --button-background: var(--primary);
+  --button-color: white;
+}
+
+.btn--secondary {
+  --button-background: var(--secondary);
+  --button-color: var(--text);
+}
+
+.btn--ghost {
+  --button-background: var(--ghost);
+  --button-border-color: var(--border);
+  --button-color: var(--text);
+}
+
+.btn--round {
+  --btn-border-radius: 100%;
+}

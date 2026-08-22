@@ -1,8 +1,8 @@
 ---
-title: Button-Komponente
-permalink: components/buttons.html
+title: Button
 css:
-  - components/components
+  - components/components-base
+  - components/button
 ---
 
 <section class="panel">

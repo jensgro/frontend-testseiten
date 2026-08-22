@@ -1,8 +1,8 @@
 ---
-title: Tabellen-Komponente
-permalink: components/tables.html
+title: Tabellen
 css:
-  - components/components
+  - components/components-base
+  - components/table
 ---
 <section class="panel">
   <h1>Tabellen-Beispiele</h1>

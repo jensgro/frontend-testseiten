@@ -1,0 +1,26 @@
+.list-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+ul,
+ol {
+  padding-left: 1.2rem;
+  color: var(--muted);
+}
+
+dl {
+  display: grid;
+  gap: 0.25rem;
+}
+
+dt {
+  font-weight: 700;
+  color: var(--text);
+}
+
+dd {
+  margin: 0 0 0.5rem;
+  color: var(--muted);
+}

@@ -1,8 +1,8 @@
 ---
-title: Akkordeon-Komponente
-permalink: components/accordion.html
+title: Akkordeon
 css:
-  - components/components
+  - components/components-base
+  - components/accordion
 ---
 
 <section class="panel">

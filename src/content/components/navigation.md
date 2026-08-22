@@ -1,8 +1,8 @@
 ---
-title: Navigation-Komponente
-permalink: components/navigation.html
+title: Navigation
 css:
   - components/components
+  - components/navigation
 ---
 <nav class="top-nav">
   <div class="brand">Acme</div>
