@@ -1,11 +1,15 @@
 .top-nav {
+  --top-nav-border-color: var(--border);
+  --top-nav-padding: 1rem 1.25rem;
+  --top-nav-bg: #fff;
+  --top-nav-color: var(--text);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 1.25rem;
-  background: white;
-  border: 1px solid var(--border);
-  border-radius: 14px;
+  padding: var(--top-nav-padding);
+  background: var(--top-nav-bg);
+  color: var(--top-nav-color);
+  border: 1px solid var(--top-nav-border-color);
 }
 
 .brand {

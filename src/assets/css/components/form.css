@@ -1,26 +1,31 @@
 .form {
+    --form-gap: var(--gap-2);
+    --form-cnt-gap: var(--gap-1);
+    --form-element-border: var(--border);
+    --form-element-border-radius: var(--radius-2);
+    --form-element-padding: var(--spacing-2) var(--spacing-3);
     display: grid;
-    gap: 1rem;
+    gap: var(--form-gap);
 }
 
-label {
+.form-cnt {
     display: grid;
-    gap: 0.4rem;
+    gap: var(--form-cnt-gap);
     font-weight: 600;
 }
 
 input,
 select {
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 0.75rem 0.9rem;
+    border: 1px solid var(--form-element-border);
+    border-radius: var(--form-element-border-radius);
+    padding: var(--form-element-padding);
     font: inherit;
 }
 
 .checkbox-row {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: var(--form-cnt-gap);
     font-weight: 500;
 }
 

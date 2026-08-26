@@ -4,10 +4,11 @@
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
-ul,
-ol {
-  padding-left: 1.2rem;
-  color: var(--muted);
+ul, ol {
+  --list-color: var(--text);
+  --list-padding-left: 1.2em;
+  padding-left: var(--list-padding-left);
+  color: var(--list-color);
 }
 
 dl {
@@ -16,11 +17,13 @@ dl {
 }
 
 dt {
+  --dt-color: var(--text);
   font-weight: 700;
-  color: var(--text);
+  color: var(--dt-color);
 }
 
 dd {
+  --dd-color: var(--text);
   margin: 0 0 0.5rem;
-  color: var(--muted);
+  color: var(--dd-color);
 }

@@ -1,15 +1,37 @@
-:root {
-  font-family: Inter, Arial, sans-serif;
-  --bg: #f8faff;
-  --text: #101828;
-  --accent: #4f46e5;
-  --panel: #ffffff;
-  --border: #d0d5dd;
+.tooltip-trigger {
+  --tooltip-trigger-padding: 0.75rem 1rem;
+  --tooltip-trigger-border: 1px dashed var(--border);
+  --tooltip-trigger-border-radius: 999px;
+
+  position: relative;
+  display: inline-block;
+  padding: var(--tooltip-trigger-padding);
+  border: var(--tooltip-trigger-border);
+  border-radius: var(--tooltip-trigger-border-radius);
 }
-* { box-sizing: border-box; }
-body { margin: 0; background: var(--bg); color: var(--text); }
-.demo { max-width: 760px; margin: 0 auto; padding: 2rem 1.25rem; }
-.back-link { display: inline-block; margin-bottom: 1rem; color: var(--accent); text-decoration: none; font-weight: 700; }
-.tooltip-trigger { position: relative; display: inline-block; padding: 0.75rem 1rem; border: 1px dashed var(--border); border-radius: 999px; }
-.tooltip { position: absolute; top: calc(100% + 0.7rem); left: 50%; transform: translateX(-50%); background: var(--panel); border: 1px solid var(--border); border-radius: 10px; padding: 0.65rem 0.8rem; box-shadow: 0 8px 20px rgba(16,24,40,0.12); white-space: nowrap; opacity: 0; pointer-events: none; transition: opacity 0.2s ease; }
-.tooltip-trigger:hover .tooltip { opacity: 1; }
+
+.tooltip {
+  --tooltip-bg: var(--panel);
+  --tooltip-border: 1px solid var(--border);
+  --tooltip-border-radius: var(--radius-2);
+  --tooltip-padding: var(--spacing-2) var(--spacing-3);
+  --tooltip-boxshadow: 0 8px 20px rgba(16, 24, 40, 0.12);
+
+  position: absolute;
+  top: calc(100% + 0.7rem);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--tooltip-bg);
+  border: var(--tooltip-border);
+  border-radius: var(--tooltip-border-radius);
+  padding: var(--tooltip-padding);
+  box-shadow: var(--tooltip-boxshadow);
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.tooltip-trigger:hover .tooltip {
+  opacity: 1;
+}

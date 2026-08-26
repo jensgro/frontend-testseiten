@@ -4,23 +4,28 @@
 }
 
 .popup-card {
+  --popup-card-boxshadow: 0 10px 24px rgba(16, 24, 40, 0.12);
+  --popup-card-border: 1px solid var(--border);
+  --popup-card-border-radius: var(--radius-2);
+  --popup-card-padding: var(--spacing-3);
+  --popup-card-color: var(--muted);
+  --popup-card-gap: var(--gap-2);
+
   position: absolute;
   top: calc(100% + 0.75rem);
   left: 0;
   width: 260px;
   background: var(--panel);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 1rem;
-  box-shadow: 0 10px 24px rgba(16, 24, 40, 0.12);
+  border: var(--popup-card-border);
+  border-radius: var(--popup-card-border-radius);
+  padding: var(--popup-card-padding);
+  box-shadow: var(--popup-card-boxshadow);
   display: none;
+  display: grid;
+  gap: var(--popup-card-gap);
+  color: var(--popup-card-color);
 }
 
 .popup-trigger:hover .popup-card {
   display: block;
-}
-
-.popup-card p {
-  margin: 0.35rem 0 0;
-  color: var(--muted);
 }
