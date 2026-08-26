@@ -1,7 +1,7 @@
 .card-grid {
   display: grid;
   gap: var(--card-grid-gap, var(--gap-2));
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
 .card {
