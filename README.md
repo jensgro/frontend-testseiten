@@ -53,6 +53,77 @@ Eleventy aktualisiert die Ausgabe während der Entwicklung automatisch.
 | `npm run clean` | Generierte Ausgabe entfernen |
 | `npm run debug` | Eleventy mit ausführlichem Debug-Logging ausführen |
 
+## Shortcodes
+
+Die Nunjucks-Shortcodes werden in `.eleventy.js` registriert und stehen in
+allen Dateien unter `src/content/` zur Verfügung. Sie erzeugen wiederkehrende
+HTML-Strukturen oder Testdaten direkt beim Build.
+
+### Komponenten und Layout
+
+| Shortcode | Argumente | Zweck |
+| --- | --- | --- |
+| `card` | `headline`, `modificator` (optional) | Erzeugt eine Card mit Überschrift und Platzhalterfläche. |
+| `teaser` | `headline`, `para`, `className` (optional) | Erzeugt einen Teaser mit Platzhalterbild, Überschrift und Text. |
+| `simpleteaser` | `title`, `text`, `imgSrc`, `imgWidth`, `imgHeight` | Erzeugt einen verlinkten Teaser mit Bild aus `assets/img/`. |
+| `quoteTeaser` | `quote`, `author` | Erzeugt ein Zitat mit Autor. |
+| `blockquote` | `quote`, `author` | Erzeugt ein Zitat als `figure` mit `figcaption`. |
+| `blockquoteSimple` | `quote` | Erzeugt ein Zitat ohne Autorzeile. |
+| `nav` | keine | Fügt eine feste Beispiel-Kopfzeile mit Navigation ein. |
+| `horizontalnav` | `className`, `items` | Erzeugt eine horizontale Navigation aus einem Array von Linktexten. |
+
+```njk
+{% card "Card Headline", "secondary" %}
+{% teaser "Teaser Headline", "Kurzer Beschreibungstext.", "teaser--compact" %}
+{% simpleteaser "Artikel", "Eine kurze Zusammenfassung.", "example.jpg", 640, 360 %}
+{% quoteTeaser "This is a quote.", "Author Name" %}
+{% blockquote "Ein Zitat mit Quellenangabe.", "Name der Person" %}
+{% blockquoteSimple "Ein Zitat ohne Quellenangabe." %}
+{% nav %}
+{% horizontalnav "footer-nav", ["Startseite", "Kontakt", "Impressum"] %}
+```
+
+### Bilder, Icons und Code
+
+| Shortcode | Argumente | Zweck |
+| --- | --- | --- |
+| `thumbnail` | keine | Erzeugt ein leeres `div.thumbnail` als Thumbnail-Platzhalter. |
+| `imageSimple` | `src`, `width`, `height` | Erzeugt ein Bild mit Platzhalter-Alttext und festen Abmessungen. |
+| `testicon` | `iconname` | Bindet ein Icon aus `assets/svg/test-icons.svg` ein. |
+| `svg` | `icon`, `modificator` (optional) | Erzeugt ein SVG-Symbol; der optionale Modifikator wird als CSS-Klasse gesetzt. |
+| `codeCss` | `code` | Gibt CSS-Code als hervorgehobenen `pre`-/`code`-Block aus. |
+
+```njk
+{% thumbnail %}
+{% imageSimple "foto.jpg", 800, 450 %}
+{% testicon "arrow-right" %}
+{% svg "check" %}
+{% svg "close", "icon--small" %}
+{% codeCss ".card { display: grid; }" %}
+```
+
+`imageSimple` erwartet den Bildpfad relativ zu `assets/img/`; bei
+`simpleteaser` wird dieser Pfad automatisch mit `/assets/img/` ergänzt. Die
+verwendeten Bilddateien müssen daher unter `src/assets/img/` liegen.
+
+### Testdaten und Formulare
+
+| Shortcode | Argumente | Zweck |
+| --- | --- | --- |
+| `dummyArticle` | `count`, `image` (optional), `className` (optional) | Erzeugt `count` horizontale Linien als Artikel-Platzhalter; `image` fügt der ersten Linie die Klasse `image` hinzu. |
+| `liste8` | `className` (optional) | Erzeugt eine nummerierte Liste mit den Werten 1 bis 8. |
+| `selectBundeslaender` | keine | Erzeugt ein Select mit den deutschen Bundesländern. |
+| `selectCountries` | keine | Erzeugt ein Select mit einer Länderliste. |
+| `selectTitel` | keine | Erzeugt ein Select mit Anrede- und Berufstiteln. |
+
+```njk
+{% dummyArticle 4, true, "article-example" %}
+{% liste8 "demolist--wide" %}
+{% selectBundeslaender %}
+{% selectCountries %}
+{% selectTitel %}
+```
+
 ## Neue Testseite anlegen
 
 Der kleine Generator erstellt eine neue Nunjucks-Datei mit Frontmatter und
@@ -80,5 +151,52 @@ create.js        Generator für neue Testseiten
 
 Die zentrale Übersicht liegt in `src/content/index.njk`. Änderungen an den
 Quellen gehören nach `src/`; `_site/` wird beim Build erzeugt.
+
+## Daten in `_data`
+
+Eleventy lädt die Dateien aus `src/_data/` automatisch als globale Daten. Der
+Dateiname wird dabei zum Variablennamen: `lorem.json` ist beispielsweise über
+`lorem` verfügbar. Die Daten eignen sich vor allem für wiederverwendete
+Beispielinhalte in Nunjucks-Templates.
+
+| Datei | Inhalt und Verwendung |
+| --- | --- |
+| `images.js` | Array mit Bild-URLs, Dateinamen und Überschriften für Bild- und Card-Beispiele. |
+| `list.js` | Array mit Blindtexten als `item`-Eigenschaften für Listen. |
+| `lorem.json` | Absätze, Überschriften und einzelne Zitate für Layout- und Komponentenbeispiele. |
+| `metadata.json` | Globale Metadaten wie Seitentitel, Beschreibung und Sprache. |
+| `navigations.json` | Navigationsgruppen als Arrays von Objekten mit einer `name`-Eigenschaft. |
+| `navigations2.json` | Navigationsgruppen als Arrays einfacher Strings, zum Beispiel für `horizontalnav`. |
+| `navigationTest.json` | Navigationseinträge mit `name` und `url` für Accessibility- und Screenreader-Tests. |
+| `para.js` | Array längerer Blindtext-Absätze für typografische und Layouttests. |
+| `stateselection.json` | Zustände für Infoboxen, inklusive `name` und optional `checked`. |
+| `swapstyles.json` | JSON mit einigen Basis-Stylesheets für den Vergleich unterschiedlicher Normalisierungen. |
+| `websites.js` | Liste externer Websites mit `url`, `title` und Beschreibung für Listenlayouts. |
+| `zitate.js` | Array von Zitaten mit `quote` und `author`. |
+
+Beispiele für den Zugriff auf einzelne Werte und Arrays:
+
+```njk
+<h1>{{ lorem.headline1 }}</h1>
+<p>{{ lorem.para1 }}</p>
+
+{% for item in websites %}
+	<a href="{{ item.url }}">{{ item.title }}</a>
+	<p>{{ item.desc }}</p>
+{% endfor %}
+
+{% for item in navigations2.deutsch1 %}
+	<span>{{ item }}</span>
+{% endfor %}
+
+{% for quote in zitate %}
+	<blockquote>{{ quote.quote }}</blockquote>
+	<cite>{{ quote.author }}</cite>
+{% endfor %}
+```
+
+Beim Ergänzen einer Datendatei sollte die exportierte Struktur zu ihrer
+Verwendung im Template passen: Arrays werden typischerweise mit `for`
+durchlaufen, Objekte über ihre Eigenschaften angesprochen.
 
 Die Nutzung ist unter den Bedingungen der [WTFPL](./WTFPL-licence.md) erlaubt.
