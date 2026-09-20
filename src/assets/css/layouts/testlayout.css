@@ -4,7 +4,7 @@
 
 @import url('../basics/custom-properties.css') layer(base.variables);
 
-@layer base.variables { 
+@layer base.variables {
     :root {
         --area-bg: var(--yellow-3);
         --area-border: var(--yellow-4);
@@ -54,6 +54,11 @@
         margin-inline: auto;
         max-inline-size: 1500px;
         min-height: 100vh;
+    }
+
+    pre {
+        border: 2px solid var(--yellow-2);
+        --s5p-background: #fff;
     }
 }
 

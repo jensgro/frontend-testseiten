@@ -15,6 +15,7 @@ const codeCss = require('./code/code-css.js');
 const dummyArticle = require('./dummy-article/index.js');
 const horizontalnav = require('./lists/horizontalnav.js');
 const testicon = require('./images/testicon.js');
+// const details = require('./details/index.js');
 
 module.exports = {
     card,

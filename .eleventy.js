@@ -36,6 +36,16 @@ module.exports = (eleventyConfig) => {
     }
   });
 
+  eleventyConfig.addPairedNunjucksShortcode(
+    "details",
+    function (content, summary, open = false) {
+      return `<details${open ? " open" : ""}>
+              <summary>${summary}</summary>
+              ${content}
+            </details>`;
+    }
+  );
+
   eleventyConfig.addShortcode("card", card);
   eleventyConfig.addShortcode("teaser", teaser);
   eleventyConfig.addShortcode("quoteTeaser", quoteTeaser);
