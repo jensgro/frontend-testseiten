@@ -158,10 +158,6 @@ https://keithjgrant.com/posts/2024/01/my-css-resets/
 
 /* ======================================================= */
 
-html {
-	font-size: 16px;
-}
-
 body {
 	font-size: 1rem;
 	font-family: system-ui, sans-serif;
