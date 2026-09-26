@@ -1,6 +1,6 @@
 @layer core, components, utility;
 @layer core.vars, core.reset, core.base;
-@layer components.badge, components.button, components.dialog;
+@layer components.badge, components.button, components.dialog, components.details;
 
 
 @import url('custom.css') layer(core.vars);
@@ -9,4 +9,5 @@
 @import url('badge.css') layer(components.badge);
 @import url('button.css') layer(components.button);
 @import url('dialog.css') layer(components.dialog);
+@import url('details.css') layer(components.details);
 @import url('utility.css') layer(utility);

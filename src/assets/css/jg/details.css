@@ -1,0 +1,53 @@
+
+details {
+    background-color: var(--details-bg);
+    color: var(--details-text);
+    border: var(--details-border);
+    border-radius: var(--details-radius);
+    margin-bottom: 1rem;
+    overflow: hidden;
+    transition: border-color var(--details-transition);
+}
+
+details[open] {
+    border-color: var(--details-accent);
+}
+
+summary {
+    padding: var(--details-padding);
+    cursor: pointer;
+    font-weight: 500;
+    list-style: none;
+    /* Entfernt Standard-Pfeil in einigen Browsern */
+    user-select: none;
+    transition: background-color var(--details-transition);
+}
+
+/* Custom-Pfeil für Chrome/Safari/Edge */
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary::before {
+    content: '▶';
+    display: inline-block;
+    margin-right: 0.75rem;
+    font-size: var(--summary-before-fz);
+    transition: transform var(--details-transition);
+    color: var(--details-accent);
+}
+
+details[open] summary::before {
+    transform: rotate(90deg);
+}
+
+summary:is(:hover, :focus) {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+/* Styling für den Inhalt innerhalb von details */
+details>*:not(summary) {
+    padding: var(--details-padding);
+    line-height: 1.5;
+    border-top: var(--border-1);
+}

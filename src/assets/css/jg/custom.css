@@ -8,6 +8,12 @@
     --gray-700: #374151;
     --gray-900: #111827;
 
+    --yellow-1: #f1d23a;
+    --yellow-2: #b89900;
+    --yellow-3: #fbf4d6;
+    --yellow-4: #e7d586;
+    --yellow-5: #ffe566;
+
     --blue-600: #2563eb;
     --green-500: #22c55e;
     --red-500: #ef4444;
@@ -18,10 +24,14 @@
     --btn-bg: var(--gray-50);
     --btn-color: var(--gray-900);
 
+    --page-bg: var(--gray-50); 
+    
     --dot-size: 8px;
     --dot-color: var(--gray-300);
 
     --max-width: 896px;
+
+    --fz-s: 0.875rem;
 
     --spacing-1: 8px;
     --spacing-2: calc(var(--spacing-1) * 2);
@@ -39,17 +49,35 @@
     --border-2: 1px solid var(--gray-300);
     --box-shadow-light: 0 1px 2px 0 rgb(0 0 0 / 0.05);
 
-    --btn-fz: 0.875rem;
-    --badge-fz: 0.875rem;
+    --btn-fz: var(--fz-s);
+    --badge-fz: var(--fz-s);
 
-    --site-header-bg: var(--gray-50);
-    
+    --text-color: var(--gray-900);
+
+}
+
+:root {
+    --details-bg: var(--gray-50);
+    --details-text: var(--text-color);
+    --details-accent: var(--yellow-2);
+    --details-border: var(--border-1);
+    --details-radius: var(--border-radius-1);
+    --details-padding: var(--spacing-1) var(--spacing-2);
+    --details-transition: 0.2s ease-in-out;
+    --summary-before-fz: var(--fz-s);
+}
+
+:root {
     --nav-color: var(--gray-900);
     --nav-color-hover: var(--gray-400);
     --nav-color-active: var(--blue-600);
-    --nav-fz: 0.875rem;
-    
+    --nav-fz: var(--fz-s);
+}
+
+:root {
+    --site-header-bg: var(--gray-50);
+
     --site-footer-bg: var(--gray-50);
     --site-footer-color: var(--gray-400);
-    --site-footer-fz: 0.875rem;
+    --site-footer-fz: var(--fz-s);
 }
