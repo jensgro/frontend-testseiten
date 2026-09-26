@@ -81,3 +81,28 @@
     --site-footer-color: var(--gray-400);
     --site-footer-fz: var(--fz-s);
 }
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        color-scheme: dark;
+
+        --gray-50: #111827;
+        --gray-200: #374151;
+        --gray-300: #4b5563;
+        --gray-400: #9ca3af;
+        --gray-500: #d1d5db;
+        --gray-600: #e5e7eb;
+        --gray-700: #f3f4f6;
+        --gray-900: #f9fafb;
+
+        --yellow-1: #f1d23a;
+        --yellow-2: #f1d23a;
+        --yellow-3: #3c3211;
+        --yellow-4: #8a7420;
+        --yellow-5: #ffe566;
+
+        --blue-600: #60a5fa;
+        --green-500: #4ade80;
+        --red-500: #f87171;
+    }
+}
