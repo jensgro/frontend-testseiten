@@ -1,0 +1,29 @@
+code,
+samp,
+time {
+    background: var(--code-bg);
+    color: var(--code-color);
+    padding: var(--spacing-half) var(--spacing-1);
+    border-radius: var(--border-radius-1);
+    font-size: var(--fz-text);
+}
+
+pre>code {
+    padding: var(--spacing-1);
+    display: block;
+    overflow-x: auto;
+}
+
+var {
+    color: var(--var-color);
+    font-style: normal;
+    font-family: monospace;
+}
+
+kbd {
+    background: var(--background);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    color: var(--text-main);
+    padding: 2px 4px 2px 4px;
+}

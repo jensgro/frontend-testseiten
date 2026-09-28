@@ -1,0 +1,44 @@
+fieldset {
+    min-inline-size: 0;
+}
+
+label:has(+ :where(input:not([type="radio"], [type="checkbox"]), select, textarea)) {
+    display: block;
+}
+
+button,
+input,
+select,
+label,
+textarea {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+}
+
+button,
+label,
+select,
+[role='button'],
+[role='option'] {
+    cursor: pointer;
+}
+
+textarea {
+    resize: vertical;
+    resize: block;
+}
+
+textarea:not([rows]) {
+    min-block-size: 6em;
+}
+
+:disabled,
+label:has(> input:disabled),
+label:has(+ input:disabled) {
+    cursor: not-allowed;
+}
+
+[type="search"] {
+    appearance: textfield;
+}

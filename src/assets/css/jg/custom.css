@@ -23,16 +23,29 @@
     --badge-bg: var(--gray-50);
     --btn-bg: var(--gray-50);
     --btn-color: var(--gray-900);
-
+    --code-bg: var(--gray-50);
+    --code-color: var(--gray-900);
+    --var-color: var(--green-500);
     --page-bg: var(--gray-50); 
-    
+    --heading-color: var(--blue-600);
+
     --dot-size: 8px;
     --dot-color: var(--gray-300);
 
     --max-width: 896px;
 
     --fz-s: 0.875rem;
+    --fz-text: 1rem;
 
+    --heading-margin: .5rem 0 .75rem;
+    --heading-fz-1: 2.8rem;
+    --heading-fz-2: 2.2rem;
+    --heading-fz-3: 1.8rem;
+    --heading-fz-4: 1.4rem;
+    --heading-fz-5: 1.2rem;
+    --heading-fz-6: 1rem;
+
+    --spacing-half: calc(var(--spacing-1) * 0.5);
     --spacing-1: 8px;
     --spacing-2: calc(var(--spacing-1) * 2);
     --spacing-3: calc(var(--spacing-1) * 3);
@@ -47,15 +60,22 @@
 
     --border-1: 1px solid var(--gray-200);
     --border-2: 1px solid var(--gray-300);
+    --border-table: 1px solid rgba(100, 100, 100, .2);
     --box-shadow-light: 0 1px 2px 0 rgb(0 0 0 / 0.05);
 
     --btn-fz: var(--fz-s);
     --badge-fz: var(--fz-s);
 
     --text-color: var(--gray-900);
-
+    --table-th-bg: rgba(100, 100, 100, .025);
+    --table-tbody-bg: rgba(100, 100, 100, .025);
 }
 
+:root {
+    --blockquote-color: var(--gray-200);
+    --blockquote-bg: var(--gray-600);
+    --blockquote-border: 4px solid var(--gray-400);
+}
 :root {
     --details-bg: var(--gray-50);
     --details-text: var(--text-color);

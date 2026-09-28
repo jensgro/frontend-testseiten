@@ -50,15 +50,36 @@ body {
     text-rendering: optimizeSpeed;
 }
 
-h1 {
-    font-size: 2em;
-    margin-block: 0.67em;
-}
-
-:where(h1, h2, h3, h4, h5, h6) {
+:is(h1, h2, h3, h4, h5, h6) {
     text-wrap: balance;
     overflow-wrap: break-word;
     line-height: 1.2;
+    margin: var(--heading-margin);
+    color: var(--heading-color);
+}
+
+h1 {
+    font-size: var(--heading-fz-1);
+}
+
+h2 {
+    font-size: var(--heading-fz-2);
+}
+
+h3 {
+    font-size: var(--heading-fz-3);
+}
+
+h4 {
+    font-size: var(--heading-fz-4);
+}
+
+h5 {
+    font-size: var(--heading-fz-5);
+}
+
+h6 {
+    font-size: var(--heading-fz-6);
 }
 
 abbr[title] {
@@ -79,58 +100,23 @@ iframe,
 img,
 svg,
 video {
-    max-block-size: 100%;
-    max-inline-size: 100%;
     display: block;
+    max-height: 100%;
+    max-width: 100%;
+    height: auto;
 }
 
 img {
     object-fit: cover;
 }
 
-fieldset {
-    min-inline-size: 0;
+iframe {
+    border: none;
 }
 
-label:has(+ :where(input:not([type="radio"], [type="checkbox"]), select, textarea)) {
-    display: block;
-}
-
-button,
-input,
-select,
-textarea {
-    font-family: inherit;
-    font-size: inherit;
-    color: inherit;
-}
-
-button,
-label,
-select,
-summary,
-[role='button'],
-[role='option'] {
-    cursor: pointer;
-}
-
-textarea {
-    resize: vertical;
-    resize: block;
-}
-
-textarea:not([rows]) {
-    min-block-size: 6em;
-}
-
-:disabled,
-label:has(> input:disabled),
-label:has(+ input:disabled) {
-    cursor: not-allowed;
-}
-
-[type="search"] {
-    appearance: textfield;
+hr {
+    border: none;
+    border-top: var(--border-2);
 }
 
 /* iOS only */
@@ -141,30 +127,10 @@ label:has(+ input:disabled) {
     }
 }
 
-table {
-    border-collapse: collapse;
-    border: 1px solid;
-    font-variant-numeric: tabular-nums lining-nums slashed-zero;
-}
-
-th,
-td {
-    border: 1px solid;
-    padding: 0.25em 0.5em;
-    vertical-align: top;
-}
-
 [hidden]:not([hidden="until-found"]) {
     display: none !important;
 }
 
-summary {
-    cursor: default;
-}
-
-iframe {
-    border: none;
-}
 
 @supports(position-area: end) {
     [popover] {
@@ -204,4 +170,21 @@ a {
         transition-duration: 0.01ms !important;
         scroll-behavior: auto !important;
     }
+}
+
+blockquote {
+    border-left: var(--blockquote-border);
+    background: var(--blockquote-bg);
+    color: var(--blockquote-color)
+    margin: var(--spacing-3) 0;
+    padding: var(--spacing-2);
+}
+
+blockquote footer {
+    font-style: normal;
+    border: 0;
+}
+
+blockquote cite {
+    font-style: normal;
 }

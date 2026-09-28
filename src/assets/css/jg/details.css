@@ -21,6 +21,10 @@ summary {
     /* Entfernt Standard-Pfeil in einigen Browsern */
     user-select: none;
     transition: background-color var(--details-transition);
+
+    & + * {
+        margin-top: 0;
+    }
 }
 
 /* Custom-Pfeil für Chrome/Safari/Edge */

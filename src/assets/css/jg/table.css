@@ -1,0 +1,37 @@
+table {
+    border-collapse: collapse;
+    border: 1px solid;
+    font-variant-numeric: tabular-nums lining-nums slashed-zero;
+    margin-bottom: var(--spacing-1);
+    width: 100%;
+}
+
+caption {
+    padding: var(--spacing-1) 0;
+    text-align: start;
+    caption-side: top;
+}
+
+th,
+td {
+    border: var(--border-1);
+    padding: var(--spacing-half) var(--spacing-1);
+    vertical-align: top;
+    text-align: start;
+}
+
+th {
+    background: var(--table-th-bg);
+}
+
+thead {
+    border-bottom: var(--border-table);
+}
+
+tr + tr, tfoot {
+    border-top: var(--border-table);
+}
+
+tbody tr:nth-child(even) {
+    background: var(--table-tbody-bg);
+}
