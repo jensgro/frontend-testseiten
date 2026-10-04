@@ -69,4 +69,7 @@ details>*:not(summary) {
 details pre {
     margin-block: 0;
     padding: var(--pre-padding);
+    border: none;
+    border-top: 1px solid var(--details-border);
+    border-radius: 0;
 }
