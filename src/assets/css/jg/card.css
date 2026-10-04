@@ -1,0 +1,51 @@
+/* inspired by https://smolcss.dev/#smol-card-component by Stephanie Eckles */
+
+.card-simple {
+    --img-ratio: 3/2;
+    --border-radius-card: var(--border-radius-1);
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-1);
+    box-shadow: var(--box-shadow-light);
+    border-radius: var(--border-radius-card);
+
+    >img {
+        aspect-ratio: var(--img-ratio);
+        object-fit: cover;
+        width: 100%;
+    }
+
+    >img:first-child {
+        border-radius: var(--border-radius-card) var(--border-radius-card) 0 0;
+    }
+
+    >.card>img:last-child {
+        border-radius: 0 0 var(--border-radius-card) var(--border-radius-card);
+        margin-top: auto;
+    }
+
+    > :not(img) {
+        margin-left: 1rem;
+        margin-right: 1rem;
+
+        /* Prevent typography "orphans" */
+        text-wrap: pretty;
+    }
+
+    > :not(img):first-child {
+        margin-top: 1rem;
+    }
+
+    > :last-of-type:not(img, h2, h3, h4) {
+        margin-bottom: 1rem;
+    }
+
+    > :not(h2, h3, h4) {
+        font-size: var(--fz-s);
+    }
+
+    > a {
+        align-self: start;
+    }
+}

@@ -1,9 +1,16 @@
+form,
+fieldset {
+    display: grid;
+    gap: var(--spacing-2);
+}
+
 fieldset {
     min-inline-size: 0;
 }
 
 label:has(+ :where(input:not([type="radio"], [type="checkbox"]), select, textarea)) {
     display: block;
+    margin-bottom: var(--spacing-1);
 }
 
 button,
@@ -14,6 +21,22 @@ textarea {
     font-family: inherit;
     font-size: inherit;
     color: inherit;
+}
+
+input:is([type="text"], [type="email"], [type="number"], [type="tel"],
+[type="password"]),
+select,
+textarea {
+    width: -webkit-fill-available;
+    width: stretch;
+}
+
+input,
+select,
+textarea {
+    border: var(--border-1);
+    padding: var(--spacing-1);
+    border-radius: var(--border-radius-1);
 }
 
 button,
