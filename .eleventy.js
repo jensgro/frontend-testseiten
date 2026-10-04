@@ -2,6 +2,7 @@ const configPath = "./src/_includes/";
 // module import shortcodes
 const {
   card,
+  cardSimple,
   teaser,
   quoteTeaser,
   nav,
@@ -47,6 +48,7 @@ module.exports = (eleventyConfig) => {
   );
 
   eleventyConfig.addShortcode("card", card);
+  eleventyConfig.addShortcode("cardSimple", cardSimple);
   eleventyConfig.addShortcode("teaser", teaser);
   eleventyConfig.addShortcode("quoteTeaser", quoteTeaser);
   eleventyConfig.addShortcode("nav", nav);

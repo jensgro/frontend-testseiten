@@ -1,4 +1,5 @@
 const card = require('./card/index.js');
+const cardSimple = require('./card-simple/index.js');
 const teaser = require('./teaser/index.js');
 const quoteTeaser = require('./quote-teaser/index.js');
 const nav = require('./nav/index.js');
@@ -19,6 +20,7 @@ const testicon = require('./images/testicon.js');
 
 module.exports = {
     card,
+    cardSimple,
     teaser,
     quoteTeaser,
     blockquote,
