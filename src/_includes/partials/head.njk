@@ -13,6 +13,11 @@
         <link id="pagestyle" rel="stylesheet" type="text/css" href="./assets/css/{{ style }}.css">
       {% endfor %}
     {% endif %}
+    {% if jstop %}
+    {% for javascript in jstop %}
+      <script src="assets/js/{{ javascript }}.js"></script>
+    {%- endfor %}
+    {% endif %}
     {% if externaljsmoduletop %}
       {% for js in externaljsmoduletop %}
         <script src="{{ js }}" type="module"></script>
