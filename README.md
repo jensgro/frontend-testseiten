@@ -64,6 +64,7 @@ HTML-Strukturen oder Testdaten direkt beim Build.
 | Shortcode | Argumente | Zweck |
 | --- | --- | --- |
 | `card` | `headline`, `modificator` (optional) | Erzeugt eine Card mit Überschrift und Platzhalterfläche. |
+| `cardSimple` | `headline`, `content`, `img` (optional) | Erzeugt eine einfache Card mit Überschrift, Text und optionalem Bild aus `assets/img/`. |
 | `teaser` | `headline`, `para`, `className` (optional) | Erzeugt einen Teaser mit Platzhalterbild, Überschrift und Text. |
 | `simpleteaser` | `title`, `text`, `imgSrc`, `imgWidth`, `imgHeight` | Erzeugt einen verlinkten Teaser mit Bild aus `assets/img/`. |
 | `quoteTeaser` | `quote`, `author` | Erzeugt ein Zitat mit Autor. |
@@ -71,9 +72,13 @@ HTML-Strukturen oder Testdaten direkt beim Build.
 | `blockquoteSimple` | `quote` | Erzeugt ein Zitat ohne Autorzeile. |
 | `nav` | keine | Fügt eine feste Beispiel-Kopfzeile mit Navigation ein. |
 | `horizontalnav` | `className`, `items` | Erzeugt eine horizontale Navigation aus einem Array von Linktexten. |
+| `details` (paired) | `summary`, `open` (optional) | Erzeugt ein `<details>`-Element; der Inhalt zwischen Start- und End-Tag wird zum Inhalt des Elements. |
+| `footerSimple` | keine | Fügt einen statischen Beispiel-Footer ein. |
 
 ```njk
 {% card "Card Headline", "secondary" %}
+{% cardSimple "Profil", "Ein kurzer Beschreibungstext.", "profil.jpg" %}
+{% cardSimple "Hinweis", "Eine Card ohne Bild." %}
 {% teaser "Teaser Headline", "Kurzer Beschreibungstext.", "teaser--compact" %}
 {% simpleteaser "Artikel", "Eine kurze Zusammenfassung.", "example.jpg", 640, 360 %}
 {% quoteTeaser "This is a quote.", "Author Name" %}
@@ -81,6 +86,13 @@ HTML-Strukturen oder Testdaten direkt beim Build.
 {% blockquoteSimple "Ein Zitat ohne Quellenangabe." %}
 {% nav %}
 {% horizontalnav "footer-nav", ["Startseite", "Kontakt", "Impressum"] %}
+{% details "Mehr erfahren" %}
+	<p>Zusätzlicher Inhalt im aufklappbaren Bereich.</p>
+{% enddetails %}
+{% details "Bereits geöffnet", true %}
+	<p>Dieser Bereich ist beim Laden geöffnet.</p>
+{% enddetails %}
+{% footerSimple %}
 ```
 
 ### Bilder, Icons und Code
@@ -95,10 +107,14 @@ HTML-Strukturen oder Testdaten direkt beim Build.
 
 ```njk
 {% thumbnail %}
+
 {% imageSimple "foto.jpg", 800, 450 %}
+
 {% testicon "arrow-right" %}
+
 {% svg "check" %}
 {% svg "close", "icon--small" %}
+
 {% codeCss ".card { display: grid; }" %}
 ```
 
