@@ -1,4 +1,4 @@
-const details = (summary, content, open = false) => {
+const details = (content, summary,  open = false) => {
     return `<details${open ? " open" : ""}>
   <summary>${summary}</summary>
   ${content}
