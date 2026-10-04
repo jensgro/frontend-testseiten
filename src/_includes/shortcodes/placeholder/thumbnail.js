@@ -1,6 +1,8 @@
-const thumbnail = () => {
+const thumbnail = (className = '') => {
+    const classes = ['thumbnail', className].filter(Boolean).join(' ');
+
     return `
-    <div class="thumbnail"></div>
+    <div class="${classes}"></div>
   `;
 };
 

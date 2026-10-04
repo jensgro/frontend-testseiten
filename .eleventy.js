@@ -18,7 +18,10 @@ const {
   codeCss,
   dummyArticle,
   horizontalnav,
-  testicon
+  testicon,
+  svg,
+  footerSimple,
+  details
 } = require(configPath + 'shortcodes/index.js');
 
 module.exports = (eleventyConfig) => {
@@ -29,23 +32,9 @@ module.exports = (eleventyConfig) => {
     'src/assets/svg/': '/assets/svg/'
   });
 
-  eleventyConfig.addShortcode("svg", async function (icon, modificator = false) {
-    if (modificator) {
-      return `<svg class="svg-icon ${modificator}"><use xlink:href="#${icon}"></use></svg>`;
-    } else {
-      return `<svg class="svg-icon"><use xlink:href="#${icon}"></use></svg>`;
-    }
-  });
+  eleventyConfig.addShortcode("svg", svg);
 
-  eleventyConfig.addPairedNunjucksShortcode(
-    "details",
-    function (content, summary, open = false) {
-      return `<details${open ? " open" : ""}>
-              <summary>${summary}</summary>
-              ${content}
-            </details>`;
-    }
-  );
+  eleventyConfig.addPairedNunjucksShortcode("details", details);
 
   eleventyConfig.addShortcode("card", card);
   eleventyConfig.addShortcode("cardSimple", cardSimple);
@@ -65,6 +54,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addShortcode("dummyArticle", dummyArticle);
   eleventyConfig.addShortcode("horizontalnav", horizontalnav);
   eleventyConfig.addShortcode("testicon", testicon);
+  eleventyConfig.addShortcode("footerSimple", footerSimple);
 
   eleventyConfig.addWatchTarget('src/assets/css/');
   eleventyConfig.addWatchTarget('src/assets/js/');

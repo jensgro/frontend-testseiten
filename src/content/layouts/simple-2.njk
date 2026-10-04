@@ -15,7 +15,7 @@ css:
             <a href="#text">Text-Elemente</a>
           </li>
           <li>
-            <a href="#grouping">Gruppierung</a>
+            <a href="#lists">Listen</a>
           </li>
           <li>
             <a href="#forms">Formulare</a>
@@ -66,16 +66,12 @@ css:
     <blockquote>
       Dies ist ein Blockzitat. Es wird verwendet, um längere Zitate aus anderen Quellen deutlich vom Haupttext abzuheben.
     </blockquote>
-    <p>Präzise Begriffe:
+    <p>Präzise Defintionen:
       <dfn>HTML</dfn>
-      steht für Hypertext Markup Language.</p>
+      steht für Hypertext Markup Language. Das kann man auch anders darstellen:
+      <abbr title="Hypertext Markup Language">HTML</abbr>.</p>
     <p>Ein Beispiel für einen Link:
       <a href="https://www.example.com">Besuche Example.com</a>
-    </p>
-    <p>Adress-Informationen:
-      <address>
-        Max Mustermann<br> Musterstraße 1<br> 12345 Musterstadt
-      </address>
     </p>
     <p>Code-Beispiel:
       <code>console.log("Hallo Welt");</code>
@@ -85,24 +81,21 @@ css:
                 Zeile 1
                 Zeile 2 (Einrückungen bleiben erhalten)
             </pre>
-    <p>Mathematische Formel:
-      <var>E</var>
-      =
-      <var>m</var>c<sup>2</sup>
-    </p>
     <p>Zeitangabe:
       <time datetime="2026-08-19">Heute</time>
     </p>
   </section>
-  <hr>
-  <!-- Gruppierung & Listen -->
-  <section id="grouping">
-    <h2>Gruppierung und Listen</h2>
-    <div>
-      <p>Dies ist ein einfacher
-        <code>div</code>-Container, der oft zur Gruppierung genutzt wird.</p>
-    </div>
-    <p>Ungeordnete Liste:</p>
+  <div>
+  <a href="#hauptinhalt" class="badge">
+    <span class="status-dot" id="status-dot"></span>
+    <span id="status-text">nach oben</span>
+  </a>
+</div>
+
+  <!-- Listen -->
+  <section id="lists">
+    <h2>Listen</h2>
+    <h3>Ungeordnete Liste:</h3>
     <ul>
       <li>Erster Punkt</li>
       <li>Zweiter Punkt
@@ -113,13 +106,13 @@ css:
       </li>
       <li>Dritter Punkt</li>
     </ul>
-    <p>Geordnete Liste:</p>
+    <h3>Geordnete Liste:</h3>
     <ol>
       <li>Schritt eins</li>
       <li>Schritt zwei</li>
       <li>Schritt drei</li>
     </ol>
-    <p>Beschreibungsliste:</p>
+    <h3>Beschreibungsliste:</h3>
     <dl>
       <dt>HTML</dt>
       <dd>Eine Auszeichnungssprache für Webseiten.</dd>
@@ -127,55 +120,61 @@ css:
       <dd>Eine Stylesheet-Sprache zur Gestaltung.</dd>
     </dl>
   </section>
-  <hr>
+  <div>
+  <a href="#hauptinhalt" class="badge">
+    <span class="status-dot" id="status-dot"></span>
+    <span id="status-text">nach oben</span>
+  </a>
+</div>
+
   <!-- Formulare -->
   <section id="forms">
     <h2>Formulare und Eingaben</h2>
     <form action="#" method="post">
       <fieldset>
         <legend>Persönliche Daten</legend>
-        <p>
+        <div>
           <label for="name">Name:</label>
           <input type="text" id="name" name="name" placeholder="Max Mustermann">
-        </p>
-        <p>
+        </div>
+        <div>
           <label for="email">E-Mail:</label>
           <input type="email" id="email" name="email">
-        </p>
-        <p>
+        </div>
+        <div>
           <label for="pass">Passwort:</label>
           <input type="password" id="pass" name="pass">
-        </p>
-        <p>
+        </div>
+        <div>
           <label for="age">Alter:</label>
           <input type="number" id="age" name="age" min="0" max="120">
-        </p>
-        <p>
+        </div>
+        <div>
           <label for="date">Datum:</label>
           <input type="date" id="date" name="date">
-        </p>
-        <p>
+        </div>
+        <div>
           <label for="color">Lieblingsfarbe:</label>
           <input type="color" id="color" name="color">
-        </p>
+        </div>
       </fieldset>
       <fieldset>
         <legend>Präferenzen</legend>
-        <p>
+        <div>
           <input type="checkbox" id="newsletter" name="newsletter">
           <label for="newsletter">Newsletter abonnieren</label>
-        </p>
-        <p>
+        </div>
+        <div>
           <input type="radio" id="option1" name="choice" value="1">
           <label for="option1">Option 1</label>
           <input type="radio" id="option2" name="choice" value="2">
           <label for="option2">Option 2</label>
-        </p>
-        <p>
+        </div>
+        <div>
           <label for="experience">Erfahrung:</label>
           <input type="range" id="experience" name="experience" min="0" max="10">
-        </p>
-        <p>
+        </div>
+        <div>
           <label for="browser">Browser wählen:</label>
           <input list="browsers" id="browser" name="browser">
           <datalist id="browsers">
@@ -184,12 +183,12 @@ css:
             <option value="Safari"></option>
             <option value="Edge"></option>
           </datalist>
-        </p>
-        <p>
+        </div>
+        <div>
           <label for="message">Nachricht:</label><br>
           <textarea id="message" name="message" rows="4" cols="50">Hier Text eingeben...</textarea>
-        </p>
-        <p>
+        </div>
+        <div>
           <label for="category">Kategorie:</label>
           <select id="category" name="category">
             <optgroup label="Technik">
@@ -200,15 +199,21 @@ css:
               <option value="divers">Diverses</option>
             </optgroup>
           </select>
-        </p>
+        </div>
       </fieldset>
-      <p>
+      <div>
         <button type="submit">Absenden</button>
         <button type="reset">Zurücksetzen</button>
-      </p>
+      </div>
     </form>
   </section>
-  <hr>
+  <div>
+  <a href="#hauptinhalt" class="badge">
+    <span class="status-dot" id="status-dot"></span>
+    <span id="status-text">nach oben</span>
+  </a>
+</div>
+
   <!-- Tabellen -->
   <section id="table">
     <h2>Tabellen</h2>
@@ -242,7 +247,13 @@ css:
       </tfoot>
     </table>
   </section>
-  <hr>
+  <div>
+  <a href="#hauptinhalt" class="badge">
+    <span class="status-dot" id="status-dot"></span>
+    <span id="status-text">nach oben</span>
+  </a>
+</div>
+
   <!-- Medien -->
   <section id="media">
     <h2>Medien</h2>
@@ -262,7 +273,13 @@ css:
     <p>Ein eingebetteter Iframe:</p>
     <iframe src="about:blank" title="Beispiel Iframe" width="300" height="100"></iframe>
   </section>
-  <hr>
+  <div>
+  <a href="#hauptinhalt" class="badge">
+    <span class="status-dot" id="status-dot"></span>
+    <span id="status-text">nach oben</span>
+  </a>
+</div>
+
   <!-- Interaktive Elemente -->
   <section id="interactive">
     <h2>Interaktive Elemente</h2>
@@ -278,10 +295,14 @@ css:
   <div>Ein Meter-Element:<meter value="0.6">60%</meter>
   </div>
 </section>
-<a href="#hauptinhalt" class="badge">
-  <span class="status-dot" id="status-dot"></span>
-  <span id="status-text">nach oben</span>
-</a></main><footer class="site-footer">
+<div>
+  <a href="#hauptinhalt" class="badge">
+    <span class="status-dot" id="status-dot"></span>
+    <span id="status-text">nach oben</span>
+  </a>
+</div>
+</main>
+<footer class="site-footer">
 <div class="container">
   &copy; 2026 Flocke Enterprises. All rights reserved. This is a technical demonstration.
 </div></footer>
