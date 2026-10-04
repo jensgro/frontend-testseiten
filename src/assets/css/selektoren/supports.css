@@ -1,3 +1,38 @@
+:root {
+    --gray-50: #f9fafb;
+    --gray-200: #e5e7eb;
+    --gray-300: #d1d5db;
+    --gray-400: #9ca3af;
+    --gray-900: #111827;
+    --blue-600: #2563eb;
+    --green-500: #22c55e;
+    --red-500: #ef4444;
+
+    --success: var(--green-500);
+    --error: var(--red-500);
+
+    --spacing-half: calc(var(--spacing-1) * 0.5);
+    --spacing-1: 8px;
+    --spacing-2: calc(var(--spacing-1) * 2);
+
+    --border-radius-1: 4px;
+    --border-radius-2: calc(var(--border-radius-1) * 2);
+    --border-radius-3: calc(var(--border-radius-1) * 3);
+    --border-radius-round: 100%;
+
+    --border-1: 1px solid var(--gray-200);
+    --border-2: 1px solid var(--gray-300);
+
+    --dot-size: 8px;
+    --dot-color: var(--gray-300);
+    --badge-bg: var(--gray-50);
+    --badge-color: var(--gray-900);
+    --badge-fz: 0.875rem;
+
+    --box-shadow-light: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+
+}
+
 /* === Basis ========= */
 body {
     font-family: system-ui, sans-serif;
@@ -6,13 +41,8 @@ body {
 
 main {
     display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 20px;
-}
-
-@media (min-width: 720px) {
-    main {
-        grid-template-columns: 1fr 1fr;
-    }
 }
 
 div {
@@ -23,73 +53,113 @@ div {
     place-items: center;
 }
 
+/* badge */
+.badge {
+    display: inline-flex;
+    width: fit-content;
+    flex: 1;
+    align-items: center;
+    padding: var(--spacing-1) var(--spacing-2);
+    border: var(--border-2);
+    border-radius: var(--border-radius-2);
+    font-size: var(--badge-fz);
+    background: var(--badge-bg);
+    color: var(--badge-color);
+    font-weight: 500;
+    box-shadow: var(--box-shadow-light);
+    margin-right: var(--spacing-1);
+    margin-bottom: var(--spacing-1);
+    --dot-color: var(--error);
+
+    &:before {
+        content: "";
+        display: inline-block;
+        width: var(--dot-size);
+        height: var(--dot-size);
+        border-radius: var(--border-radius-round);
+        margin-right: var(--spacing-1);
+        background: var(--dot-color);
+    }
+}
+
+
 /* =============================== */
 /* ============ Features ========= */
 /* =============================== */
 @media not all and (min-resolution: 0.001dpcm) {
-    .min-resolution {
-        background: lime;
-        color: #000;
+    [data-check="min-resolution"] {
+        --dot-color: #000;
+        --badge-bg: lime;
+        --badge-color: #000;
     }
 }
 
 @supports (-webkit-touch-callout: none) {
-    .check-ios {
-        background: lime;
-        color: #000;
+    [data-check="check-ios"] {
+        --dot-color: #000;
+        --badge-bg: lime;
+        --badge-color: #000;
     }
 }
 
-main:has(div) .check-has {
-    background: lime;
-    color: #000;
+main:has(span.badge) [data-check="check-has"] {
+    --dot-color: #000;
+    --badge-bg: lime;
+    --badge-color: #000;
 }
 
 @supports (display: flow-root) {
-    .check-flow-root {
-        background: lime;
-        color: #000;
+    [data-check="check-flow-root"] {
+        --dot-color: #000;
+        --badge-bg: lime;
+        --badge-color: #000;
     }
 }
 
 @supports (accent-color: red) {
-    .accent-color {
-        background: lime;
-        color: #000;
+    [data-check="accent-color"] {
+        --dot-color: #000;
+        --badge-bg: lime;
+        --badge-color: #000;
     }
 }
 
 @supports (anchor-name: none) {
-    .anchor-name {
-        background: lime;
-        color: #000;
+    [data-check="anchor-name"] {
+        --dot-color: #000;
+        --badge-bg: lime;
+        --badge-color: #000;
     }
 }
 
 @supports (container-name: test) {
-    .container-name {
-        background: lime;
-        color: #000;
+    [data-check="container-name"] {
+        --dot-color: #000;
+        --badge-bg: lime;
+        --badge-color: #000;
     }
 }
 
 @supports (appearance: base-select) {
-    .base-select {
-        background: lime;
-        color: #000;
+    [data-check="base-select"] {
+        --dot-color: #000;
+        --badge-bg: lime;
+        --badge-color: #000;
     }
 }
 
 @supports (hyphenate-limit-chars: 10) {
-    .hyphenate-limit-chars {
-        background: lime;
-        color: #000;
+    [data-check="hyphenate-limit-chars"] {
+        --dot-color: #000;
+        --badge-bg: lime;
+        --badge-color: #000;
     }
 }
 
 @supports (width: stretch) {
-    .width-stretch {
-        background: lime;
-        color: #000;
+    [data-check="width-stretch"] {
+        --dot-color: #000;
+        --badge-bg: lime;
+        --badge-color: #000;
     }
 }
