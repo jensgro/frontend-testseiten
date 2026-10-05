@@ -19,6 +19,7 @@ const testicon = require('./images/testicon.js');
 const svg = require('./images/svg.js');
 const footerSimple = require('./footer/footer-simple.js');
 const details = require('./details/index.js');
+const collectionDetails = require('./details/collections.js');
 
 module.exports = {
     card,
@@ -41,5 +42,6 @@ module.exports = {
     testicon,
     svg,
     footerSimple,
-    details
+    details,
+    collectionDetails
 };

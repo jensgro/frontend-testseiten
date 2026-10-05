@@ -21,7 +21,8 @@ const {
   testicon,
   svg,
   footerSimple,
-  details
+  details,
+  collectionDetails
 } = require(configPath + 'shortcodes/index.js');
 
 module.exports = (eleventyConfig) => {
@@ -55,6 +56,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addShortcode("horizontalnav", horizontalnav);
   eleventyConfig.addShortcode("testicon", testicon);
   eleventyConfig.addShortcode("footerSimple", footerSimple);
+  eleventyConfig.addShortcode("collectionDetails", collectionDetails);
 
   eleventyConfig.addWatchTarget('src/assets/css/');
   eleventyConfig.addWatchTarget('src/assets/js/');
