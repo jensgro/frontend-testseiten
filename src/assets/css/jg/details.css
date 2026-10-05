@@ -4,7 +4,7 @@ details {
     color: var(--details-text);
     border: var(--details-border);
     border-radius: var(--details-radius);
-    margin-bottom: 1rem;
+    margin: var(--details-margin);
     overflow: hidden;
     transition: border-color var(--details-transition);
 }
