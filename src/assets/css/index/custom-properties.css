@@ -41,6 +41,7 @@
     --body-padding: var(--space-4);
 
     --html-bg: var(--lightgrey);
+    --html-padding: var(--space-2) 0;
 }
 
 :root {

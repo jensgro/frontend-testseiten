@@ -1,22 +1,4 @@
-:root {
-    --space: 10px;
-    --space-2: 20px;
-    --space-3: 30px;
-    --padding: 1rem;
-
-    --body-width: 80%;
-    --box-shadow-1: 1px 1px 5px rgba(0,0,0,0.5);
-
-    --lightgrey: #efefef;
-    --myred: #a20000;
-    --eggshell: #e6e3d4;
-    --ash-grey: #b3cbb9;
-    --pearl: #ddd8b8;
-    --ultra-violet: #6a66a3;
-    --eminence: #542e71;
-  }
-
-
+@import url("custom-properties.css");
 
   /* ======== styling basics ======= */
   * {
@@ -24,20 +6,19 @@
   }
 
   html {
-    padding: calc(var(--space) * 2) 0;
-    background-color: var(--lightgrey);
-    font-size: 16px;
+    padding: var(--html-padding);
+    background-color: var(--html-bg);
   }
 
   body {
-    width: var(--body-width);
-    padding: calc(var(--space) * 4);
-    margin: 0 auto;
-    background: #fff;
-    box-shadow: var(--box-shadow-1);
     font-family: system-ui, sans-serif;
     font-size: 1rem;
-    color: #000;
+    width: var(--body-width);
+    padding: var(--body-padding);
+    margin: 0 auto;
+    color: var(--text-color);
+    background: var(--body-bg);
+    box-shadow: var(--box-shadow-1);
   }
 
   :where(a) {
