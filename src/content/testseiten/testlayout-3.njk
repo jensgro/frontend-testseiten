@@ -2,10 +2,44 @@
 title: Testlayout 3
 permalink: testlayout-3.html
 css:
+    - basics/base 
+    - basics/grid 
     - layouts/testlayout-2
 ---
 
-{% card "Card Headline" %}
-{% card "Noch eine Card", "secondary" %}
-{% quoteTeaser "This is a quote.", "Author Name" %}
-{% teaser "Teaser Headline", "This is a teaser text that gives a brief overview of the content." %}
+<div class="grid cols-2">
+  {% card "Card Headline" %}
+  {% card "Noch eine Card", "secondary" %}
+  {% quoteTeaser "This is a quote.", "Author Name" %}
+  {% teaser "Teaser Headline", "This is a teaser text that gives a brief overview of the content." %}
+</div>
+
+<div class="grid">
+  <div class="testitem"></div>
+  <div class="testitem"></div>
+  <div class="testitem"></div>
+  <div class="testitem"></div>
+  <div class="testitem"></div>
+  <div class="testitem"></div>
+  <div class="testitem"></div>
+  <div class="testitem"></div>
+</div>
+
+<div class="grid">
+  <div class="testitem"></div>
+  <div class="testitem"></div>
+  <div class="testitem"></div>
+  <div class="testitem"></div>
+  <div class="testitem"></div>
+</div>
+
+<div class="grid">
+  <div class="testitem"></div>
+  <div class="testitem"></div>
+  <div class="testitem"></div>
+</div>
+
+<div class="grid">
+  <div class="testitem"></div>
+  <div class="testitem"></div>
+</div>

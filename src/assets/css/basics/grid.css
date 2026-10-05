@@ -1,0 +1,24 @@
+:root {
+    --testitem-bg: var(--yellow-1);
+}
+
+.grid {
+    --gap: 10px;
+    --grid-item-min-width: 200px;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(var(--grid-item-min-width), 1fr));
+    gap: var(--gap);
+    margin-inline: auto;
+    margin-bottom: var(--space-4);
+}
+
+.cols-2 {
+    grid-template-columns: 1fr 1fr;
+    --gap: 30px;
+}
+
+.testitem {
+    aspect-ratio: 16/9;
+    background-color: var(--testitem-bg);
+}

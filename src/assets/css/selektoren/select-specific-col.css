@@ -57,7 +57,7 @@
 /* visualization */
 body {
     margin: 0 2rem;
-    font-family: system-ui;
+    font-family: system-ui, sans-serif;
     text-align: center;
     width: unset;
 }
