@@ -1,22 +1,21 @@
 ---
 layout: simple-1.njk
-title: Kitchensink
+title: Kitchensink für Reset-Test
 permalink: kitchensink.html
 swapstyle:
   - selektoren/kitchensink
+  - components/details
 js:
   - swapstylesheet
 ---
 
 <!-- framework toggles -->
-<details
-  class="framework-toggle"
-  style="padding: 10px; font-family: system-ui; font-size: 14px; color: #a20000; font-weight: 600;">
-  <summary style="padding: 4px 8px; cursor: pointer; ">Toggle reset/framework:</summary>
+<details>
+  <summary>Toggle reset/framework:</summary>
   {% for item in swapstyles %}
-    <div style="margin-left: 10px; ">
-      <label>
-        <input type="radio" name="options" id="{{ item.id }}" value="{{ item.id }}" onclick="swapStyleSheet('{{ item.css }}')">
+    <div style="margin-left: 10px; padding-block: 4px; display: flex; gap: 20px;">
+      <input type="radio" name="options" id="{{ item.id }}" value="{{ item.id }}" onclick="swapStyleSheet('{{ item.css }}')"> 
+      <label for="{{ item.id }}">
           {{ item.name }}
         </label>
       </div>

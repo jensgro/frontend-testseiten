@@ -16,24 +16,20 @@
        "css": "https://rawgit.com/csstools/sanitize.css/master/sanitize.css",
        "name": "Sanitize"
     },    {
-       "id": "reeeset",
-       "css": "https://dl.dropboxusercontent.com/u/18590/reeeset.css",
-       "name": "reeeset"
+       "id": "the new css reset",
+       "css": "https://raw.githubusercontent.com/elad2412/the-new-css-reset/main/css/reset.css",
+       "name": "new reset"
     },    {
        "id": "bootstrap3",
        "css": "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css",
        "name": "Bootstrap 3.3.6"
     },    {
        "id": "bootstrap4",
-       "css": "https://rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap-reboot.min.css",
+       "css": "https://raw.githubusercontent.com/twbs/bootstrap/refs/heads/main/dist/css/bootstrap-reboot.css",
        "name": "Bootstrap 4 - Reboot"
     },    {
        "id": "semantic-ui",
        "css": "https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.css",
        "name": "Semantic UI"
-    },    {
-       "id": "foundation5",
-       "css": "http:// cdn.foundation5.zurb.com/foundation.css",
-       "name": "Foundation 5"
     }
 ]
