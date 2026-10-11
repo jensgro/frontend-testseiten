@@ -30,7 +30,9 @@ module.exports = (eleventyConfig) => {
     'src/assets/css/': '/assets/css/',
     'src/assets/img/': '/assets/img/',
     'src/assets/js/': '/assets/js/',
-    'src/assets/svg/': '/assets/svg/'
+    'src/assets/svg/': '/assets/svg/',
+    'src/assets/audio/': '/assets/audio/',
+    'src/assets/video/': '/assets/video/'
   });
 
   eleventyConfig.addShortcode("svg", svg);

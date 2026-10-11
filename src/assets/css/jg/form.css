@@ -4,6 +4,10 @@ fieldset {
     gap: var(--spacing-2);
 }
 
+form {
+    margin-bottom: var(--spacing-4);
+}
+
 fieldset {
     min-inline-size: 0;
 }

@@ -114,6 +114,10 @@ iframe {
     border: none;
 }
 
+audio {
+    min-height: 40px;
+    height: unset;
+}
 hr {
     border: none;
     border-top: var(--border-2);
@@ -175,7 +179,7 @@ a {
 blockquote {
     border-left: var(--blockquote-border);
     background: var(--blockquote-bg);
-    color: var(--blockquote-color)
+    color: var(--blockquote-color);
     margin: var(--spacing-3) 0;
     padding: var(--spacing-2);
 }
@@ -187,4 +191,10 @@ blockquote footer {
 
 blockquote cite {
     font-style: normal;
+}
+
+@layer demo {
+    section {
+        margin-bottom: 20px;
+    }
 }
