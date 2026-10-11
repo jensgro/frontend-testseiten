@@ -1,0 +1,358 @@
+---
+title: Kitchensink zum Editieren
+permalink: kitchensink-edit.html
+description: Übersicht wichtiger Elemente. Zur Anpassung mittels eigener Klassen gedacht.
+tags: kitchensink
+css:
+    - jg/jg
+---
+
+<header class="site-header">
+  <div class="container">
+    <div class="header-inner">
+      <div class="logo">Kitchensink</div>
+      <nav class="nav" aria-label="Hauptnavigation">
+        <ul class="main-nav">
+          <li>
+            <a href="#text">Text-Elemente</a>
+          </li>
+          <li>
+            <a href="#lists">Listen</a>
+          </li>
+          <li>
+            <a href="#forms">Formulare</a>
+          </li>
+          <li>
+            <a href="#media">Medien</a>
+          </li>
+          <li>
+            <a href="#table">Tabellen</a>
+          </li>
+          <li>
+            <a href="#interactive">Interaktive Elemente</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+<main id="hauptinhalt" class="main-content container">
+  <h1>Kitchen Sink: Umfangreiche HTML-Demo</h1>
+  <p>Diese Seite enthält viele HTML-Elemente in typischen Bereichen.</p>
+  <section id="text">
+    <h2>Text-Elemente</h2>
+    <p>Dies ist ein einfacher Absatz mit
+      <strong>fettem Text</strong>,
+      <em>kursivem Text</em>
+      und
+      <u>unterstrichenem Text</u>. Man kann auch
+      <mark>Text markieren</mark>,
+      <small>kleiner schreiben</small>
+      oder
+      <del>Text durchstreichen</del>
+      und ihn dann
+      <ins>ergänzen</ins>.</p>
+    <p>Hier ist ein Beispiel für
+      <s>veralteten Text</s>
+      und
+      <strong>starken Fokus</strong>
+      sowie
+      <em>betonten Text</em>. Es gibt auch
+      <sub>tiefgestellte</sub>
+      und
+      <sup>hochgestellte</sup>
+      Zeichen.</p>
+    <p>Ein Zitat:
+      <q>Dies ist ein kurzes Inline-Zitat.</q>
+    </p>
+    <blockquote>
+      Dies ist ein Blockzitat. Es wird verwendet, um längere Zitate aus anderen Quellen deutlich vom Haupttext abzuheben.
+    </blockquote>
+    <p>Präzise Defintionen:
+      <dfn>HTML</dfn>
+      steht für Hypertext Markup Language. Das kann man auch anders darstellen:
+      <abbr title="Hypertext Markup Language">HTML</abbr>.</p>
+    <p>Ein Beispiel für einen Link:
+      <a href="https://www.example.com">Besuche Example.com</a>
+    </p>
+    <p>Code-Beispiel:
+      <code>console.log("Hallo Welt");</code>
+    </p>
+    <pre>
+                Dies ist ein vorformatiertes Textblock:
+                Zeile 1
+                Zeile 2 (Einrückungen bleiben erhalten)
+            </pre>
+    <p>Zeitangabe:
+      <time datetime="2026-08-19">Heute</time>
+    </p>
+  </section>
+  <div>
+
+  <a href="#hauptinhalt" class="badge">
+    <span class="status-dot" id="status-dot"></span>
+    <span id="status-text">nach oben</span>
+  </a>
+</div>
+
+  <!-- Listen -->
+  <section id="lists">
+    <h2>Listen</h2>
+    <h3>Ungeordnete Liste:</h3>
+    <ul>
+      <li>Erster Punkt</li>
+      <li>Zweiter Punkt
+        <ul>
+          <li>Unterpunkt A</li>
+          <li>Unterpunkt B</li>
+        </ul>
+      </li>
+      <li>Dritter Punkt</li>
+    </ul>
+    <h3>Geordnete Liste:</h3>
+    <ol>
+      <li>Schritt eins</li>
+      <li>Schritt zwei</li>
+      <li>Schritt drei</li>
+    </ol>
+    <h3>Beschreibungsliste:</h3>
+    <dl>
+      <dt>HTML</dt>
+      <dd>Eine Auszeichnungssprache für Webseiten.</dd>
+      <dt>CSS</dt>
+      <dd>Eine Stylesheet-Sprache zur Gestaltung.</dd>
+    </dl>
+  </section>
+  <div>
+  <a href="#hauptinhalt" class="badge">
+    <span class="status-dot" id="status-dot"></span>
+    <span id="status-text">nach oben</span>
+  </a>
+</div>
+
+  <!-- Formulare -->
+  <section id="forms">
+    <h2>Formulare und Eingaben</h2>
+    <form action="#" method="post">
+      <fieldset>
+        <legend>Persönliche Daten</legend>
+        <div>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" placeholder="Max Mustermann">
+        </div>
+        <div>
+          <label for="email">E-Mail:</label>
+          <input type="email" id="email" name="email" placeholder="max@example.com" required autocomplete="email">
+        </div>
+        <div>
+          <label for="pass">Passwort:</label>
+          <input type="password" id="pass" name="pass" minlength="6">
+        </div>
+        <div>
+          <label for="age">Alter:</label>
+          <input type="number" id="age" name="age" min="0" max="120">
+        </div>
+        <div>
+          <label for="date">Datum:</label>
+          <input type="date" id="date" name="date">
+        </div>
+        <div>
+          <label for="color">Lieblingsfarbe:</label>
+          <input type="color" id="color" name="color">
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Präferenzen</legend>
+        <div>
+          <input type="checkbox" id="newsletter" name="newsletter">
+          <label for="newsletter">Newsletter abonnieren</label>
+        </div>
+        <div>
+          <input type="radio" id="option1" name="choice" value="1">
+          <label for="option1">Option 1</label>
+          <input type="radio" id="option2" name="choice" value="2">
+          <label for="option2">Option 2</label>
+        </div>
+        <div>
+          <label for="experience">Erfahrung:</label>
+          <input type="range" id="experience" name="experience" min="0" max="10">
+        </div>
+        <div>
+          <label for="browser">Browser wählen:</label>
+          <input list="browsers" id="browser" name="browser">
+          <datalist id="browsers">
+            <option value="Chrome"></option>
+            <option value="Firefox"></option>
+            <option value="Safari"></option>
+            <option value="Edge"></option>
+          </datalist>
+        </div>
+        <div>
+          <label for="message">Nachricht:</label><br>
+          <textarea id="message" name="message" rows="4" cols="50">Hier Text eingeben...</textarea>
+        </div>
+        <div>
+          <label for="category">Kategorie:</label>
+          <select id="category" name="category">
+            <optgroup label="Technik">
+              <option value="software">Software</option>
+              <option value="hardware">Hardware</option>
+            </optgroup>
+            <optgroup label="Andere">
+              <option value="divers">Diverses</option>
+            </optgroup>
+          </select>
+        </div>
+        <div>
+          <label for="readonly">Readonly</label>
+          <input id="readonly" name="readonly" type="text" value="Nur lesen" readonly/>
+        </div>
+        <div>
+          <label for="disabled">Disabled</label>
+          <input id="disabled" name="disabled" type="text" value="Deaktiviert" disabled/>
+        </div>
+      </fieldset>
+      <div>
+        <button type="submit">Absenden</button>
+        <button type="reset">Zurücksetzen</button>
+      </div>
+    </form>
+  </section>
+  <div>
+  <a href="#hauptinhalt" class="badge">
+    <span class="status-dot" id="status-dot"></span>
+    <span id="status-text">nach oben</span>
+  </a>
+</div>
+
+  <!-- Tabellen -->
+  <section id="table">
+    <h2>Tabellen</h2>
+    <table>
+      <caption>Beispielhafte Datentabelle</caption>
+      <thead>
+        <tr>
+          <th>Produkt</th>
+          <th>Menge</th>
+          <th>Preis</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Apfel</td>
+          <td>5</td>
+          <td>2,00 €</td>
+        </tr>
+        <tr>
+          <td>Birne</td>
+          <td>3</td>
+          <td>3,50 €</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>Gesamt</td>
+          <td>8</td>
+          <td>5,50 €</td>
+        </tr>
+      </tfoot>
+    </table>
+<table>
+    <caption>
+      Beispiel-Tabelle: Lorem ipsum dolor sit amet, consetetur sadipscing elitr.
+    </caption>
+    <thead>
+      <tr>
+        <th scope="col">Spalte A</th>
+        <th scope="col">Spalte B</th>
+        <th scope="col">Spalte C</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Zeile 1</th>
+        <td>Lorem ipsum</td>
+        <td>Dolor sit amet</td>
+      </tr>
+      <tr>
+        <th scope="row">Zeile 2</th>
+        <td colspan="2">colspan: Der Inhalt überspannt zwei Spalten</td>
+      </tr>
+      <tr>
+        <th scope="row">Zeile 3</th>
+        <td rowspan="1">rowspan: In dieser Demo nur ein Wert</td>
+        <td>Weitere Zelle</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th scope="row">Footer</th>
+        <td colspan="2">Lorem ipsum am Ende</td>
+      </tr>
+    </tfoot>
+  </table>
+  </table>
+    
+  </section>
+  <div>
+  <a href="#hauptinhalt" class="badge">
+    <span class="status-dot" id="status-dot"></span>
+    <span id="status-text">nach oben</span>
+  </a>
+</div>
+
+  <!-- Medien -->
+  <section id="media">
+    <h2>Medien</h2>
+    <h3>Ein Bild mit Alternativtext</h3>
+    <figure>
+      <img src="https://via.placeholder.com/150" alt="Beispielbild">
+      <figcaption>Bildunterschrift: Ein Platzhalterbild</figcaption>
+    </figure>
+    <h3>Ein Audio-Element</h3>
+    <audio controls preload="metadata">
+    <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg"/> Dein Browser unterstützt das Audio-Element
+    nicht.
+  </audio>
+    <h3>Ein Video-Element</h3>
+  <video controls width="640" height="360" preload="metadata">
+    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4"/>
+    <track kind="captions" src="https://example.com/captions.vtt" srclang="de" label="Deutsch" default/> Dein Browser
+    unterstützt das Video-Element nicht.
+  </video>
+    <h3>Ein eingebetteter Iframe</h3>
+    <iframe src="https://grochtdreis.de" title="Beispiel Iframe" width="400" height="100" style="border: 1px solid #cecece;"></iframe>
+  </section>
+  <div>
+  <a href="#hauptinhalt" class="badge">
+    <span class="status-dot" id="status-dot"></span>
+    <span id="status-text">nach oben</span>
+  </a>
+</div>
+
+  <!-- Interaktive Elemente -->
+  <section id="interactive">
+    <h2>Interaktive Elemente</h2>
+    <details>
+      <summary>Klicke hier, um mehr zu erfahren</summary>
+      <p>Dies ist der Inhalt, der durch das
+        <code>details</code>-Element versteckt war.</p>
+    </details>
+    <div>
+      <label for="progress-bar">Uploading Document</label>
+      <progress id="progress-bar" value="70" max="100">70 %</progress>
+  </div>
+  <div>Ein Meter-Element:<meter value="0.6">60%</meter>
+  </div>
+</section>
+<div>
+  <a href="#hauptinhalt" class="badge">
+    <span class="status-dot" id="status-dot"></span>
+    <span id="status-text">nach oben</span>
+  </a>
+</div>
+</main>
+<footer class="site-footer">
+<div class="container">
+  &copy; 2026 Flocke Enterprises. All rights reserved. This is a technical demonstration.
+</div></footer>

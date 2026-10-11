@@ -20,6 +20,7 @@ const svg = require('./images/svg.js');
 const footerSimple = require('./footer/footer-simple.js');
 const details = require('./details/index.js');
 const collectionDetails = require('./details/collections.js');
+const collectionList = require('./lists/collectionList.js');
 
 module.exports = {
     card,
@@ -43,5 +44,6 @@ module.exports = {
     svg,
     footerSimple,
     details,
-    collectionDetails
+    collectionDetails,
+    collectionList
 };

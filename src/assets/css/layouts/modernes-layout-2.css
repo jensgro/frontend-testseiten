@@ -77,7 +77,6 @@
         border: 1px solid var(--area-border);
     }
 }
-
 /* === Header Styles ======== */
 @layer header {
     .site-header {
@@ -97,9 +96,12 @@
         border: none;
         background-color: transparent;
         cursor: pointer;
+        margin-left: auto;
     }
 
-    .site-nav {
+    .site-nav ul {
+        list-style: none;
+        padding-left: 0;
         justify-content: flex-end;
         gap: 1.25rem;
         display: none;
@@ -110,7 +112,7 @@
             display: none;
         }
 
-        .site-nav {
+        .site-nav ul {
             display: flex;
         }
     }
@@ -133,7 +135,6 @@
         outline-offset: 0.25em;
     }
 }
-
 /* ========= Thumbnails ========= */
 @layer thumbnails {
     .post-thumbnails {

@@ -4,7 +4,12 @@ const collectionDetails = (items, summary) => {
   <div class="details-content">
     <ol class="indexlist">
       ${items.map(item => `
-        <li><a href="${item.url}" target="_blank">${item.data.title}</a></li>
+        <li>
+        <a href="${item.url}" target="_blank">${item.data.title}</a>
+        ${item.data.description
+          ? `<span>${item.data.description}</span>`
+          : ""}
+        </li>
       `).join("")}
     </ol>
   </div>

@@ -12,10 +12,15 @@
 
 .teaser-header {
     display: flex;
+    justify-content: space-between;
 }
 
 .teaser :is(h2, h3) {
     margin: 0;
+}
+
+.teaser-header:not(:has(.teaser-mark)) {
+    display: block;
 }
 
 .teaser-header:not(:has(.teaser-mark)) :is(h2, h3) {
@@ -23,11 +28,10 @@
 }
 
 .teaser-mark {
-    background-color: black;
+    background-color: rgb(192, 33, 33);
     color: white;
     padding: 6px 12px;
     margin-top: -10px;
     margin-right: -20px;
     align-self: start;
-
 }
