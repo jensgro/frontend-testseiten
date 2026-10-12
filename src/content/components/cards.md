@@ -1,5 +1,5 @@
 ---
-title: Card
+title: Cards
 css:
   - components/components-base
   - components/card

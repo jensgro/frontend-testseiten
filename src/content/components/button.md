@@ -1,5 +1,5 @@
 ---
-title: Button
+title: Buttons
 css:
   - components/components-base
   - components/button
