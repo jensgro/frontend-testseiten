@@ -1,9 +1,11 @@
 /* inspired by https://smolcss.dev/#smol-card-component by Stephanie Eckles */
 
-.card-simple {
-    --img-ratio: 3/2;
+:root {
+    --card-img-ratio: 3/2;
     --border-radius-card: var(--border-radius-1);
+}
 
+.card-simple {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-1);
@@ -11,7 +13,7 @@
     border-radius: var(--border-radius-card);
 
     >img {
-        aspect-ratio: var(--img-ratio);
+        aspect-ratio: var(--card-img-ratio);
         object-fit: cover;
         width: 100%;
     }

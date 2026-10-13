@@ -1,0 +1,26 @@
+.color-list {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    li {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .color {
+        aspect-ratio: 1;
+        width: 120px;
+        background-color: var(--bg, #000);
+    }
+    .color-name {
+        color: black;
+        margin-top: auto;
+    }
+}
+
+body {
+    padding: 20px;
+}

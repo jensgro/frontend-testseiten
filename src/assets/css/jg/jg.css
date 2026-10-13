@@ -1,8 +1,9 @@
-@layer core, components, utility;
+@layer colors, core, components, utility;
 @layer core.vars, core.reset, core.base;
 @layer components.badge, components.button, components.dialog, components.details, components.form, components.table, components.code, components.card;
 
 
+@import url('colors.css') layer(colors);
 @import url('custom.css') layer(core.vars);
 @import url('base.css') layer(core.reset);
 @import url('layout.css') layer(core.base);
@@ -15,3 +16,30 @@
 @import url('code.css') layer(components.code);
 @import url('card.css') layer(components.card);
 @import url('utility.css') layer(utility);
+
+/*
+     colors=
+        'red',
+        'orange',
+        'amber',
+        'lime',
+        'green',
+        'teal',
+        'cyan',
+        'blue',
+        'violet',
+        'rose',
+        'gray'
+
+        shade=
+        '50',
+        '100',
+        '200',
+        '300',
+        '400',
+        '500',
+        '600',
+        '700',
+        '800',
+        '900'
+*/

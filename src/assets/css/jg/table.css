@@ -1,3 +1,9 @@
+:root {
+    --table-th-bg: rgba(100, 100, 100, .025);
+    --table-tbody-bg: rgba(100, 100, 100, .025);
+    --border-table: 1px solid rgba(100, 100, 100, .2);
+}
+
 table {
     border-collapse: collapse;
     border: 1px solid;
@@ -28,7 +34,8 @@ thead {
     border-bottom: var(--border-table);
 }
 
-tr + tr, tfoot {
+tr+tr,
+tfoot {
     border-top: var(--border-table);
 }
 

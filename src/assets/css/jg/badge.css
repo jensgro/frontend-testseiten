@@ -1,3 +1,10 @@
+:root {
+    --badge-bg: var(--grey-50);
+    --badge-fz: var(--fz-s);
+    --dot-size: 8px;
+    --dot-color: var(--grey-300);
+}
+
 .badge {
     display: inline-flex;
     align-items: center;

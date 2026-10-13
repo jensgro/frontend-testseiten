@@ -1,3 +1,10 @@
+:root {
+    --code-bg: var(--grey-50);
+    --code-color: var(--grey-900);
+    --var-color: var(--green-500);
+    --kbd-color: var(--text-main);
+}
+
 code,
 samp,
 time {
@@ -22,8 +29,8 @@ var {
 
 kbd {
     background: var(--background);
-    border: 1px solid var(--border);
-    border-radius: 2px;
-    color: var(--text-main);
-    padding: 2px 4px 2px 4px;
+    border: var(--border-1);
+    border-radius: var(--border-radius);
+    color: var(--kbd-color);
+    padding: 2px 4px;
 }

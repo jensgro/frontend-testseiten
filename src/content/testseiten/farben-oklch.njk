@@ -1,0 +1,27 @@
+---
+layout: simple-2.njk
+title: Farben im oklch-Farbraum
+permalink: colors-oklch.html
+bodyClass: page
+css:
+    - jg/custom-base
+    - jg/base
+    - jg/colors
+    - testseiten/color-list
+---
+
+{% set colors = ['red', 'orange', 'amber', 'lime', 'green', 'teal', 'cyan', 'blue', 'violet', 'rose', 'grey'] %}
+{% set shades = ['50', '100', '200', '300', '400', '500', '600', '700', '800', '900'] %}
+
+{% for color in colors %}
+  <ul class="color-list">
+    {% for shade in shades %}
+      {% set prop = '--' + color + '-' + shade %}
+      <li>
+        <div class="color" style="--bg: var({{ prop }});"></div>
+        <div class="color-name">{{ prop }}</div>
+      </li>
+    {% endfor %}
+  </ul>
+{% endfor %}
+

@@ -1,3 +1,14 @@
+:root {
+    --details-bg: var(--grey-50);
+    --details-text: var(--text-color);
+    --details-accent: var(--yellow-2);
+    --details-border: var(--border-1);
+    --details-radius: var(--border-radius-1);
+    --details-padding: var(--spacing-1) var(--spacing-2);
+    --details-margin: 0 0 var(--spacing-2) 0;
+    --details-transition: 0.2s ease-in-out;
+    --summary-before-fz: var(--fz-s);
+}
 
 details {
     background-color: var(--details-bg);

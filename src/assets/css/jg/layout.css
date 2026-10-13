@@ -1,3 +1,17 @@
+
+:root {
+    --site-header-bg: var(--grey-50);
+    
+    --site-footer-bg: var(--grey-50);
+    --site-footer-color: var(--grey-400);
+    --site-footer-fz: var(--fz-s);
+
+    --nav-color: var(--grey-900);
+    --nav-color-hover: var(--grey-400);
+    --nav-color-active: var(--blue-600);
+    --nav-fz: var(--fz-s);
+}
+
 /* layout in general */
 .container {
     max-width: var(--max-width);
@@ -22,11 +36,17 @@
 
 /* Header */
 .site-header {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
     background: var(--site-header-bg);
     border-bottom: var(--border-1);
-    position: sticky;
+    padding: var(--spacing-2);
+    /* 
+    position: sticky; 
     top: 0;
-    z-index: 10;
+    z-index: 10; 
+    */
 }
 
 .header-inner {
@@ -42,13 +62,18 @@
     letter-spacing: -0.025em;
 }
 
-.main-nav {
+.site-nav {
     /* display: none; */
-    display: flex;
-    gap: var(--spacing-4);
-    font-size: var(--nav-fz);
-    font-weight: 500;
-    color: var(--nav-color);
+    
+    ul {
+        display: flex;
+        gap: var(--spacing-4);
+        list-style: none;
+        padding-left: 0;
+        font-size: var(--nav-fz);
+        font-weight: 500;
+        color: var(--nav-color);
+    }
     
     a {
         text-decoration: none;
@@ -64,6 +89,10 @@
             font-weight: 600;
         }
     }
+}
+
+.site-nav-toggle {
+    display: none;
 }
 
 
