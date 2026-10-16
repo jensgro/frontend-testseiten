@@ -2,28 +2,45 @@
 
 :root {
     --card-img-ratio: 3/2;
-    --border-radius-card: var(--border-radius-1);
+    --card-border: var(--border-1);
+    --card-border-radius: var(--border-radius-1);
+    --card-box-shadow: var(--box-shadow-light);
+
+    --card-grid-gap: var(--spacing-2);
 }
 
 .card-simple {
+    --heading-fz-2: 1.5rem;
+    --heading-fz-3: 1.5rem;
+
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-1);
-    box-shadow: var(--box-shadow-light);
-    border-radius: var(--border-radius-card);
+    gap: var(--spacing-2);
+    box-shadow: var(--card-box-shadow);
+    border: var(--card-border);
+    border-radius: var(--card-border-radius);
 
-    >img {
+    h2, h3 {
+        font-weight: normal;
+    }
+
+    a:is(:hover, :focus) {
+        text-decoration: none;
+        color: var(--teal-600);
+    } 
+
+    > img {
         aspect-ratio: var(--card-img-ratio);
         object-fit: cover;
         width: 100%;
     }
 
-    >img:first-child {
-        border-radius: var(--border-radius-card) var(--border-radius-card) 0 0;
+    > img:first-child {
+        border-radius: var(--card-border-radius) var(--card-border-radius) 0 0;
     }
 
-    >.card>img:last-child {
-        border-radius: 0 0 var(--border-radius-card) var(--border-radius-card);
+    > img:last-child {
+        border-radius: 0 0 var(--card-border-radius) var(--card-border-radius);
         margin-top: auto;
     }
 
@@ -51,3 +68,60 @@
         align-self: start;
     }
 }
+
+.card-grid {
+    display: grid;
+    gap: var(--card-grid-gap);
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.card {
+    --card-box-shadow: 0 10px 30px rgba(16, 24, 40, 0.06);
+    --card-padding: var(--spacing-4);
+    --card-border-radius: var(--radius-3);
+    --card-border: var(--border);
+    --card-bg: var(--card);
+    --card-text: var(--text);
+    --card-topline-color: var(--accent);
+    --card-link-color: var(--accent);
+    --card-link-color-hover: var(--muted);
+
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+    box-shadow: var(--card-box-shadow);
+}
+
+.card--featured {
+    --card-border: var(--accent);
+    --card-box-shadow: 0 12px 32px rgba(79, 70, 229, 0.18);
+}
+
+.card__topline {
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 0.75rem;
+    color: var(--card-topline-color);
+    font-weight: 700;
+}
+
+.card__footer a {
+    color: var(--card-link-color);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.card__footer a:is(:hover, :focus) {
+    color: var(--card-link-color-hover);
+    text-decoration: underline;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+
+}
+
+.card__head {}
+.card__content {}

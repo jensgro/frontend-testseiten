@@ -1,0 +1,50 @@
+/* MQ-Check: Einblendung, welche Media Query gerade existiert. Muss editiert werden! */
+body.mq-check {
+    position: relative;
+}
+body.mq-check:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    padding: 10px;
+    background-color: #78909C;
+    color: #000;
+    /* text-align: right; */
+}
+
+@media (max-width: 500px) {
+    body:before {
+        content: "XS";
+        color: #fff;
+    }
+}
+
+@media (min-width: 500px) {
+    body:before {
+        content: "S";
+        background-color: #42A5F5;
+    }
+}
+
+@media (min-width: 780px) {
+    body:before {
+        content: "M";
+        background-color: #8BC34A;
+    }
+}
+
+@media (min-width: 1000px) {
+    body:before {
+        content: "L";
+        background-color: #fd8700;
+    }
+}
+
+@media (min-width: 1400px) {
+    body:before {
+        content: "XL";
+        background-color: #a20000;
+        color: #fff;
+    }
+}

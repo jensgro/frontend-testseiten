@@ -16,19 +16,19 @@
 .container {
     max-width: var(--max-width);
     margin: 0 auto;
-    padding: 0 var(--spacing-2);
+    padding: var(--spacing-2);
     width: 100%;
 }
 
 @media (min-width: 640px) {
     .container {
-        padding: 0 var(--spacing-3);
+        padding: var(--spacing-3);
     }
 }
 
 @media (min-width: 1024px) {
     .container {
-        padding: 0 var(--spacing-4);
+        padding: var(--spacing-4);
     }
 }
 

@@ -1,12 +1,13 @@
 @layer colors, core, components, utility;
 @layer core.vars, core.reset, core.base;
-@layer components.badge, components.button, components.dialog, components.details, components.form, components.table, components.code, components.card;
+@layer  components.form, components.table, components.code, components.badge, components.button, components.dialog, components.details, components.card, components.hero;
 
 
 @import url('colors.css') layer(colors);
 @import url('custom.css') layer(core.vars);
 @import url('base.css') layer(core.reset);
 @import url('layout.css') layer(core.base);
+@import url('hero.css') layer(components.hero);
 @import url('badge.css') layer(components.badge);
 @import url('button.css') layer(components.button);
 @import url('dialog.css') layer(components.dialog);
