@@ -5,7 +5,7 @@
     --card: rgb(255, 255, 255);
     --text: rgb(16, 24, 40);
     --muted: rgb(102, 112, 133);
-    --accent: rgb(79, 70, 229);
+    --accent: oklch(51.058% 0.23015 276.976);
     --border: rgb(228, 231, 236);
     --success: rgb(6, 118, 71);
     --warning: rgb(181, 71, 8);

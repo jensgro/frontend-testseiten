@@ -1,7 +1,7 @@
 const nav = () => {
   return `
   <header class="site-header">
-    <div class="logo">Logo</div>
+    <div class="logo"><img src="assets/img/logo/jg-logo-80x40.png" alt=""></div>
 
     <button class="site-nav-toggle" aria-label="Hauptnavigation öffnen" aria-expanded="false">
       &#9776;

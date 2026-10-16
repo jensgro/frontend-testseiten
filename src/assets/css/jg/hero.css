@@ -6,6 +6,7 @@
     align-items: center;
     grid-template-columns: 1fr 1fr;
     background: var(--hero-header-bg);
+    padding-inline: var(--spacing-6);
 }
 
 .hero {

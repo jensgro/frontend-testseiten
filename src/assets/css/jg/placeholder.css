@@ -1,0 +1,34 @@
+.placeholder {
+    --_w: 100%;
+    --_h: 100%;
+    aspect-ratio: 16/9;
+
+    --_fill: green;
+
+    width: var(--_w);
+    height: var(--_h);
+    fill: var(--_fill);
+
+    rect {
+        width: var(--_w);
+        height: var(--_h);
+    }
+}
+
+.feature .placeholder {
+    --_fill: var(--yellow-2);
+    aspect-ratio: 16 / 7;
+}
+
+.recent .placeholder {
+    --_fill: var(--green-1);
+    aspect-ratio: 7 / 2;
+}
+
+.placeholder--secondary {
+    --_fill: var(--red-400);
+}
+
+.placeholder--tertiary {
+    --_fill: var(--violet-200);
+}

@@ -1,5 +1,5 @@
 const card = require('./card/index.js');
-const cardSimple = require('./card-simple/index.js');
+const cardSketch = require('./card-sketch/index.js');
 const teaser = require('./teaser/index.js');
 const quoteTeaser = require('./quote-teaser/index.js');
 const nav = require('./nav/index.js');
@@ -12,6 +12,8 @@ const selectBundeslaender = require('./blindtexte/select-bundeslaender.js');
 const selectCountries = require('./blindtexte/select-countries.js');
 const selectTitel = require('./blindtexte/select-titel.js');
 const liste8 = require('./blindtexte/liste-8.js');
+const formComplex = require('./blindtexte/form-complex.js');
+const tabelle1 = require('./blindtexte/tabelle1.js');
 const codeCss = require('./code/code-css.js');
 const dummyArticle = require('./dummy-article/index.js');
 const horizontalnav = require('./lists/horizontalnav.js');
@@ -21,10 +23,13 @@ const footerSimple = require('./footer/footer-simple.js');
 const details = require('./details/index.js');
 const collectionDetails = require('./details/collections.js');
 const collectionList = require('./lists/collectionList.js');
+const badge = require('./badge/index.js');
+const alert = require('./alert/index.js');
+
 
 module.exports = {
     card,
-    cardSimple,
+    cardSketch,
     teaser,
     quoteTeaser,
     blockquote,
@@ -37,6 +42,8 @@ module.exports = {
     selectCountries,
     selectTitel,
     liste8,
+    tabelle1,
+    formComplex,
     codeCss,
     dummyArticle,
     horizontalnav,
@@ -45,5 +52,7 @@ module.exports = {
     footerSimple,
     details,
     collectionDetails,
-    collectionList
+    collectionList,
+    alert,
+    badge
 };

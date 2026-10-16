@@ -1,6 +1,6 @@
 @layer colors, core, components, utility;
 @layer core.vars, core.reset, core.base;
-@layer  components.form, components.table, components.code, components.badge, components.button, components.dialog, components.details, components.card, components.hero;
+@layer  components.form, components.table, components.code, components.badge, components.button, components.dialog, components.details, components.card, components.hero, components.alert;
 
 
 @import url('colors.css') layer(colors);
@@ -16,7 +16,10 @@
 @import url('table.css') layer(components.table);
 @import url('code.css') layer(components.code);
 @import url('card.css') layer(components.card);
+@import url('alert.css') layer(components.alert);
 @import url('utility.css') layer(utility);
+@import url('placeholder.css') layer(utility);
+@import url('dummy-article.css') layer(utility);
 
 /*
      colors=

@@ -1,0 +1,31 @@
+:root {
+  --alert-padding: var(--spacing-2);
+  --alert-border-radius: var(--border-radius-1);
+  --alert-margin: var(--spacing-4);
+  --alert-bg: var(--black);
+  --alert-color: var(--white);
+}
+
+.alert {
+  padding: var(--alert-padding);
+  border-radius: var(--alert-border-radius);
+  margin-block: var(--alert-margin);
+  font-weight: 600;
+  background-color: var(--alert-bg);
+  color: var(--alert-color);
+}
+
+.alert--success {
+  --alert-bg: var(--success-bg);
+  --alert-color: var(--success);
+}
+
+.alert--warning {
+  --alert-bg: var(--warning-bg);
+  --alert-color: var(--warning);
+}
+
+.alert--error {
+  --alert-bg: var(--error-bg);
+  --alert-color: var(--error);
+}

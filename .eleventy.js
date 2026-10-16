@@ -2,7 +2,7 @@ const configPath = "./src/_includes/";
 // module import shortcodes
 const {
   card,
-  cardSimple,
+  cardSketch,
   teaser,
   quoteTeaser,
   nav,
@@ -15,6 +15,8 @@ const {
   selectCountries,
   selectTitel,
   liste8,
+  tabelle1,
+  formComplex,
   codeCss,
   dummyArticle,
   horizontalnav,
@@ -23,7 +25,9 @@ const {
   footerSimple,
   details,
   collectionDetails,
-  collectionList
+  collectionList,
+  alert,
+  badge
 } = require(configPath + 'shortcodes/index.js');
 
 module.exports = (eleventyConfig) => {
@@ -41,7 +45,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPairedNunjucksShortcode("details", details);
 
   eleventyConfig.addShortcode("card", card);
-  eleventyConfig.addShortcode("cardSimple", cardSimple);
+  eleventyConfig.addShortcode("cardSketch", cardSketch);
   eleventyConfig.addShortcode("teaser", teaser);
   eleventyConfig.addShortcode("quoteTeaser", quoteTeaser);
   eleventyConfig.addShortcode("nav", nav);
@@ -54,6 +58,8 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addShortcode("selectCountries", selectCountries);
   eleventyConfig.addShortcode("selectTitel", selectTitel);
   eleventyConfig.addShortcode("liste8", liste8);
+  eleventyConfig.addShortcode("formComplex", formComplex);
+  eleventyConfig.addShortcode("tabelle1", tabelle1);
   eleventyConfig.addShortcode("codeCss", codeCss);
   eleventyConfig.addShortcode("dummyArticle", dummyArticle);
   eleventyConfig.addShortcode("horizontalnav", horizontalnav);
@@ -61,6 +67,8 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addShortcode("footerSimple", footerSimple);
   eleventyConfig.addShortcode("collectionDetails", collectionDetails);
   eleventyConfig.addShortcode("collectionList", collectionList);
+  eleventyConfig.addShortcode("badge", badge);
+  eleventyConfig.addShortcode("alert", alert);
 
   eleventyConfig.addWatchTarget('src/assets/css/');
   eleventyConfig.addWatchTarget('src/assets/js/');

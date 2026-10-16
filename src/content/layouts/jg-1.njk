@@ -1,9 +1,12 @@
 ---
 title: JG-Test 1
 permalink: jg-1.html
+tags:
+  - jg
 css:
     - jg/jg
 ---
+
 {% nav %}
 <header class="hero-header">
   <section class="hero">
@@ -15,19 +18,42 @@ css:
     </div>
   </section>
   <picture>
-    <img src="https://doodleipsum.com/700x700/outline?bg=3b5bdb" height="800" width="800" alt="a random doodle">
-  </picture>
-</header>
-<main class="container">
-  <div class="card-grid">
-    {% for image in images %}
-    {% if (loop.index <= 5) %}
-      <div class="card-simple">
-        <h3><a href="#">{{ image.headline }}</a></h3>
-        <img src="{{ image.filename }}"/>
+    <img src="https://doodleipsum.com/400x400/outline?bg=3b5bdb" height="400" width="400" alt="a random doodle"></picture>
+  </header>
+  <main class="container">
+    <div class="card-grid">
+      {% cardSketch "Card Headline", "secondary" %}
+      {% cardSketch "Card Headline", "tertiary" %}
+      {% card "Profil", "Ein kurzer Beschreibungstext.", "16x9-200.png" %}
+      {% card "Hinweis", "Eine Card ohne Bild." %}
+    </div>
+    <div>
+      <p>{{ lorem.para1 }}</p>
+      <p>{{ lorem.para2 }}</p>
+    </div>
+    <div class="grid-1">
+      <div>
+        {% dummyArticle "3", true %}
       </div>
-    {% endif %}
-  {% endfor %}
-  </div>
-</main>
-{% footerSimple %}
+      <div>
+        {% dummyArticle "5", true %}
+      </div>
+      <div>
+        {% dummyArticle 5 %}
+      </div>
+    </div>
+    <div>
+      {% tabelle1%}
+    </div>
+    <div>
+      {% formComplex %}
+    </div>
+    <div>
+      {% badge "test-badge 1", "primary" %}
+      {% badge "test-badge 2", "secondary" %}
+      {% alert "Das ist eine ernste Warnung", "warning" %}
+      {% alert "Das ist ein echter Erfolg", "success" %}
+      {% alert "Das ist ein echter Fehler", "error" %}
+    </div>
+  </main>
+  {% footerSimple %}
