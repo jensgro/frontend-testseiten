@@ -30,6 +30,12 @@ css:
           </li>
           <li>
             <a href="#interactive">Interaktive Elemente</a>
+          </li>          
+          <li>
+            <a href="#alert">Alert</a>
+          </li>
+          <li>
+            <a href="#dialog">Dialog</a>
           </li>
         </ul>
       </nav>
@@ -41,6 +47,14 @@ css:
   <p>Diese Seite enthält viele HTML-Elemente in typischen Bereichen.</p>
   <section id="text">
     <h2>Text-Elemente</h2>
+    <hr>
+    <h1>Headline Stufe 1</h1>
+    <h2>Headline Stufe 2</h2>
+    <h3>Headline Stufe 3</h3>
+    <h4>Headline Stufe 4</h4>
+    <h5>Headline Stufe 5</h5>
+    <h6>Headline Stufe 6</h6>
+    <hr>
     <p>Dies ist ein einfacher Absatz mit
       <strong>fettem Text</strong>,
       <em>kursivem Text</em>
@@ -78,11 +92,18 @@ css:
     <p>Code-Beispiel:
       <code>console.log("Hallo Welt");</code>
     </p>
+    <p>Use <code>const</code> for block-scoped constants. Press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd> to open DevTools.</p>
+    <p>Run <code>npm install</code> then <code>npm run dev</code> to start the server.</p>
     <pre>
                 Dies ist ein vorformatiertes Textblock:
                 Zeile 1
                 Zeile 2 (Einrückungen bleiben erhalten)
             </pre>
+    <pre><code>function greet(name) {
+  return 'Hello, ' + name + '!';
+}
+
+console.log(greet('World'));</code></pre>            
     <p>Zeitangabe:
       <time datetime="2026-08-19">Heute</time>
     </p>
@@ -291,8 +312,22 @@ css:
       </tr>
     </tfoot>
   </table>
-  </table>
+
+  <table>
+  <caption>Team Members</caption>
+  <thead>
+    <tr><th>Name</th><th>Role</th><th>Status</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Alice Chen</td><td>Developer</td><td>Active</td></tr>
+    <tr><td>Bob Kline</td><td>Designer</td><td>Active</td></tr>
+  </tbody>
+  <tfoot>
+    <tr><td colspan="2">Total</td><td>2</td></tr>
+  </tfoot>
+</table>
     
+
   </section>
   <div>
   <a href="#hauptinhalt" class="badge">
@@ -335,15 +370,51 @@ css:
     <h2>Interaktive Elemente</h2>
     <details>
       <summary>Klicke hier, um mehr zu erfahren</summary>
-      <p>Dies ist der Inhalt, der durch das
-        <code>details</code>-Element versteckt war.</p>
+      <p>Dies ist der Inhalt, der durch das <code>details</code>-Element versteckt war.</p>
     </details>
     <div>
       <label for="progress-bar">Uploading Document</label>
       <progress id="progress-bar" value="70" max="100">70 %</progress>
   </div>
-  <div>Ein Meter-Element:<meter value="0.6">60%</meter>
+  <div>
+    <label for="battery">Battery (90%)</label>
+    <meter id="battery" value="9" min="0" max="10" low="3" high="7" optimum="10"></meter>
   </div>
+  <div>
+    <label>Disk usage (60%)
+      <meter value="0.6" min="0" max="1" low="0.25" high="0.75" optimum="0.5"></meter>
+    </label>
+  </div>
+  <div>
+    <form oninput="result.value = parseInt(a.value) + parseInt(b.value)">
+      <label>A: <input type="range" id="a" value="50"></label>
+      <label>B: <input type="number" id="b" value="30"></label>
+      <label>Sum: <output name="result" for="a b">80</output></label>
+    </form>
+  </div>
+</section>
+
+<section id="alert">
+  <h2>Alert</h2>
+  <div role="alert">Alert: Session expiring soon.</div>
+  <div role="status">Status: Upload complete.</div>
+  <div role="note">Note: Auto-saved.</div>
+</section>
+
+<section id="dialog">
+  <h2>Dialog via Popover API</h2>
+  <button popovertarget="my-dialog">Dialog öffnen</button>
+
+  <dialog id="my-dialog" popover>
+    <h3>Dialog Titel</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, illo culpa voluptas odio dolorum repellendus laudantium repudiandae consequatur quam quisquam.</p>
+    <footer>
+      <button popovertarget="my-dialog" popovertargetaction="hide">Close</button>
+      <button data-variant="success"
+              popovertarget="my-dialog"
+              popovertargetaction="hide">Confirm</button>
+    </footer>
+  </dialog>
 </section>
 <div>
   <a href="#hauptinhalt" class="badge">
