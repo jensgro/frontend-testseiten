@@ -5,5 +5,29 @@ css:
     - jg/jg
 ---
 {% nav %}
-
+<header class="hero-header">
+  <section class="hero">
+    <h1>Hero layout just for fun!</h1>
+    <p>Lorem ipsum dolor sit amet consectetu adipisicing elit. Nemo in doloremque quam, voluptatibus eum voluptatum.</p>
+    <div class="button-list">
+      <button class="btn btn-hero primary">Get started</button>
+      <button class="btn btn-hero">Live demo</button>
+    </div>
+  </section>
+  <picture>
+    <img src="https://doodleipsum.com/700x700/outline?bg=3b5bdb" height="800" width="800" alt="a random doodle">
+  </picture>
+</header>
+<main class="container">
+  <div class="card-grid">
+    {% for image in images %}
+    {% if (loop.index <= 5) %}
+      <div class="card-simple">
+        <h3><a href="#">{{ image.headline }}</a></h3>
+        <img src="{{ image.filename }}"/>
+      </div>
+    {% endif %}
+  {% endfor %}
+  </div>
+</main>
 {% footerSimple %}
